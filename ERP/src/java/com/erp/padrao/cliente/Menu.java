@@ -155,7 +155,8 @@ public class Menu implements MDIController, LoginController {
      * Method called by MDI Frame to authenticate the user.
      *
      * @param loginInfo login information, like nomeUsuario, password, ...
-     * @return <code>true</code> if user is correcly * *      * authenticated, <code>false</code> otherwise
+     * @return <code>true</code> if user is correcly * * *
+     * authenticated, <code>false</code> otherwise
      */
     public boolean authenticateUser(Map loginInfo) throws Exception {
         nomeUsuario = (String) loginInfo.get("username");
@@ -211,9 +212,10 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.TREE_BACK = "treeback2.jpg";
         ClientSettings.FILTER_PANEL_ON_GRID = false;
         ClientSettings.AUTO_EXPAND_TREE_MENU = true;
-        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
-        com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
+        // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
+        //  com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
         ClientSettings.MAX_NR_OF_LOOPS_IN_ANALYZE_VO = 3;
+
 
 
 
@@ -225,7 +227,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_SAVE_IMAGE_NAME = "salvar.png";
         ClientSettings.BUTTON_FILTER_IMAGE_NAME = "proc1.png";
         ClientSettings.BUTTON_IMPORT_IMAGE_NAME = "Importar.png";
-
+        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
 
 
 
