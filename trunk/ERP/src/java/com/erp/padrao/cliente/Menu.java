@@ -210,7 +210,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BACKGROUND = "background4.jpg";
         ClientSettings.TREE_BACK = "treeback2.jpg";
         ClientSettings.FILTER_PANEL_ON_GRID = false;
-        ClientSettings.AUTO_EXPAND_TREE_MENU = false;
+        ClientSettings.AUTO_EXPAND_TREE_MENU = true;
         ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
         com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
         ClientSettings.MAX_NR_OF_LOOPS_IN_ANALYZE_VO = 3;
