@@ -12,7 +12,7 @@
             <h1>Projeto ERP </h1>
             <br />
             <a href="ERP.jnlp">
-                <img src="imagens/t2ti_erp.jpg" style="border: none;" alt="ERP" />
+                <img src="imagens/erp.jpg" style="border: none;" alt="ERP" />
             </a>
             <br />
             Clique na imagem acima para acessar o sistema.

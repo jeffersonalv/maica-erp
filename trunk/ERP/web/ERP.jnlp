@@ -9,7 +9,7 @@
         <vendor>MAICACORP</vendor>
         <description>ERP</description>
         <icon href="imagens/union.png"/>
-        <icon kind="splash" href="imagens/t2ti_erp"/>
+        <icon kind="splash" href="imagens/loading.gif"/>
         <offline-allowed/> 
         <shortcut online="false" install="true">
             <desktop/>
