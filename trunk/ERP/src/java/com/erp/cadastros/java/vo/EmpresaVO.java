@@ -398,7 +398,7 @@ public class EmpresaVO extends ValueObjectImpl implements Serializable {
 
     @Override
     public String toString() {
-        return "com.erp.cadastros.java.vo.EmpresaVO[id=" + id + "]";
+        return id+ " - " + razaoSocial;
     }
 
     public List<PessoaVO> getListaPessoa() {
