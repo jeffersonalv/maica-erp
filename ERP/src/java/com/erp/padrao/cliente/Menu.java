@@ -2,7 +2,6 @@ package com.erp.padrao.cliente;
 
 import com.erp.cadastros.java.vo.EmpresaVO;
 import com.erp.cadastros.java.vo.UsuarioVO;
-import com.erp.padrao.servidor.HibernateUtil;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.InputStream;
@@ -17,7 +16,6 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.view.JasperViewer;
-import org.hibernate.Session;
 import org.openswing.swing.client.GridControl;
 import org.openswing.swing.domains.java.Domain;
 import org.openswing.swing.internationalization.java.*;
@@ -33,7 +31,23 @@ public class Menu implements MDIController, LoginController {
     public Menu() {
         ClientUtils.setObjectSender(new HessianObjectSender());
         fachadaCliente = new Fachada();
-        LoginDialog d = new LoginDialog(null, false, this);
+        LoginDialog d = new LoginDialog(
+                null,
+                false,
+                this,
+                "Autenticação",
+                "Login",
+                'L',
+                "Sair",
+                'S',
+                "Armazenar Informações",
+                "Basic",
+                null,
+                null,
+                null,
+                "Usuário",
+                "Senha",
+                null);
     }
 
     /**
@@ -92,7 +106,9 @@ public class Menu implements MDIController, LoginController {
          String EmpresaLicenciada = obj_Empresa.getNomeFantasia();
          session.close();*/
         //System.out.println(EmpresaLicenciada);
-        return "Usuario= " + nomeUsuario;
+        EmpresaVO empresa = (EmpresaVO) Container.getContainer().get("empresa");
+        
+        return empresa.getNomeFantasia() + " - "+nomeUsuario;
         //  return EmpresaLicenciada + " - Usuario= " + nomeUsuario;
     }
 
@@ -155,8 +171,7 @@ public class Menu implements MDIController, LoginController {
      * Method called by MDI Frame to authenticate the user.
      *
      * @param loginInfo login information, like nomeUsuario, password, ...
-     * @return <code>true</code> if user is correcly * * *
-     * authenticated, <code>false</code> otherwise
+     * @return <code>true</code> if user is correcly * * *      * authenticated, <code>false</code> otherwise
      */
     public boolean authenticateUser(Map loginInfo) throws Exception {
         nomeUsuario = (String) loginInfo.get("username");
@@ -250,6 +265,38 @@ public class Menu implements MDIController, LoginController {
         MDIFrame.addStatusComponent(userPanel);
         userPanel.setText(nomeUsuario);
         MDIFrame.addStatusComponent(new Clock());
+
+        JMenuItem menuItemSuporte = new JMenuItem("Suporte Técnico");
+        menuItemSuporte.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    UsuarioVO usuario = (UsuarioVO) Container.getContainer().get("usuario");
+                    EmpresaVO empresa = (EmpresaVO) Container.getContainer().get("empresa");
+                    String modulo;
+                    String janela;
+                    if (MDIFrame.getSelectedFrame() != null) {
+                        modulo = MDIFrame.getSelectedFrame().getTitle();
+                        janela = MDIFrame.getSelectedFrame().getClass().getName();
+                    } else {
+                        modulo = "ERP";
+                        janela = "Principal";
+                    }
+
+                    Runtime.getRuntime().exec("javaws -open \""
+                            + empresa.getId() + "|"
+                            + empresa.getRazaoSocial() + "|"
+                            + usuario.getColaborador().getPessoa().getId() + "|"
+                            + usuario.getColaborador().getPessoa().getNome() + "|"
+                            + modulo + "|"
+                            + janela + "\" http://localhost:8084/Suporte/T2TiERP.jnlp"
+                            + " ");
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        frame.getMenuHelp().add(menuItemSuporte);
 
 
     }
@@ -685,7 +732,7 @@ public class Menu implements MDIController, LoginController {
                             parametros.put("LOGO_EMPRESA", logoEmpresa.getImage());
                             parametros.put("NOME_FANTASIA", empresa.getNomeFantasia());
                             parametros.put("RAZAO_SOCIAL", empresa.getRazaoSocial());
-                            parametros.put("NOME_SOFTWARE_HOUSE", "T2Ti.com");
+                            parametros.put("NOME_SOFTWARE_HOUSE", "maica");
 
                             JRBeanCollectionDataSource jrbean = new JRBeanCollectionDataSource(listaRelatorio);
                             InputStream ip = this.getClass().getResourceAsStream("/relatorios/" + arquivoRelatorio + ".jasper");
