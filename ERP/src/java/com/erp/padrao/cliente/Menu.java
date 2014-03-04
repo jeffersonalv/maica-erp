@@ -175,7 +175,8 @@ public class Menu implements MDIController, LoginController {
      * Method called by MDI Frame to authenticate the user.
      *
      * @param loginInfo login information, like nomeUsuario, password, ...
-     * @return <code>true</code> if user is correcly * * * * *      * authenticated, <code>false</code> otherwise
+     * @return <code>true</code> if user is correcly * * * * * *
+     * authenticated, <code>false</code> otherwise
      */
     public boolean authenticateUser(Map loginInfo) throws Exception {
         nomeUsuario = (String) loginInfo.get("username");
@@ -260,7 +261,8 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_FILTER_IMAGE_NAME = "proc1.png";
         ClientSettings.BUTTON_IMPORT_IMAGE_NAME = "Importar.png";
         ClientSettings.GRID_PROFILE_MANAGER = new FileGridProfileManager();
-        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+        // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
 
 
 
