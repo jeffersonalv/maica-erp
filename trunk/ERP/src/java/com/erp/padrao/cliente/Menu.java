@@ -4,6 +4,7 @@ import com.erp.cadastros.java.vo.EmpresaVO;
 import com.erp.cadastros.java.vo.UsuarioVO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.*;
@@ -19,8 +20,11 @@ import net.sf.jasperreports.view.JasperViewer;
 import org.openswing.swing.client.GridControl;
 import org.openswing.swing.domains.java.Domain;
 import org.openswing.swing.internationalization.java.*;
+import org.openswing.swing.lookup.client.LookupController;
 import org.openswing.swing.message.receive.java.*;
 import org.openswing.swing.permissions.java.ButtonsAuthorizations;
+import org.openswing.swing.table.profiles.client.FileGridProfileManager;
+import org.openswing.swing.util.java.Consts;
 
 public class Menu implements MDIController, LoginController {
 
@@ -107,8 +111,8 @@ public class Menu implements MDIController, LoginController {
          session.close();*/
         //System.out.println(EmpresaLicenciada);
         EmpresaVO empresa = (EmpresaVO) Container.getContainer().get("empresa");
-        
-        return empresa.getNomeFantasia() + " - "+nomeUsuario;
+
+        return empresa.getNomeFantasia() + " - " + nomeUsuario;
         //  return EmpresaLicenciada + " - Usuario= " + nomeUsuario;
     }
 
@@ -171,7 +175,7 @@ public class Menu implements MDIController, LoginController {
      * Method called by MDI Frame to authenticate the user.
      *
      * @param loginInfo login information, like nomeUsuario, password, ...
-     * @return <code>true</code> if user is correcly * * *      * authenticated, <code>false</code> otherwise
+     * @return <code>true</code> if user is correcly * * * * *      * authenticated, <code>false</code> otherwise
      */
     public boolean authenticateUser(Map loginInfo) throws Exception {
         nomeUsuario = (String) loginInfo.get("username");
@@ -227,6 +231,12 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.TREE_BACK = "treeback2.jpg";
         ClientSettings.FILTER_PANEL_ON_GRID = false;
         ClientSettings.AUTO_EXPAND_TREE_MENU = true;
+        ClientSettings.LOOKUP_FRAME_CONTENT = LookupController.GRID_AND_PANEL_FRAME;
+        ClientSettings.SHOW_PREVIEW_OF_IMAGE = true;
+        ClientSettings.VIEW_MANDATORY_SYMBOL = true;
+        ClientSettings.ASK_BEFORE_CLOSE = true;
+        ClientSettings.SHOW_PAGE_NUMBER_IN_GRID = true;
+        ClientSettings.SHOW_PAGINATION_BUTTONS_ON_NAVBAR = true;
         // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
         //  com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
         ClientSettings.MAX_NR_OF_LOOPS_IN_ANALYZE_VO = 3;
@@ -237,11 +247,19 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_INSERT_IMAGE_NAME = "Insert.png";
         ClientSettings.BUTTON_RELOAD_IMAGE_NAME = "refresh.png";
         ClientSettings.BUTTON_DELETE_IMAGE_NAME = "delete.png";
+        ClientSettings.ICON_MENU_FILE_EXIT = "sair.png";
+        ClientSettings.BACK_IMAGE_DISPOSITION = Consts.BACK_IMAGE_CENTERED;
+        ClientSettings.LOOKUP_AUTO_COMPLETITION_WAIT_TIME = 100;
+        ClientSettings.LOOKUP_OPEN_KEY = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0);
+        ClientSettings.INSERT_ROWS_ON_TOP = true;
+        ClientSettings.AS_TAB = KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0);
+        ClientSettings.SEARCH_ADDITIONAL_ROWS = true;
         ClientSettings.BUTTON_EDIT_IMAGE_NAME = "edi.png";
         ClientSettings.BUTTON_EXPORT_IMAGE_NAME = "Excel-icon.png";
         ClientSettings.BUTTON_SAVE_IMAGE_NAME = "salvar.png";
         ClientSettings.BUTTON_FILTER_IMAGE_NAME = "proc1.png";
         ClientSettings.BUTTON_IMPORT_IMAGE_NAME = "Importar.png";
+        ClientSettings.GRID_PROFILE_MANAGER = new FileGridProfileManager();
         ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
 
 
