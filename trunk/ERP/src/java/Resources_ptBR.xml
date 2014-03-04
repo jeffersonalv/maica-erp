@@ -2,8 +2,8 @@
 
 <!-- grid -->
 	<object key="of" value="De"/>
-	<object key="like" value="Se parece com..."/>
-        <object key="=" value="="/>
+	<object key="like" value="Parecido"/>
+        <object key="=" value="Igual a"/>
         <object key="is not null" value="n&#227;o é nulo"/>
         <object key="is null" value="é nulo"/>
         <object key=">" value="maior"/> 
@@ -36,7 +36,7 @@
 	<object key="Filtering/Sorting data (CTRL+F)" value="Filtragem/Classifica&#231;&#227;o de dados (CTRL+F)"/>
 	<object key="Select the previous row in grid" value="Seleciona o registro anterior" />
 	<object key="Select the next row in grid" value="Seleciona o pr&#243;ximo registro" />
-        
+
 <!-- export -->
 	<object key="grid export" value="Grade de exportação"/>
 	<object key="export" value="Exportação"/>
@@ -44,16 +44,16 @@
 	<object key="column" value="Coluna"/>
 	<object key="sel." value="Sel. "/>
 	<object key="you must select at least one column" value="Você deve selecionar pelo menos uma coluna"/>
-	<object key="columns to export" value="Colunas para exportação"/>
-	<object key="export type" value="Formato para exportação"/>
+	<object key="columns to export" value="Colunas exportação"/>
+	<object key="export type" value="Tipo exportação"/>
 	
 <!-- import -->
 	<object key="Import records (CTRL+M)" value="Importar registos (CTRL + M)"/>
 	<object key="grid import" value="Tabela de importação"/>
 	<object key="import" value="Importação"/>
 	<object key="importmnemonic" value="M"/>
-	<object key="columns to import" value="Colunas para importação"/>
-	<object key="import type" value="Formato para importação de arquivo"/>
+	<object key="columns to import" value="Colunas importação"/>
+	<object key="import type" value="Tipo importação"/>
 	<object key="file to import" value="Arquivo a importar"/>
 	<object key="error while importing data" value="Erro ao importar dados"/>
 	<object key="import completed" value="Importação concluída"/>
@@ -89,7 +89,7 @@
 	<object key="Load the previous block of records" value="Carregar bloco de registros anteriores"/>
 	<object key="Load the next block of records" value="Carregar próximo bloco de registros"/>
 	<object key="Load the last block of records" value="Carregar último bloco de registros"/>
-
+<!-- Botões -->
 	<object key="Insert" value="Inserir"/>
 	<object key="edit" value="Editar"/>
 	<object key="Copy" value="Copiar"/>
@@ -98,7 +98,7 @@
 	<object key="Reload" value="Recarregar"/>
 	<object key="Export" value="Exportar"/>
 	<object key="Filter" value="Filtrar"/>
-
+        <object key="Import" value="Importar"/>
 <!-- MDI Frame -->
 	<object key="file" value="Arquivo"/>
 	<object key="exit" value="Sair"/>
@@ -156,6 +156,8 @@
 	<object key="minimizeallmnemonic" value="A"/>
 	<object key="change background" value="Alterar fundo"/>
 	<object key="change background" value="Restaurar padrão de fundo"/>
+         <object key="Error while validating data" value="Campo não pode ficar em branco" />
+<object key="Error while validating data:" value="Campo não pode ficar em branco" />
 
 <!-- parei aqui	 -->
 <!-- select/deselect all -->
@@ -1361,16 +1363,19 @@
 	<object key="isParamRequiredSYS22" value="Onde Req.in"/>
 	<object key="filter conditions" value="Filtro condições"/>
 	<object key="where param" value="Onde Param"/>
+	<object key="yes" value="sim" />
+	<object key="no" value="não" />
 	<object key="" value="" />
 	<object key="" value="" />
 	<object key="" value="" />
-	<object key="" value="" />
-	<object key="" value="" />
+        
+      	<object key="search" value="Pesquisa"/>
 
 
-	<currencySymbol>E</currencySymbol>
-	<decimalSymbol>.</decimalSymbol>
-	<groupingSymbol>,</groupingSymbol>
+
+	<currencySymbol>R$</currencySymbol>
+	<decimalSymbol>,</decimalSymbol>
+	<groupingSymbol>.</groupingSymbol>
 	<dateFormat>DMY</dateFormat>
 	<showCenturyInDateFormat>true</showCenturyInDateFormat>
 	<dateFormatSeparator>/</dateFormatSeparator>
