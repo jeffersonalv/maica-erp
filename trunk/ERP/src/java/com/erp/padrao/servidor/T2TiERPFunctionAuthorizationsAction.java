@@ -630,8 +630,8 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
             } else {
                 if (!funcoes.contains(funcao.getFunctionId())) {
                     pasta.remove(i);
-                    ApplicationFunction appFunction = new ApplicationFunction(funcao.getDescription() + "*", "funcaoPadrao", null, "getFuncaoPadrao");
-                    pasta.insert(appFunction, i);
+                   // ApplicationFunction appFunction = new ApplicationFunction(funcao.getDescription() + "*", "funcaoPadrao", null, "getFuncaoPadrao");
+                   // pasta.insert(appFunction, i);
                 }
             }
         }

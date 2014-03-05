@@ -164,6 +164,7 @@
         <mapping class="com.erp.tributacao.java.vo.TributPisCodApuracaoVO"/> 
               
         <!--contablil-->
+              
         <mapping class="com.t2tierp.contabilidade.java.AidfAimdfVO"/>
         <mapping class="com.t2tierp.contabilidade.java.CentroResultadoVO"/>
         <mapping class="com.t2tierp.contabilidade.java.ContaContabilRateioVO"/>
@@ -196,6 +197,8 @@
         <mapping class="com.t2tierp.contabilidade.java.RateioCentroResultadoCabVO"/>
         <mapping class="com.t2tierp.contabilidade.java.RateioCentroResultadoDetVO"/>
         <mapping class="com.t2tierp.contabilidade.java.RegistroCartorioVO"/>
+        <mapping class="com.t2tierp.contabilidade.java.ViewDfcVO"/>
+        <mapping class="com.t2tierp.contabilidade.java.ViewBalancoPatrimonialVO"/>
 
      
       

@@ -130,7 +130,7 @@ public class NaturezaFinanceiraDetalhe extends InternalFrame {
         comboBoxControl9 = new org.openswing.swing.client.ComboBoxControl();
         jSeparator1 = new javax.swing.JSeparator();
 
-        setTitle("T2Ti ERP - Contabilidade");
+        setTitle("Contabilidade");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 

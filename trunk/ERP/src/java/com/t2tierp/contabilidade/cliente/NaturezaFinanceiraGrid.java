@@ -75,7 +75,7 @@ public class NaturezaFinanceiraGrid extends InternalFrame {
         comboColumn8 = new org.openswing.swing.table.columns.client.ComboColumn();
         comboColumn9 = new org.openswing.swing.table.columns.client.ComboColumn();
 
-        setTitle("T2Ti ERP - Contabilidade");
+        setTitle("Contabilidade");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -104,7 +104,7 @@ public class NaturezaFinanceiraGrid extends InternalFrame {
 
         textColumn2.setColumnName("planoNaturezaFinanceira.nome");
         textColumn2.setHeaderColumnName("Plano Natureza Financeira");
-        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn2.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn2);
 
@@ -115,36 +115,36 @@ public class NaturezaFinanceiraGrid extends InternalFrame {
 
         textColumn4.setColumnName("classificacao");
         textColumn4.setHeaderColumnName("Classificacao");
-        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn4);
 
         textColumn5.setColumnName("descricao");
         textColumn5.setHeaderColumnName("Descricao");
-        textColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn5);
 
         comboColumn6.setColumnName("tipo");
         comboColumn6.setDomainId("tipoNaturezaFinanceira");
         comboColumn6.setHeaderColumnName("Tipo");
-        comboColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(comboColumn6);
 
         textColumn7.setColumnName("aplicacao");
         textColumn7.setHeaderColumnName("Aplicacao");
-        textColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn7);
 
         comboColumn8.setColumnName("apareceAPagar");
         comboColumn8.setDomainId("simnao");
         comboColumn8.setHeaderColumnName("Aparece A Pagar");
-        comboColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(comboColumn8);
 
         comboColumn9.setColumnName("apareceAReceber");
         comboColumn9.setDomainId("simnao");
         comboColumn9.setEditableOnInsert(true);
         comboColumn9.setHeaderColumnName("Aparece A Receber");
-        comboColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         comboColumn9.setPreferredWidth(120);
         gridControl1.getColumnContainer().add(comboColumn9);
 

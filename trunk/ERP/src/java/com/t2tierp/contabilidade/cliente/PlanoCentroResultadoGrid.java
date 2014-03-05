@@ -71,7 +71,7 @@ public class PlanoCentroResultadoGrid extends InternalFrame {
         integerColumn5 = new org.openswing.swing.table.columns.client.IntegerColumn();
         dateColumn6 = new org.openswing.swing.table.columns.client.DateColumn();
 
-        setTitle("T2Ti ERP - Contabilidade");
+        setTitle("Contabilidade");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -106,17 +106,17 @@ public class PlanoCentroResultadoGrid extends InternalFrame {
 
         textColumn4.setColumnName("mascara");
         textColumn4.setHeaderColumnName("Mascara");
-        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn4);
 
         integerColumn5.setColumnName("niveis");
         integerColumn5.setHeaderColumnName("Niveis");
-        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(integerColumn5);
 
         dateColumn6.setColumnName("dataInclusao");
         dateColumn6.setHeaderColumnName("Data Inclusao");
-        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn6);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
