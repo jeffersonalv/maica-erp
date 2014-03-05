@@ -64,7 +64,6 @@ import com.t2tierp.contabilidade.cliente.CentroResultadoGridController;
 import com.t2tierp.contabilidade.cliente.ContabilContaGridController;
 import com.t2tierp.contabilidade.cliente.ContabilDreCabecalhoGridController;
 import com.t2tierp.contabilidade.cliente.ContabilEncerramentoExeCabGridController;
-import com.t2tierp.contabilidade.cliente.ContabilFechamentoGridController;
 import com.t2tierp.contabilidade.cliente.ContabilHistoricoGridController;
 import com.t2tierp.contabilidade.cliente.ContabilIndiceGridController;
 import com.t2tierp.contabilidade.cliente.ContabilLancamentoOrcadoGridController;
@@ -91,6 +90,11 @@ import com.t2tierp.controleestoque.cliente.EstoqueContagemCabecalhoGridControlle
 import com.t2tierp.controleestoque.cliente.EstoqueFormacaoPrecoGridController;
 import com.t2tierp.controleestoque.cliente.EstoqueReajusteCabecalhoGridController;
 import com.t2tierp.controleestoque.cliente.RequisicaoInternaCabecalhoGridController;
+import com.t2tierp.escritafiscal.cliente.FiscalApuracaoIcmsController;
+import com.t2tierp.escritafiscal.cliente.FiscalParametrosGridController;
+import com.t2tierp.escritafiscal.cliente.FiscalTermoGridController;
+import com.t2tierp.escritafiscal.cliente.InformativosGuiasGrid;
+import com.t2tierp.escritafiscal.cliente.SimplesNacionalCabecalhoGridController;
 import com.t2tierp.financeiro.cliente.FinConfiguracaoBoletoGridController;
 import com.t2tierp.financeiro.cliente.FinDocumentoOrigemGridController;
 import com.t2tierp.financeiro.cliente.FinExtratoContaBancoGridController;
@@ -121,7 +125,6 @@ import com.t2tierp.folhapagamento.cliente.FolhaRescisaoGridController;
 import com.t2tierp.folhapagamento.cliente.FolhaTipoAfastamentoGridController;
 import com.t2tierp.folhapagamento.cliente.FolhaValeTransporteGridController;
 import com.t2tierp.folhapagamento.cliente.GuiasAcumuladasGridController;
-import com.t2tierp.folhapagamento.cliente.InformativosGuiasController;
 
 import com.t2tierp.ged.cliente.GedDocumentoGridController;
 import com.t2tierp.ged.cliente.GedTipoDocumentoGridController;
@@ -550,7 +553,8 @@ public class Fachada implements ClientFacade {
     }
 
     public void getInformativosGuias() {
-        new InformativosGuiasController();
+        MDIFrame.add(new InformativosGuiasGrid());
+        //   new InformativosGuiasController();
     }
 
     public void getCompraTipoRequisicao() {
@@ -687,10 +691,9 @@ public class Fachada implements ClientFacade {
     public void getComposicaoSaldo() {
         new ComposicaoSaldoGridController();
     }
-    
-    
+
     //orçamento
-     public void getOrcamentoPeriodo() {
+    public void getOrcamentoPeriodo() {
         new OrcamentoPeriodoGridController();
     }
 
@@ -705,91 +708,103 @@ public class Fachada implements ClientFacade {
     public void getOrcamentoEmpresarial() {
         new OrcamentoEmpresarialGridController();
     }
-    
-    
-      public void getSintegra() {
+
+    public void getSintegra() {
         new SintegraController();
     }
-      
-      
-      
-      public void getRegistroCartorio() {
+
+    public void getRegistroCartorio() {
         new RegistroCartorioGridController();
     }
 
-    public void getParametros(){
+    public void getParametros() {
         new ContabilParametrosGridController();
     }
 
-    public void getIndices(){
+    public void getIndices() {
         new ContabilIndiceGridController();
     }
 
-    public void getHistorico(){
+    public void getHistorico() {
         new ContabilHistoricoGridController();
     }
 
-    public void getAidfAimdf(){
+    public void getAidfAimdf() {
         new AidfAimdfGridController();
     }
 
-    public void getFap(){
+    public void getFap() {
         new FapGridController();
     }
 
-    public void getPlanoContas(){
+    public void getPlanoContas() {
         new PlanoContaGridController();
     }
 
-    public void getPlanoContasRefSped(){
+    public void getPlanoContasRefSped() {
         new PlanoContaRefSpedGridController();
     }
 
-    public void getContaContabil(){
+    public void getContaContabil() {
         new ContabilContaGridController();
     }
 
-   
-
-    public void getLancamentoPadrao(){
+    public void getLancamentoPadrao() {
         new ContabilLancamentoPadraoGridController();
     }
 
-    public void getLancamentoLote(){
+    public void getLancamentoLote() {
         new ContabilLoteGridController();
     }
 
-    public void getLancamentoOrcado(){
+    public void getLancamentoOrcado() {
         new ContabilLancamentoOrcadoGridController();
     }
 
-    public void getLancamentoContabil(){
+    public void getLancamentoContabil() {
         new com.t2tierp.contabilidade.cliente.ContabilLancamentoCabecalhoGridController();
     }
 
-    public void getDre(){
+    public void getDre() {
         new ContabilDreCabecalhoGridController();
     }
 
-    public void getEncerramentoExercicio(){
+    public void getEncerramentoExercicio() {
         new ContabilEncerramentoExeCabGridController();
     }
 
-    public void getLivrosTermos(){
+    public void getLivrosTermos() {
         new ContabilLivroGridController();
     }
 
-    public void getDfc(){
+    public void getDfc() {
         new DfcGridController();
     }
 
-    public void getBalancoPatrimonial(){
+    public void getBalancoPatrimonial() {
         new BalancoPatrimonialGridController();
     }
 
-    public void getLivroContabil(){
+    public void getLivroContabil() {
         new LivroContabilGridController();
     }
-    
-    
+
+    public void getFiscalParametros() {
+        new FiscalParametrosGridController();
+    }
+
+    public void getSimplesNacional() {
+        new SimplesNacionalCabecalhoGridController();
+    }
+
+    public void getFiscalTermo() {
+        new FiscalTermoGridController();
+    }
+
+    public void getRegistroEntradaSaida() {
+    }
+
+    public void getApuracaoIcms() {
+        new FiscalApuracaoIcmsController();
+    }
 }

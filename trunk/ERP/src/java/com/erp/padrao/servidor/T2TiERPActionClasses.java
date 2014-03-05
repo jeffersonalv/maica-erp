@@ -220,6 +220,14 @@ import com.t2tierp.controleestoque.servidor.NfeTransporteVolumeLacreGridAction;
 import com.t2tierp.controleestoque.servidor.RequisicaoInternaCabecalhoDetalheAction;
 import com.t2tierp.controleestoque.servidor.RequisicaoInternaCabecalhoGridAction;
 import com.t2tierp.controleestoque.servidor.RequisicaoInternaDetalheGridAction;
+import com.t2tierp.escritafiscal.servidor.FiscalApuracaoIcmsAction;
+import com.t2tierp.escritafiscal.servidor.FiscalLivroDetalheAction;
+import com.t2tierp.escritafiscal.servidor.FiscalParametrosDetalheAction;
+import com.t2tierp.escritafiscal.servidor.FiscalParametrosGridAction;
+import com.t2tierp.escritafiscal.servidor.FiscalTermoGridAction;
+import com.t2tierp.escritafiscal.servidor.SimplesNacionalCabecalhoDetalheAction;
+import com.t2tierp.escritafiscal.servidor.SimplesNacionalCabecalhoGridAction;
+import com.t2tierp.escritafiscal.servidor.SimplesNacionalDetalheGridAction;
 import com.t2tierp.financeiro.servidor.FinConfiguracaoBoletoDetalheAction;
 import com.t2tierp.financeiro.servidor.FinConfiguracaoBoletoGridAction;
 import com.t2tierp.financeiro.servidor.FinDocumentoOrigemDetalheAction;
@@ -1291,6 +1299,27 @@ public class T2TiERPActionClasses extends ActionsCollection {
 
         /*actions do módulo sintegra */
         a = new GeraSintegraAction();
+        put(a.getRequestName(), a);
+
+
+        /*actions do módulo escrita Fiscal */
+        a = new FiscalParametrosGridAction();
+        put(a.getRequestName(), a);
+        a = new FiscalParametrosDetalheAction();
+        put(a.getRequestName(), a);
+        a = new SimplesNacionalCabecalhoGridAction();
+        put(a.getRequestName(), a);
+        a = new SimplesNacionalCabecalhoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new SimplesNacionalDetalheGridAction();
+        put(a.getRequestName(), a);
+        a = new FiscalLivroDetalheAction();
+        put(a.getRequestName(), a);
+        a = new FiscalLivroDetalheAction();
+        put(a.getRequestName(), a);
+        a = new FiscalTermoGridAction();
+        put(a.getRequestName(), a);
+        a = new FiscalApuracaoIcmsAction();
         put(a.getRequestName(), a);
 
 
