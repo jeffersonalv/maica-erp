@@ -71,7 +71,7 @@ public class CentroResultadoGrid extends InternalFrame {
         textColumn4 = new org.openswing.swing.table.columns.client.TextColumn();
         comboColumn5 = new org.openswing.swing.table.columns.client.ComboColumn();
 
-        setTitle("T2Ti ERP - Contabilidade");
+        setTitle("Contabilidade");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -106,12 +106,12 @@ public class CentroResultadoGrid extends InternalFrame {
 
         textColumn3.setColumnName("classificacao");
         textColumn3.setHeaderColumnName("Classificacao");
-        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn3);
 
         textColumn4.setColumnName("descricao");
         textColumn4.setHeaderColumnName("Descricao");
-        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn4);
 
         comboColumn5.setColumnName("sofreRateiro");
