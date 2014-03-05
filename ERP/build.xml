@@ -737,6 +737,25 @@
                 <include name="*.*" />
             </fileset>
         </copy>
+        
+        
+         <copy todir="${tmp}/com/t2tierp/escritafiscal/cliente">
+            <fileset dir="${build.classes.dir}/com/t2tierp/escritafiscal/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${tmp}/com/t2tierp/escritafiscal/cliente/darf">
+            <fileset dir="${build.classes.dir}/com/t2tierp/escritafiscal/cliente/darf">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${tmp}/com/t2tierp/escritafiscal/java">
+            <fileset dir="${build.classes.dir}/com/t2tierp/escritafiscal/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
 
         <copy todir="${tmp}/com/t2tierp/sintegra/cliente">
             <fileset dir="${build.classes.dir}/com/t2tierp/sintegra/cliente">

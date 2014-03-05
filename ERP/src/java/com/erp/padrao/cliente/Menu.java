@@ -261,7 +261,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_IMPORT_IMAGE_NAME = "Importar.png";
         ClientSettings.GRID_PROFILE_MANAGER = new FileGridProfileManager();
         // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
-        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
+       // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
 
 
 

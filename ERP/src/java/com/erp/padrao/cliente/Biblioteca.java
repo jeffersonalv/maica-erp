@@ -558,5 +558,33 @@ public class Biblioteca {
         return dataC;
     }
 
+     
+     
+     public static String periodoAnterior(String periodo) throws Exception {
+        String periodoAnterior = "";
+        int mesPeriodo = Integer.valueOf(periodo.substring(0, 2));
+        int anoPeriodo = Integer.valueOf(periodo.substring(3, 7));
+        mesPeriodo--;
+        if (mesPeriodo == 0) {
+            mesPeriodo = 1;
+            anoPeriodo--;
+        }
+        if (mesPeriodo < 10) {
+            periodoAnterior = "0" + String.valueOf(mesPeriodo) + "/" + String.valueOf(mesPeriodo);
+        } else {
+            periodoAnterior = String.valueOf(mesPeriodo) + "/" + String.valueOf(anoPeriodo);
+        }
+        return periodoAnterior;
+    }
+     
+     
+      public static Calendar ultimoDiaMes(Calendar dataInicio) {
+        Calendar cData = Calendar.getInstance();
+        cData.setTime(dataInicio.getTime());
+        cData.setLenient(false);
+        cData.set(Calendar.DAY_OF_MONTH, cData.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+        return cData;
+    }
     
 }
