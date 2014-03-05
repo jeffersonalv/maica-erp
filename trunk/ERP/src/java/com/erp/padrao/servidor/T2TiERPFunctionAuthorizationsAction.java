@@ -158,10 +158,42 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
 
 
         ApplicationFunction n3 = new ApplicationFunction(factory.getResources(langId).getResource("Contabilidade"), "Caduceus-16.png");
+
         ApplicationFunction n31 = new ApplicationFunction(factory.getResources(langId).getResource("Plano Natureza Financeira"), "planoNaturezaFinanceira", "naturezaFinanceira16.png", "getPlanoNaturezaFinanceira");
         ApplicationFunction n32 = new ApplicationFunction(factory.getResources(langId).getResource("Plano Centro Resultado"), "planoCentroResultado", "centroResultado16.png", "getPlanoCentroResultado");
         ApplicationFunction n33 = new ApplicationFunction(factory.getResources(langId).getResource("Natureza Financeira"), "naturezaFinanceira", "ContabilParametros16.png", "getNaturezaFinanceira");
         ApplicationFunction n34 = new ApplicationFunction(factory.getResources(langId).getResource("Centro Resultado"), "centroResultado", "centroResultado16.png", "getCentroResultado");
+
+
+
+        ApplicationFunction n387 = new ApplicationFunction(factory.getResources(langId).getResource("Cadastros"), "MenuCadastros.png");
+        ApplicationFunction n403 = new ApplicationFunction(factory.getResources(langId).getResource("Registro Cartório"), "registroCartorio", "RegistroCartorio16.png", "getRegistroCartorio");
+        ApplicationFunction n400 = new ApplicationFunction(factory.getResources(langId).getResource("Parâmetros"), "parametros", "ContabilParametros16.png", "getParametros");
+        ApplicationFunction n401 = new ApplicationFunction(factory.getResources(langId).getResource("Índices"), "indices", "indice_economico16.png", "getIndices");
+        ApplicationFunction n402 = new ApplicationFunction(factory.getResources(langId).getResource("Históricos"), "historico", "ContabilHistorico16.png", "getHistorico");
+        ApplicationFunction n368 = new ApplicationFunction(factory.getResources(langId).getResource("AIDF/AIMDF"), "aidfAimdf", "AIDF16.png", "getAidfAimdf");
+        ApplicationFunction n369 = new ApplicationFunction(factory.getResources(langId).getResource("FAP"), "fap", "FAP16.png", "getFap");
+        n387.add(n403);
+        n387.add(n400);
+        n387.add(n401);
+        n387.add(n402);
+        n387.add(n368);
+        n387.add(n369);
+
+        ApplicationFunction n380 = new ApplicationFunction(factory.getResources(langId).getResource("Plano de Contas"), "PlanoContas16.png");
+
+        ApplicationFunction n382 = new ApplicationFunction(factory.getResources(langId).getResource("Plano Contas"), "planoContas", "PlanoContas16.png", "getPlanoContas");
+        ApplicationFunction n383 = new ApplicationFunction(factory.getResources(langId).getResource("Plano Contas SPED"), "planoContasRefSped", "PlanoContasSped16.png", "getPlanoContasRefSped");
+        ApplicationFunction n384 = new ApplicationFunction(factory.getResources(langId).getResource("Conta Contábil"), "contaContabil", "ContabilDFC16.png", "getContaContabil");
+
+        n380.add(n382);
+        n380.add(n383);
+        n380.add(n384);
+
+
+
+
+
 
 
 
@@ -173,6 +205,39 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         ApplicationFunction n363 = new ApplicationFunction(factory.getResources(langId).getResource("Composiçao do Saldo"), "composicaoSaldo", "ComposicaoSaldo16.png", "getComposicaoSaldo");
 
 
+
+
+        ApplicationFunction n372 = new ApplicationFunction(factory.getResources(langId).getResource("Lançamentos"), "LancamentoContabilProgramado16.png");
+        ApplicationFunction n373 = new ApplicationFunction(factory.getResources(langId).getResource("Fechamento"), "fechamento", "ContabilFechamento16.png", "getFechamento");
+        ApplicationFunction n374 = new ApplicationFunction(factory.getResources(langId).getResource("Lançamento Padrão"), "lancamentoPadrao", "LancamentoContabil16.png", "getLancamentoPadrao");
+        ApplicationFunction n375 = new ApplicationFunction(factory.getResources(langId).getResource("Lançamento em Lote"), "lancamentoLote", "LancamentoContabilLote16.png", "getLancamentoLote");
+        ApplicationFunction n376 = new ApplicationFunction(factory.getResources(langId).getResource("Lançamento Programado"), "lancamentoProgramado", "LancamentoContabilProgramado16.png", "getLancamentoProgramado");
+        ApplicationFunction n377 = new ApplicationFunction(factory.getResources(langId).getResource("Lançamento Orçado"), "lancamentoOrcado", "LancamentoContabilOrcado16.png", "getLancamentoOrcado");
+        ApplicationFunction n378 = new ApplicationFunction(factory.getResources(langId).getResource("Lançamento Contabil"), "lancamentoContabil", "LancamentoContabilPadrao16.png", "getLancamentoContabil");
+        n372.add(n373);
+        n372.add(n374);
+        n372.add(n375);
+        n372.add(n376);
+        n372.add(n377);
+        n372.add(n378);
+
+
+
+
+        ApplicationFunction n379 = new ApplicationFunction(factory.getResources(langId).getResource("Demonstrativos"), "BalancoPatrimonial16.png");
+        ApplicationFunction n390 = new ApplicationFunction(factory.getResources(langId).getResource("DRE"), "dre", "ContabilDRE16.png", "getDre");
+        ApplicationFunction n391 = new ApplicationFunction(factory.getResources(langId).getResource("DFC"), "dfc", "ContabilDFC16.png", "getDfc");
+        ApplicationFunction n392 = new ApplicationFunction(factory.getResources(langId).getResource("Balanço Patrimonial"), "balancoPatrimonial", "BalancoPatrimonial16.png", "getBalancoPatrimonial");
+        ApplicationFunction n393 = new ApplicationFunction(factory.getResources(langId).getResource("Encerramento Exercício"), "encerramentoExercicio", "ContabilEncerramentoExercicio16.png", "getEncerramentoExercicio");
+        n379.add(n390);
+        n379.add(n391);
+        n379.add(n392);
+        n379.add(n393);
+        ApplicationFunction n395 = new ApplicationFunction(factory.getResources(langId).getResource("Livros Contábeis"), "ContabilLivro16.png");
+        ApplicationFunction n396 = new ApplicationFunction(factory.getResources(langId).getResource("Livros e Termos"), "livrosTermos", null, "getLivrosTermos");
+        ApplicationFunction n397 = new ApplicationFunction(factory.getResources(langId).getResource("Emissão de Livros"), "livroContabil", "ContabilLivroEmissao16.png", "getLivroContabil");
+        n395.add(n396);
+        n395.add(n397);
 
 
         ApplicationFunction n58 = new ApplicationFunction(factory.getResources(langId).getResource("Controle de Orçamento"), "orcamento.png");
@@ -249,7 +314,7 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         ApplicationFunction n40 = new ApplicationFunction(factory.getResources(langId).getResource("Folha de Pagamento"), "folhaFechamento16.png");
 
 
-       // ApplicationFunction n311 = new ApplicationFunction(factory.getResources(langId).getResource("Cadastros"), null);
+        // ApplicationFunction n311 = new ApplicationFunction(factory.getResources(langId).getResource("Cadastros"), null);
         ApplicationFunction n312 = new ApplicationFunction(factory.getResources(langId).getResource("Parâmetros"), "folhaParametro", "folhaParametro16.png", "getFolhaParametro");
         ApplicationFunction n313 = new ApplicationFunction(factory.getResources(langId).getResource("Guias Acumuladas"), "guiasAcumuladas", "folhaGuiasAcumuladas16.png", "getGuiasAcumuladas");
         ApplicationFunction n314 = new ApplicationFunction(factory.getResources(langId).getResource("Plano de Saúde"), "planoSaude", "folhaPlanoSaude-16.png", "getPlanoSaude");
@@ -335,7 +400,7 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         ApplicationFunction n134 = new ApplicationFunction(factory.getResources(langId).getResource("Papéis"), "papel", "PapelMenu.png", "getPapel");
         ApplicationFunction n135 = new ApplicationFunction(factory.getResources(langId).getResource("Auditoria"), "", "Auditoria16.png", "");
         ApplicationFunction n136 = new ApplicationFunction(factory.getResources(langId).getResource("Suporte"), "", "suporte.png", "");
-        
+
         n100.add(n133);
         n100.add(n134);
         n100.add(n135);
@@ -413,6 +478,11 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         n3.add(n32);
         n3.add(n33);
         n3.add(n34);
+        n3.add(n372);
+        n3.add(n387);
+        n3.add(n380);
+        n3.add(n390);
+        n3.add(n395);
 
         n4.add(n41);
 
@@ -454,7 +524,7 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         n4.add(n10);
         n4.add(n20);
 
-      //  n40.add(n311);
+        //  n40.add(n311);
         n40.add(n312);
         n40.add(n313);
         n40.add(n314);
@@ -495,8 +565,8 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
 
         n13.add(n131);
         n13.add(n132);
-       // n13.add(n133);
-      //  n13.add(n134);
+        // n13.add(n133);
+        //  n13.add(n134);
 
         n14.add(n141);
         n14.add(n142);
@@ -630,8 +700,8 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
             } else {
                 if (!funcoes.contains(funcao.getFunctionId())) {
                     pasta.remove(i);
-                   // ApplicationFunction appFunction = new ApplicationFunction(funcao.getDescription() + "*", "funcaoPadrao", null, "getFuncaoPadrao");
-                   // pasta.insert(appFunction, i);
+                    // ApplicationFunction appFunction = new ApplicationFunction(funcao.getDescription() + "*", "funcaoPadrao", null, "getFuncaoPadrao");
+                    // pasta.insert(appFunction, i);
                 }
             }
         }

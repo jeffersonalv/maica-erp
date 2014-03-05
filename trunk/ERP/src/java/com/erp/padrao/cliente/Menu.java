@@ -175,8 +175,7 @@ public class Menu implements MDIController, LoginController {
      * Method called by MDI Frame to authenticate the user.
      *
      * @param loginInfo login information, like nomeUsuario, password, ...
-     * @return <code>true</code> if user is correcly * * * * * *
-     * authenticated, <code>false</code> otherwise
+     * @return <code>true</code> if user is correcly * * * * * *      * authenticated, <code>false</code> otherwise
      */
     public boolean authenticateUser(Map loginInfo) throws Exception {
         nomeUsuario = (String) loginInfo.get("username");
@@ -231,7 +230,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BACKGROUND = "background4.jpg";
         ClientSettings.TREE_BACK = "treeback2.jpg";
         ClientSettings.FILTER_PANEL_ON_GRID = false;
-        ClientSettings.AUTO_EXPAND_TREE_MENU = true;
+        ClientSettings.AUTO_EXPAND_TREE_MENU = false;
         ClientSettings.LOOKUP_FRAME_CONTENT = LookupController.GRID_AND_PANEL_FRAME;
         ClientSettings.SHOW_PREVIEW_OF_IMAGE = true;
         ClientSettings.VIEW_MANDATORY_SYMBOL = true;
