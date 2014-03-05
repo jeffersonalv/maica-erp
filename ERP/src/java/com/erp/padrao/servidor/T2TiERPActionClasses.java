@@ -128,17 +128,56 @@ import com.t2tierp.conciliacaocontabil.servidor.ExtratoConciliacaoBancariaGridAc
 import com.t2tierp.conciliacaocontabil.servidor.LancamentoConciliacaoBancariaGridAction;
 import com.t2tierp.conciliacaocontabil.servidor.ParcelaConciliacaoClienteGridAction;
 import com.t2tierp.conciliacaocontabil.servidor.ParcelaConciliacaoFornecedorGridAction;
+import com.t2tierp.contabilidade.servidor.AidfAimdfDetalheAction;
+import com.t2tierp.contabilidade.servidor.AidfAimdfGridAction;
+import com.t2tierp.contabilidade.servidor.BalancoPatrimonialGridAction;
 import com.t2tierp.contabilidade.servidor.CentroResultadoDetalheAction;
 import com.t2tierp.contabilidade.servidor.CentroResultadoGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilContaDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilContaGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilDreCabecalhoDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilDreCabecalhoGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilDreDetalheGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilEncerramentoExeCabDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilEncerramentoExeCabGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilEncerramentoExeDetGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilFechamentoDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilFechamentoGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilHistoricoDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilHistoricoGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilIndiceDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilIndiceGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilIndiceValorGridAction;
 import com.t2tierp.contabilidade.servidor.ContabilLancamentoCabecalhoDetalheAction;
 import com.t2tierp.contabilidade.servidor.ContabilLancamentoCabecalhoGridAction;
 import com.t2tierp.contabilidade.servidor.ContabilLancamentoDetalheGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilLancamentoOrcadoDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilLancamentoOrcadoGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilLancamentoPadraoDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilLancamentoPadraoGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilLivroDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilLivroGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilLoteDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilLoteGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilParametrosDetalheAction;
+import com.t2tierp.contabilidade.servidor.ContabilParametrosGridAction;
+import com.t2tierp.contabilidade.servidor.ContabilTermoGridAction;
+import com.t2tierp.contabilidade.servidor.DfcGridAction;
+import com.t2tierp.contabilidade.servidor.FapDetalheAction;
+import com.t2tierp.contabilidade.servidor.FapGridAction;
+import com.t2tierp.contabilidade.servidor.LivroContabilGridAction;
 import com.t2tierp.contabilidade.servidor.NaturezaFinanceiraDetalheAction;
 import com.t2tierp.contabilidade.servidor.NaturezaFinanceiraGridAction;
 import com.t2tierp.contabilidade.servidor.PlanoCentroResultadoDetalheAction;
 import com.t2tierp.contabilidade.servidor.PlanoCentroResultadoGridAction;
+import com.t2tierp.contabilidade.servidor.PlanoContaDetalheAction;
+import com.t2tierp.contabilidade.servidor.PlanoContaGridAction;
+import com.t2tierp.contabilidade.servidor.PlanoContaRefSpedDetalheAction;
+import com.t2tierp.contabilidade.servidor.PlanoContaRefSpedGridAction;
 import com.t2tierp.contabilidade.servidor.PlanoNaturezaFinanceiraDetalheAction;
 import com.t2tierp.contabilidade.servidor.PlanoNaturezaFinanceiraGridAction;
+import com.t2tierp.contabilidade.servidor.RegistroCartorioDetalheAction;
+import com.t2tierp.contabilidade.servidor.RegistroCartorioGridAction;
 import com.t2tierp.contratos.servidor.ContratoDetalheAction;
 import com.t2tierp.contratos.servidor.ContratoGridAction;
 import com.t2tierp.contratos.servidor.ContratoHistFaturamentoGridAction;
@@ -355,13 +394,17 @@ public class T2TiERPActionClasses extends ActionsCollection {
         Action a = null;
 
         //infra
-      
-          //infra
-        a = new T2TiERPButtonAuthorizationsAction(); put(a.getRequestName(), a);
-        a = new T2TiERPFunctionAuthorizationsAction(); put(a.getRequestName(), a);
-        a = new UserLoginAction(); put(a.getRequestName(), a);
-        a = new T2TiERPContainerAction(); put(a.getRequestName(), a);
-        
+
+        //infra
+        a = new T2TiERPButtonAuthorizationsAction();
+        put(a.getRequestName(), a);
+        a = new T2TiERPFunctionAuthorizationsAction();
+        put(a.getRequestName(), a);
+        a = new UserLoginAction();
+        put(a.getRequestName(), a);
+        a = new T2TiERPContainerAction();
+        put(a.getRequestName(), a);
+
 
         /*actions do módulo */
         a = new UsuarioGridAction();
@@ -746,9 +789,11 @@ public class T2TiERPActionClasses extends ActionsCollection {
         put(a.getRequestName(), a);
         a = new ValidaChequeAction();
         put(a.getRequestName(), a);
-        
-         a = new ImportaVendaOrcamentoAction(); put(a.getRequestName(), a);
-        a = new ValidaVendaOrcamentoAction(); put(a.getRequestName(), a);
+
+        a = new ImportaVendaOrcamentoAction();
+        put(a.getRequestName(), a);
+        a = new ValidaVendaOrcamentoAction();
+        put(a.getRequestName(), a);
 
 
 
@@ -1071,58 +1116,182 @@ public class T2TiERPActionClasses extends ActionsCollection {
         put(a.getRequestName(), a);
         a = new nfeTributAction();
         put(a.getRequestName(), a);
-        
-        
-        
-        
-        
+
+
+
+
+
         /*actions do Vendas*/
-        a = new TipoNotaFiscalGridAction(); put(a.getRequestName(), a);
-        a = new TipoNotaFiscalDetalheAction(); put(a.getRequestName(), a);
-        a = new VendaCondicoesPagamentoGridAction(); put(a.getRequestName(), a);
-        a = new VendaCondicoesPagamentoDetalheAction(); put(a.getRequestName(), a);
-        a = new VendaCondicoesParcelasGridAction(); put(a.getRequestName(), a);
-        a = new VendaOrcamentoGridAction(); put(a.getRequestName(), a);
-        a = new VendaOrcamentoDetalheAction(); put(a.getRequestName(), a);
-        a = new VendaOrcamentoDetalheGridAction(); put(a.getRequestName(), a);
-        a = new VendaGridAction(); put(a.getRequestName(), a);
-        a = new VendaDetalheAction(); put(a.getRequestName(), a);
-        a = new VendaDetalheGridAction(); put(a.getRequestName(), a);
-        a = new VendaFreteGridAction(); put(a.getRequestName(), a);
-        a = new VendaFreteDetalheAction(); put(a.getRequestName(), a);
-        a = new VendaRomaneioEntregaGridAction(); put(a.getRequestName(), a);
-        a = new VendaRomaneioEntregaDetalheAction(); put(a.getRequestName(), a);
-        a = new VendaRomaneioEntregaDetalheGridAction(); put(a.getRequestName(), a);
-        
-        
-        
-          /*actions do módulo */
-        a = new ConciliacaoBancariaGridAction(); put(a.getRequestName(), a);
-        a = new LancamentoConciliacaoBancariaGridAction(); put(a.getRequestName(), a);
-        a = new ExtratoConciliacaoBancariaGridAction(); put(a.getRequestName(), a);
-        a = new ConciliacaoClienteGridAction(); put(a.getRequestName(), a);
-        a = new ParcelaConciliacaoClienteGridAction(); put(a.getRequestName(), a);
-        a = new ConciliacaoFornecedorGridAction(); put(a.getRequestName(), a);
-        a = new ParcelaConciliacaoFornecedorGridAction(); put(a.getRequestName(), a);
-        a = new ContabilLancamentoCabecalhoGridAction(); put(a.getRequestName(), a);
-        a = new ContabilLancamentoCabecalhoDetalheAction(); put(a.getRequestName(), a);
-        a = new ContabilLancamentoDetalheGridAction(); put(a.getRequestName(), a);
-        a = new ComposicaoSaldoGridAction(); put(a.getRequestName(), a);
-        
-        
-        
-           /*actions do módulo orçamentos */
-        a = new OrcamentoPeriodoGridAction(); put(a.getRequestName(), a);
-        a = new OrcamentoFluxoCaixaPeriodoGridAction(); put(a.getRequestName(), a);
-        a = new OrcamentoFluxoCaixaGridAction(); put(a.getRequestName(), a);
-        a = new OrcamentoFluxoCaixaDetalheAction(); put(a.getRequestName(), a);
-        a = new OrcamentoFluxoCaixaDetalheGridAction(); put(a.getRequestName(), a);
-        a = new OrcamentoEmpresarialGridAction(); put(a.getRequestName(), a);
-        a = new OrcamentoEmpresarialDetalheAction(); put(a.getRequestName(), a);
-        a = new OrcamentoDetalheGridAction(); put(a.getRequestName(), a);
-        
-          /*actions do módulo sintegra */
-         a = new GeraSintegraAction(); put(a.getRequestName(), a);
+        a = new TipoNotaFiscalGridAction();
+        put(a.getRequestName(), a);
+        a = new TipoNotaFiscalDetalheAction();
+        put(a.getRequestName(), a);
+        a = new VendaCondicoesPagamentoGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaCondicoesPagamentoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new VendaCondicoesParcelasGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaOrcamentoGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaOrcamentoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new VendaOrcamentoDetalheGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaDetalheAction();
+        put(a.getRequestName(), a);
+        a = new VendaDetalheGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaFreteGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaFreteDetalheAction();
+        put(a.getRequestName(), a);
+        a = new VendaRomaneioEntregaGridAction();
+        put(a.getRequestName(), a);
+        a = new VendaRomaneioEntregaDetalheAction();
+        put(a.getRequestName(), a);
+        a = new VendaRomaneioEntregaDetalheGridAction();
+        put(a.getRequestName(), a);
+
+
+
+        /*actions do módulo */
+        a = new ConciliacaoBancariaGridAction();
+        put(a.getRequestName(), a);
+        a = new LancamentoConciliacaoBancariaGridAction();
+        put(a.getRequestName(), a);
+        a = new ExtratoConciliacaoBancariaGridAction();
+        put(a.getRequestName(), a);
+        a = new ConciliacaoClienteGridAction();
+        put(a.getRequestName(), a);
+        a = new ParcelaConciliacaoClienteGridAction();
+        put(a.getRequestName(), a);
+        a = new ConciliacaoFornecedorGridAction();
+        put(a.getRequestName(), a);
+        a = new ParcelaConciliacaoFornecedorGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoCabecalhoGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoCabecalhoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoDetalheGridAction();
+        put(a.getRequestName(), a);
+        a = new ComposicaoSaldoGridAction();
+        put(a.getRequestName(), a);
+
+
+
+        a = new RegistroCartorioGridAction();
+        put(a.getRequestName(), a);
+        a = new RegistroCartorioDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilParametrosGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilParametrosDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilIndiceGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilIndiceDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilIndiceValorGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilHistoricoGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilHistoricoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new AidfAimdfGridAction();
+        put(a.getRequestName(), a);
+        a = new AidfAimdfDetalheAction();
+        put(a.getRequestName(), a);
+        a = new FapGridAction();
+        put(a.getRequestName(), a);
+        a = new FapDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PlanoContaGridAction();
+        put(a.getRequestName(), a);
+        a = new PlanoContaDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PlanoContaRefSpedGridAction();
+        put(a.getRequestName(), a);
+        a = new PlanoContaRefSpedDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilContaGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilContaDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilFechamentoGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilFechamentoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoPadraoGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoPadraoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLoteGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLoteDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoOrcadoGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoOrcadoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoCabecalhoGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoCabecalhoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLancamentoDetalheGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilDreCabecalhoGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilDreCabecalhoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilDreDetalheGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilEncerramentoExeCabGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilEncerramentoExeCabDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilEncerramentoExeDetGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLivroGridAction();
+        put(a.getRequestName(), a);
+        a = new ContabilLivroDetalheAction();
+        put(a.getRequestName(), a);
+        a = new ContabilTermoGridAction();
+        put(a.getRequestName(), a);
+        a = new DfcGridAction();
+        put(a.getRequestName(), a);
+        a = new BalancoPatrimonialGridAction();
+        put(a.getRequestName(), a);
+        a = new LivroContabilGridAction();
+        put(a.getRequestName(), a);
+
+
+
+
+        /*actions do módulo orçamentos */
+        a = new OrcamentoPeriodoGridAction();
+        put(a.getRequestName(), a);
+        a = new OrcamentoFluxoCaixaPeriodoGridAction();
+        put(a.getRequestName(), a);
+        a = new OrcamentoFluxoCaixaGridAction();
+        put(a.getRequestName(), a);
+        a = new OrcamentoFluxoCaixaDetalheAction();
+        put(a.getRequestName(), a);
+        a = new OrcamentoFluxoCaixaDetalheGridAction();
+        put(a.getRequestName(), a);
+        a = new OrcamentoEmpresarialGridAction();
+        put(a.getRequestName(), a);
+        a = new OrcamentoEmpresarialDetalheAction();
+        put(a.getRequestName(), a);
+        a = new OrcamentoDetalheGridAction();
+        put(a.getRequestName(), a);
+
+        /*actions do módulo sintegra */
+        a = new GeraSintegraAction();
+        put(a.getRequestName(), a);
 
 
 
