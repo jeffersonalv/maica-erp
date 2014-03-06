@@ -319,6 +319,27 @@ import com.t2tierp.orcamento.servidor.OrcamentoFluxoCaixaDetalheGridAction;
 import com.t2tierp.orcamento.servidor.OrcamentoFluxoCaixaGridAction;
 import com.t2tierp.orcamento.servidor.OrcamentoFluxoCaixaPeriodoGridAction;
 import com.t2tierp.orcamento.servidor.OrcamentoPeriodoGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimApoliceSeguroDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimApoliceSeguroGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimBemDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimBemGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimDepreciacaoBemGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimDocumentoBemGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimEstadoConservacaoDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimEstadoConservacaoGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimGrupoBemDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimGrupoBemGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimIndiceAtualizacaoDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimIndiceAtualizacaoGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimMovimentacaoBemGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimTaxaDepreciacaoDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimTaxaDepreciacaoGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimTipoAquisicaoBemDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimTipoAquisicaoBemGridAction;
+import com.t2tierp.patrimonio.servidor.PatrimTipoMovimentacaoDetalheAction;
+import com.t2tierp.patrimonio.servidor.PatrimTipoMovimentacaoGridAction;
+import com.t2tierp.patrimonio.servidor.SeguradoraDetalheAction;
+import com.t2tierp.patrimonio.servidor.SeguradoraGridAction;
 import com.t2tierp.ponto.servidor.PontoAbonoDetalheAction;
 import com.t2tierp.ponto.servidor.PontoAbonoGridAction;
 import com.t2tierp.ponto.servidor.PontoAbonoUtilizacaoGridAction;
@@ -343,6 +364,8 @@ import com.t2tierp.ponto.servidor.PontoRelogioDetalheAction;
 import com.t2tierp.ponto.servidor.PontoRelogioGridAction;
 import com.t2tierp.ponto.servidor.PontoTurmaGridAction;
 import com.t2tierp.sintegra.servidor.GeraSintegraAction;
+import com.t2tierp.sped.servidor.GeraSpedContabilAction;
+import com.t2tierp.sped.servidor.GeraSpedFiscalAction;
 import com.t2tierp.vendas.servidor.ImportaVendaOrcamentoAction;
 import com.t2tierp.vendas.servidor.TipoNotaFiscalDetalheAction;
 import com.t2tierp.vendas.servidor.TipoNotaFiscalGridAction;
@@ -754,6 +777,51 @@ public class T2TiERPActionClasses extends ActionsCollection {
         }
 
 
+        /*patrimonio*/
+        a = new PatrimTaxaDepreciacaoGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimTaxaDepreciacaoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimIndiceAtualizacaoGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimIndiceAtualizacaoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimTipoAquisicaoBemGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimTipoAquisicaoBemDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimTipoMovimentacaoGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimTipoMovimentacaoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimEstadoConservacaoGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimEstadoConservacaoDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimGrupoBemGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimGrupoBemDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimBemGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimBemDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimDepreciacaoBemGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimDocumentoBemGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimMovimentacaoBemGridAction();
+        put(a.getRequestName(), a);
+        a = new SeguradoraGridAction();
+        put(a.getRequestName(), a);
+        a = new SeguradoraDetalheAction();
+        put(a.getRequestName(), a);
+        a = new PatrimApoliceSeguroGridAction();
+        put(a.getRequestName(), a);
+        a = new PatrimApoliceSeguroDetalheAction();
+        put(a.getRequestName(), a);
+
+
         /*actions do módulo tributacao*/
         /*  a = new TributOperacaoFiscalGridAction(); put(a.getRequestName(), a);
          a = new TributOperacaoFiscalDetalheAction(); put(a.getRequestName(), a);
@@ -864,8 +932,11 @@ public class T2TiERPActionClasses extends ActionsCollection {
         put(a.getRequestName(), a);
 
 
-
-
+        /*SPED*/
+        a = new GeraSpedContabilAction();
+        put(a.getRequestName(), a);
+        a = new GeraSpedFiscalAction();
+        put(a.getRequestName(), a);
 
         /*actions do módulo FOLHA*/
         a = new FolhaParametrosGridAction();

@@ -94,7 +94,7 @@ public class ConciliacaoBancariaGrid extends InternalFrame {
 
         gridControl1.setNavBar(navigatorBar1);
         gridControl1.setReloadButton(reloadButton1);
-        gridControl1.setValueObjectClassName("com.t2tierp.cadastros.java.ContaCaixaVO");
+        gridControl1.setValueObjectClassName("com.erp.cadastros.java.vo.ContaCaixaVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         textColumn2.setColumnName("contabilConta.descricao");

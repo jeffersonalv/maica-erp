@@ -67,7 +67,7 @@ public class ContabilIndiceDetalhe extends InternalFrame {
         /*
          * Configurações do lookup do indice economico
          */
-        indiceEconomicoController.setLookupValueObjectClassName("com.t2tierp.cadastros.java.IndiceEconomicoVO");
+        indiceEconomicoController.setLookupValueObjectClassName("com.erp.cadastros.java.vo.IndiceEconomicoVO");
         indiceEconomicoController.addLookup2ParentLink("id", "indiceEconomico.id");
         indiceEconomicoController.addLookup2ParentLink("nome", "indiceEconomico.nome");
         indiceEconomicoController.setHeaderColumnName("id", "ID");

@@ -17,6 +17,7 @@ import java.security.PrivateKey;
 import java.security.Signature;
 import java.security.cert.X509Certificate;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -585,6 +586,20 @@ public class Biblioteca {
         cData.set(Calendar.DAY_OF_MONTH, cData.getActualMaximum(Calendar.DAY_OF_MONTH));
 
         return cData;
+    }
+      
+      public static String mesAno(Calendar dataA) throws Exception {
+        return new SimpleDateFormat("MM/yyyy").format(dataA.getTime());
+    }
+      
+       public static Calendar mesAnterior(Calendar dataA) throws Exception {
+        Calendar novaData = Calendar.getInstance();
+        novaData.setLenient(false);
+        novaData.set(Calendar.DAY_OF_MONTH, dataA.get(Calendar.DAY_OF_MONTH));
+        novaData.set(Calendar.MONTH, dataA.get(Calendar.MONTH) - 1);
+        novaData.set(Calendar.YEAR, dataA.get(Calendar.YEAR));
+
+        return novaData;
     }
     
 }

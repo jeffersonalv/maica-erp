@@ -185,7 +185,7 @@
         
         
         <signjar jar="${build}/${signedlib}/liquidlnf.jar" alias="${alias}" storepass="${storepass}" keystore="${keystore}" />
-         <signjar jar="${build}/${signedlib}/a03-laf_4.0.3.jar" alias="${alias}" storepass="${storepass}" keystore="${keystore}" />
+        <signjar jar="${build}/${signedlib}/a03-laf_4.0.3.jar" alias="${alias}" storepass="${storepass}" keystore="${keystore}" />
         <signjar jar="${build}/${signedlib}/MmsComputing.jar" alias="${alias}" storepass="${storepass}" keystore="${keystore}" />   
         
         <signjar jar="${build}/${signedlib}/commons-io-2.0.jar" alias="${alias}" storepass="${storepass}" keystore="${keystore}" />
@@ -739,7 +739,7 @@
         </copy>
         
         
-         <copy todir="${tmp}/com/t2tierp/escritafiscal/cliente">
+        <copy todir="${tmp}/com/t2tierp/escritafiscal/cliente">
             <fileset dir="${build.classes.dir}/com/t2tierp/escritafiscal/cliente">
                 <include name="*.*" />
             </fileset>
@@ -769,7 +769,17 @@
             </fileset>
         </copy>
 
+        <copy todir="${tmp}/com/t2tierp/patrimonio/cliente">
+            <fileset dir="${build.classes.dir}/com/t2tierp/patrimonio/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
 
+        <copy todir="${tmp}/com/t2tierp/patrimonio/java">
+            <fileset dir="${build.classes.dir}/com/t2tierp/patrimonio/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
 
 
         <copy todir="${tmp}/images">

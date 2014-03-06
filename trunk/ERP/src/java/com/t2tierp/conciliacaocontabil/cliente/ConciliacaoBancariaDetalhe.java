@@ -128,7 +128,7 @@ public class ConciliacaoBancariaDetalhe extends InternalFrame {
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        form1.setVOClassName("com.t2tierp.cadastros.java.ContaCaixaVO");
+        form1.setVOClassName("com.erp.cadastros.java.vo.ContaCaixaVO");
         form1.setLayout(new java.awt.GridBagLayout());
 
         labelControl1.setLabel("Nome Conta:");

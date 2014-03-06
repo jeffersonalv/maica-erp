@@ -127,7 +127,7 @@ public class ConciliacaoFornecedorDetalhe extends InternalFrame {
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        formFornecedor.setVOClassName("com.t2tierp.cadastros.java.FornecedorVO");
+        formFornecedor.setVOClassName("com.erp.cadastros.java.vo.FornecedorVO");
         formFornecedor.setLayout(new java.awt.GridBagLayout());
 
         labelControl1.setLabel("Nome Fornecedor:");

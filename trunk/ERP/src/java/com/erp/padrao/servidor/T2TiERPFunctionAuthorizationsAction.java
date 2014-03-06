@@ -240,6 +240,62 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         n395.add(n397);
 
 
+
+        ApplicationFunction n404 = new ApplicationFunction(factory.getResources(langId).getResource("Escrita Fiscal"), "Entradas16.png");
+
+
+
+        ApplicationFunction n405 = new ApplicationFunction(factory.getResources(langId).getResource("Parâmetros"), "fiscalParametros", "FiscalParametros16.png", "getFiscalParametros");
+        //ApplicationFunction n113 = new ApplicationFunction(factory.getResources(langId).getResource("Índices"), "indieces", null, "getIndices");
+        // ApplicationFunction n406 = new ApplicationFunction(factory.getResources(langId).getResource("Tipo Nota Fiscal"), "tipoNotaFiscal", null, "getTipoNotaFiscal");
+        ApplicationFunction n407 = new ApplicationFunction(factory.getResources(langId).getResource("Tabela Simples Nacional"), "simplesNacional", "SimplesNacional16.png", "getSimplesNacional");
+        ApplicationFunction n408 = new ApplicationFunction(factory.getResources(langId).getResource("Livros e Termos"), "livrosTermos", "FiscalLivro16.png", "getLivrosTermos");
+        n404.add(n405);
+        // n404.add(n406);
+        n404.add(n407);
+        n404.add(n408);
+
+        ApplicationFunction n409 = new ApplicationFunction(factory.getResources(langId).getResource("Movimento"), "movimentoCaixaBanco16.png");
+        ApplicationFunction n410 = new ApplicationFunction(factory.getResources(langId).getResource("Registro Entrada/Saída"), "registroEntradaSaida", "Entradas16.png", "getRegistroEntradaSaida");
+        ApplicationFunction n411 = new ApplicationFunction(factory.getResources(langId).getResource("Apuração"), "apuracao", "Apuracao16.png", "getApuracaoIcms");
+        ApplicationFunction n412 = new ApplicationFunction(factory.getResources(langId).getResource("Informativos e Guias"), "informativosGuias", "guide.png", "getInformativosGuias");
+
+        n409.add(n410);
+        n409.add(n411);
+        n409.add(n412);
+        n404.add(n409);
+
+
+
+        ApplicationFunction n413 = new ApplicationFunction(factory.getResources(langId).getResource("Controle Patrimonial"), "patrimonial16.png");
+        ApplicationFunction n414 = new ApplicationFunction(factory.getResources(langId).getResource("Taxas de Depreciação"), "patrimTaxaDepreciacao", "taxaDepreciacao16.png", "getPatrimTaxaDepreciacao");
+        ApplicationFunction n415 = new ApplicationFunction(factory.getResources(langId).getResource("Índices de Atualização"), "patrimIndiceAtualizacao", "indiceAtualizacao16.png", "getPatrimIndiceAtualizacao");
+        ApplicationFunction n416 = new ApplicationFunction(factory.getResources(langId).getResource("Tipo Aquisição Bem"), "patrimTipoAquisicaoBem", "tipoAquisicao16.png", "getPatrimTipoAquisicaoBem");
+        ApplicationFunction n417 = new ApplicationFunction(factory.getResources(langId).getResource("Tipo Movimentação Bem"), "patrimTipoMovimentacao", "tipoMovimentacao16.png", "getPatrimTipoMovimentacao");
+        ApplicationFunction n418 = new ApplicationFunction(factory.getResources(langId).getResource("Estado de Conservação Bem"), "patrimEstadoConservacao", "estadoConservacao16.png", "getPatrimEstadoConservacao");
+        ApplicationFunction n419 = new ApplicationFunction(factory.getResources(langId).getResource("Grupo"), "patrimGrupoBem", "estadoConservacao16.png", "getPatrimGrupoBem");
+        ApplicationFunction n420 = new ApplicationFunction(factory.getResources(langId).getResource("Bem"), "patrimBem", "bem16.png", "getPatrimBem");
+        ApplicationFunction n421 = new ApplicationFunction(factory.getResources(langId).getResource("Seguradora"), "seguradora", "seguradora16.png", "getSeguradora");
+        ApplicationFunction n422 = new ApplicationFunction(factory.getResources(langId).getResource("Apólice"), "patrimApoliceSeguro", "apolice16.png", "getPatrimApoliceSeguro");
+
+        n413.add(n414);
+        n413.add(n415);
+        n413.add(n416);
+        n413.add(n417);
+        n413.add(n418);
+        n413.add(n419);
+        n413.add(n420);
+        n413.add(n421);
+        n413.add(n422);
+
+
+        ApplicationFunction n423 = new ApplicationFunction(factory.getResources(langId).getResource("Sped"), "SpedFiscal16.png");
+        ApplicationFunction n424 = new ApplicationFunction(factory.getResources(langId).getResource("Sped Contábil"), "spedContabil", "SpedContabil16.png", "getSpedContabil");
+        ApplicationFunction n425 = new ApplicationFunction(factory.getResources(langId).getResource("Sped Fiscal"), "spedFiscal", "SpedFiscal16.png", "getSpedFiscal");
+        n423.add(n424);
+        n423.add(n425);
+        
+            
         ApplicationFunction n58 = new ApplicationFunction(factory.getResources(langId).getResource("Controle de Orçamento"), "orcamento.png");
 
         ApplicationFunction n364 = new ApplicationFunction(factory.getResources(langId).getResource("Orçamento Período"), "orcamentoPeriodo", "orcamentoPEriodo.png", "getOrcamentoPeriodo");
@@ -483,6 +539,8 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         n3.add(n380);
         n3.add(n390);
         n3.add(n395);
+        n3.add(n404);
+        n3.add(n413);
 
         n4.add(n41);
 
@@ -627,6 +685,7 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         n58.add(n367);
         n3.add(n57);
         n3.add(n58);
+        n3.add(n423);
         n59.add(n60);
         n3.add(n59);
         root.add(n1);
