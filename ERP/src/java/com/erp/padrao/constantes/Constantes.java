@@ -43,4 +43,5 @@ public class Constantes {
     public static final int DELETE = 3;
     public static final int DOWNLOAD = 4;
     public static final int TAMANHO_BLOCO = 50;
+    public static final int DECIMAIS_VALOR = 2;
 }

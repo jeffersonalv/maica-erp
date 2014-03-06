@@ -92,7 +92,7 @@ public class ConciliacaoFornecedorGrid extends InternalFrame {
         getContentPane().add(jPanel1, gridBagConstraints);
 
         gridControl1.setFunctionId("fornecedor");
-        gridControl1.setValueObjectClassName("com.t2tierp.cadastros.java.FornecedorVO");
+        gridControl1.setValueObjectClassName("com.erp.cadastros.java.vo.FornecedorVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         textColumn3.setColumnName("pessoa.nome");

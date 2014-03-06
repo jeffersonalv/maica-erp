@@ -127,7 +127,7 @@ public class ConciliacaoClienteDetalhe extends InternalFrame {
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        formCliente.setVOClassName("com.t2tierp.cadastros.java.ClienteVO");
+        formCliente.setVOClassName("com.erp.cadastros.java.vo.ClienteVO");
         formCliente.setLayout(new java.awt.GridBagLayout());
 
         labelControl1.setLabel("Nome Cliente:");

@@ -92,7 +92,7 @@ public class ConciliacaoClienteGrid extends InternalFrame {
         getContentPane().add(jPanel1, gridBagConstraints);
 
         gridControl1.setFunctionId("cliente");
-        gridControl1.setValueObjectClassName("com.t2tierp.cadastros.java.ClienteVO");
+        gridControl1.setValueObjectClassName("com.erp.cadastros.java.vo.ClienteVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         textColumn4.setColumnName("pessoa.nome");

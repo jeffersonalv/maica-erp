@@ -134,6 +134,15 @@ import com.t2tierp.orcamento.cliente.OrcamentoEmpresarialGridController;
 import com.t2tierp.orcamento.cliente.OrcamentoFluxoCaixaGridController;
 import com.t2tierp.orcamento.cliente.OrcamentoFluxoCaixaPeriodoGridController;
 import com.t2tierp.orcamento.cliente.OrcamentoPeriodoGridController;
+import com.t2tierp.patrimonio.cliente.PatrimApoliceSeguroGridController;
+import com.t2tierp.patrimonio.cliente.PatrimBemGridController;
+import com.t2tierp.patrimonio.cliente.PatrimEstadoConservacaoGridController;
+import com.t2tierp.patrimonio.cliente.PatrimGrupoBemGridController;
+import com.t2tierp.patrimonio.cliente.PatrimIndiceAtualizacaoGridController;
+import com.t2tierp.patrimonio.cliente.PatrimTaxaDepreciacaoGridController;
+import com.t2tierp.patrimonio.cliente.PatrimTipoAquisicaoBemGridController;
+import com.t2tierp.patrimonio.cliente.PatrimTipoMovimentacaoGridController;
+import com.t2tierp.patrimonio.cliente.SeguradoraGridController;
 import com.t2tierp.ponto.cliente.PontoAbonoGridController;
 import com.t2tierp.ponto.cliente.PontoBancoHorasGridController;
 import com.t2tierp.ponto.cliente.PontoClassificacaoJornadaGridController;
@@ -146,6 +155,8 @@ import com.t2tierp.ponto.cliente.PontoParametroGridController;
 import com.t2tierp.ponto.cliente.PontoRegistraMarcacaoController;
 import com.t2tierp.ponto.cliente.PontoRelogioGridController;
 import com.t2tierp.sintegra.cliente.SintegraController;
+import com.t2tierp.sped.cliente.SpedContabilGridController;
+import com.t2tierp.sped.cliente.SpedFiscalGridController;
 import com.t2tierp.vendas.cliente.TipoNotaFiscalGridController;
 import com.t2tierp.vendas.cliente.VendaCondicoesPagamentoGridController;
 import com.t2tierp.vendas.cliente.VendaFreteGridController;
@@ -806,5 +817,49 @@ public class Fachada implements ClientFacade {
 
     public void getApuracaoIcms() {
         new FiscalApuracaoIcmsController();
+    }
+
+    public void getPatrimTaxaDepreciacao() {
+        new PatrimTaxaDepreciacaoGridController();
+    }
+
+    public void getPatrimIndiceAtualizacao() {
+        new PatrimIndiceAtualizacaoGridController();
+    }
+
+    public void getPatrimTipoAquisicaoBem() {
+        new PatrimTipoAquisicaoBemGridController();
+    }
+
+    public void getPatrimTipoMovimentacao() {
+        new PatrimTipoMovimentacaoGridController();
+    }
+
+    public void getPatrimEstadoConservacao() {
+        new PatrimEstadoConservacaoGridController();
+    }
+
+    public void getPatrimGrupoBem() {
+        new PatrimGrupoBemGridController();
+    }
+
+    public void getPatrimBem() {
+        new PatrimBemGridController();
+    }
+
+    public void getSeguradora() {
+        new SeguradoraGridController();
+    }
+
+    public void getPatrimApoliceSeguro() {
+        new PatrimApoliceSeguroGridController();
+    }
+
+    public void getSpedContabil() {
+        new SpedContabilGridController();
+    }
+
+    public void getSpedFiscal() {
+        new SpedFiscalGridController();
     }
 }

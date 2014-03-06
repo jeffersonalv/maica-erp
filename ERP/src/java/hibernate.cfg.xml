@@ -200,8 +200,19 @@
         <mapping class="com.t2tierp.contabilidade.java.ViewDfcVO"/>
         <mapping class="com.t2tierp.contabilidade.java.ViewBalancoPatrimonialVO"/>
 
-     
-      
+        <!--Patrimonio-->
+        <mapping class="com.t2tierp.patrimonio.java.PatrimApoliceSeguroVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimBemVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimDepreciacaoBemVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimDocumentoBemVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimEstadoConservacaoVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimGrupoBemVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimIndiceAtualizacaoVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimMovimentacaoBemVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimTaxaDepreciacaoVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimTipoAquisicaoBemVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.PatrimTipoMovimentacaoVO"/>
+        <mapping class="com.t2tierp.patrimonio.java.SeguradoraVO"/>
    
          
         
@@ -315,7 +326,38 @@
         <mapping class="com.t2tierp.controleestoque.java.RequisicaoInternaDetalheVO"/>
         
         <!--Escrita Fiscal--> 
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalApuracaoIcmsVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalEstadualPorteVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalEstadualRegimeVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalInscricoesSubstitutasVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalLivroVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalMunicipalRegimeVO"/>
         <mapping class="com.t2tierp.escritafiscal.java.FiscalNotaFiscalEntradaVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalNotaFiscalSaidaVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalParametrosVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.FiscalTermoVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.SimplesNacionalCabecalhoVO"/>
+        <mapping class="com.t2tierp.escritafiscal.java.SimplesNacionalDetalheVO"/>
+        
+        
+        <!--SPED--> 
+       <!--
+        <mapping class="com.t2tierp.sped.java.ViewC321VO"/>
+        <mapping class="com.t2tierp.sped.java.ViewC321VoId"/>
+        <mapping class="com.t2tierp.sped.java.ViewC370VO"/>
+        <mapping class="com.t2tierp.sped.java.ViewC370VoId"/>
+        <mapping class="com.t2tierp.sped.java.ViewC390VO"/>
+        <mapping class="com.t2tierp.sped.java.ViewC390VoId"/>
+        <mapping class="com.t2tierp.sped.java.ViewC425VO"/>
+        <mapping class="com.t2tierp.sped.java.ViewC425VoId"/>
+        <mapping class="com.t2tierp.sped.java.ViewC490VO"/>
+        <mapping class="com.t2tierp.sped.java.ViewC490VoId"/>
+        <mapping class="com.t2tierp.sped.java.ViewE110VO"/>
+        <mapping class="com.t2tierp.sped.java.ViewE110VoId"/>
+        -->
+        <mapping class="com.t2tierp.sped.java.ViewSpedI155VO"/>
+        <mapping class="com.t2tierp.sped.java.ViewSpedI155VoId"/>
+        
         
         <!--NFE--> 
         <!-- <mapping class="com.t2tierp.nfe.java.NfeCabecalhoVO"/>
@@ -439,7 +481,7 @@
         
         
         <!--Orçamentos-->
-         <mapping class="com.t2tierp.orcamento.java.OrcamentoDetalheVO"/>
+        <mapping class="com.t2tierp.orcamento.java.OrcamentoDetalheVO"/>
         <mapping class="com.t2tierp.orcamento.java.OrcamentoEmpresarialVO"/>
         <mapping class="com.t2tierp.orcamento.java.OrcamentoFluxoCaixaDetalheVO"/>
         <mapping class="com.t2tierp.orcamento.java.OrcamentoFluxoCaixaPeriodoVO"/>
