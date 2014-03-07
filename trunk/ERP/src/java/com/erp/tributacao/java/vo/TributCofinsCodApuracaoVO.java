@@ -173,7 +173,7 @@ public class TributCofinsCodApuracaoVO extends ValueObjectImpl implements Serial
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributCofinsCodApuracaoVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributCofinsCodApuracaoVO[id=" + id + "]";
     }
 
     public CstCofinsVO getCstCofinsVO() {

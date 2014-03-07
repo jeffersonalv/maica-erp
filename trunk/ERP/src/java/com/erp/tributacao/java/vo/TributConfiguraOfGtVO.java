@@ -95,7 +95,7 @@ public class TributConfiguraOfGtVO extends ValueObjectImpl implements Serializab
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributConfiguraOfGtVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributConfiguraOfGtVO[id=" + id + "]";
     }
 
 }

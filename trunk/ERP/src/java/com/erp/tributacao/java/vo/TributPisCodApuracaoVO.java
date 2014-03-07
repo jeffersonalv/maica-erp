@@ -172,7 +172,7 @@ public class TributPisCodApuracaoVO extends ValueObjectImpl implements Serializa
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributPisCodApuracaoVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributPisCodApuracaoVO[id=" + id + "]";
     }
 
     public CstPisVO getCstPisVO() {

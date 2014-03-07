@@ -255,7 +255,7 @@ public class TributIcmsCustomDetVO extends ValueObjectImpl implements Serializab
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributIcmsCustomDetVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributIcmsCustomDetVO[id=" + id + "]";
     }
 
 }

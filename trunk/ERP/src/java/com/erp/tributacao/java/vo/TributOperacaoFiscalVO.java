@@ -132,7 +132,7 @@ public class TributOperacaoFiscalVO extends ValueObjectImpl implements Serializa
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributOperacaoFiscalVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributOperacaoFiscalVO[id=" + id + "]";
     }
 
     public List<TributIssVO> getListaIss() {

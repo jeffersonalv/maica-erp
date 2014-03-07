@@ -105,7 +105,7 @@ public class TributIcmsCustomCabVO extends ValueObjectImpl implements Serializab
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributIcmsCustomCabVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributIcmsCustomCabVO[id=" + id + "]";
     }
 
 }

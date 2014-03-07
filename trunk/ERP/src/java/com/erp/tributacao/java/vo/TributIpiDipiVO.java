@@ -171,7 +171,7 @@ public class TributIpiDipiVO extends ValueObjectImpl implements Serializable {
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributIpiDipiVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributIpiDipiVO[id=" + id + "]";
     }
 
     public CstIpiVO getCstIpiVO() {

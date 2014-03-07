@@ -750,7 +750,11 @@ public class Fachada implements ClientFacade {
 
     public void getPlanoContas() {
         new PlanoContaGridController();
-    }
+        
+        
+            }
+    
+    
 
     public void getPlanoContasRefSped() {
         new PlanoContaRefSpedGridController();
