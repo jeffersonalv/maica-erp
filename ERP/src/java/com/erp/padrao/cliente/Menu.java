@@ -237,6 +237,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.ASK_BEFORE_CLOSE = true;
         ClientSettings.SHOW_PAGE_NUMBER_IN_GRID = true;
         ClientSettings.SHOW_PAGINATION_BUTTONS_ON_NAVBAR = true;
+        
         // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
         //  com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
         ClientSettings.MAX_NR_OF_LOOPS_IN_ANALYZE_VO = 3;
@@ -248,7 +249,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_RELOAD_IMAGE_NAME = "refresh.png";
         ClientSettings.BUTTON_DELETE_IMAGE_NAME = "delete.png";
         ClientSettings.ICON_MENU_FILE_EXIT = "sair.png";
-        ClientSettings.BACK_IMAGE_DISPOSITION = Consts.BACK_IMAGE_CENTERED;
+        //ClientSettings.BACK_IMAGE_DISPOSITION = Consts.BACK_IMAGE_STRETCHED;
         ClientSettings.LOOKUP_AUTO_COMPLETITION_WAIT_TIME = 100;
         ClientSettings.LOOKUP_OPEN_KEY = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0);
         ClientSettings.INSERT_ROWS_ON_TOP = true;

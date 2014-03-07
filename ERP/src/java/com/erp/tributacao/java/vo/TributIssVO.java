@@ -166,7 +166,7 @@ public class TributIssVO extends ValueObjectImpl implements Serializable {
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributIssVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributIssVO[id=" + id + "]";
     }
 
 }

@@ -188,7 +188,7 @@ public class NfeDetalhe extends InternalFrame {
         /*
          * Configurações do lookup da operacao fiscal
          */
-        operacaoFiscalController.setLookupValueObjectClassName("com.t2tierp.tributacao.java.TributOperacaoFiscalVO");
+        operacaoFiscalController.setLookupValueObjectClassName("com.erp.tributacao.java.vo.TributOperacaoFiscalVO");
         operacaoFiscalController.addLookup2ParentLink("id", "tributOperacaoFiscal.id");
         operacaoFiscalController.addLookup2ParentLink("descricao", "tributOperacaoFiscal.descricao");
         operacaoFiscalController.addLookup2ParentLink("descricaoNaNf", "naturezaOperacao");

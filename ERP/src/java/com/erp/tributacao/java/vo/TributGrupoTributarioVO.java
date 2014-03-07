@@ -115,7 +115,7 @@ public class TributGrupoTributarioVO extends ValueObjectImpl implements Serializ
 
     @Override
     public String toString() {
-        return "com.t2tierp.tributacao.java.TributGrupoTributarioVO[id=" + id + "]";
+        return "com.erp.tributacao.java.vo.TributGrupoTributarioVO[id=" + id + "]";
     }
 
 }
