@@ -406,6 +406,38 @@ public class NfeDetalhe extends InternalFrame {
         btnCancelaNfe = new org.openswing.swing.client.GenericButton(new ImageIcon(ClientUtils.getImage("delete_x16.png")));
         btnEnviaEmail = new org.openswing.swing.client.GenericButton(new ImageIcon(ClientUtils.getImage("mail_item16.png")));
         jTabbedPane2 = new javax.swing.JTabbedPane();
+        formDestinatario = new org.openswing.swing.form.client.Form();
+        labelControl2 = new org.openswing.swing.client.LabelControl();
+        codLookupControl3 = new org.openswing.swing.client.CodLookupControl();
+        labelControl4 = new org.openswing.swing.client.LabelControl();
+        textControl3 = new org.openswing.swing.client.TextControl();
+        labelControl5 = new org.openswing.swing.client.LabelControl();
+        textControl4 = new org.openswing.swing.client.TextControl();
+        labelControl6 = new org.openswing.swing.client.LabelControl();
+        textControl5 = new org.openswing.swing.client.TextControl();
+        labelControl7 = new org.openswing.swing.client.LabelControl();
+        textControl6 = new org.openswing.swing.client.TextControl();
+        labelControl8 = new org.openswing.swing.client.LabelControl();
+        textControl7 = new org.openswing.swing.client.TextControl();
+        labelControl9 = new org.openswing.swing.client.LabelControl();
+        textControl10 = new org.openswing.swing.client.TextControl();
+        labelControl20 = new org.openswing.swing.client.LabelControl();
+        numericControl10 = new org.openswing.swing.client.NumericControl();
+        labelControl25 = new org.openswing.swing.client.LabelControl();
+        textControl11 = new org.openswing.swing.client.TextControl();
+        labelControl27 = new org.openswing.swing.client.LabelControl();
+        textControl14 = new org.openswing.swing.client.TextControl();
+        labelControl28 = new org.openswing.swing.client.LabelControl();
+        textControl15 = new org.openswing.swing.client.TextControl();
+        labelControl47 = new org.openswing.swing.client.LabelControl();
+        textControl19 = new org.openswing.swing.client.TextControl();
+        labelControl48 = new org.openswing.swing.client.LabelControl();
+        textControl20 = new org.openswing.swing.client.TextControl();
+        labelControl49 = new org.openswing.swing.client.LabelControl();
+        textControl23 = new org.openswing.swing.client.TextControl();
+        labelControl50 = new org.openswing.swing.client.LabelControl();
+        textControl24 = new org.openswing.swing.client.TextControl();
+        jSeparator3 = new javax.swing.JSeparator();
         formDadosNfe = new org.openswing.swing.form.client.Form();
         labelControl13 = new org.openswing.swing.client.LabelControl();
         comboBoxControl17 = new org.openswing.swing.client.ComboBoxControl();
@@ -518,38 +550,6 @@ public class NfeDetalhe extends InternalFrame {
         labelControl45 = new org.openswing.swing.client.LabelControl();
         codLookupControl4 = new org.openswing.swing.client.CodLookupControl();
         labelControl46 = new org.openswing.swing.client.LabelControl();
-        formDestinatario = new org.openswing.swing.form.client.Form();
-        labelControl2 = new org.openswing.swing.client.LabelControl();
-        codLookupControl3 = new org.openswing.swing.client.CodLookupControl();
-        labelControl4 = new org.openswing.swing.client.LabelControl();
-        textControl3 = new org.openswing.swing.client.TextControl();
-        labelControl5 = new org.openswing.swing.client.LabelControl();
-        textControl4 = new org.openswing.swing.client.TextControl();
-        labelControl6 = new org.openswing.swing.client.LabelControl();
-        textControl5 = new org.openswing.swing.client.TextControl();
-        labelControl7 = new org.openswing.swing.client.LabelControl();
-        textControl6 = new org.openswing.swing.client.TextControl();
-        labelControl8 = new org.openswing.swing.client.LabelControl();
-        textControl7 = new org.openswing.swing.client.TextControl();
-        labelControl9 = new org.openswing.swing.client.LabelControl();
-        textControl10 = new org.openswing.swing.client.TextControl();
-        labelControl20 = new org.openswing.swing.client.LabelControl();
-        numericControl10 = new org.openswing.swing.client.NumericControl();
-        labelControl25 = new org.openswing.swing.client.LabelControl();
-        textControl11 = new org.openswing.swing.client.TextControl();
-        labelControl27 = new org.openswing.swing.client.LabelControl();
-        textControl14 = new org.openswing.swing.client.TextControl();
-        labelControl28 = new org.openswing.swing.client.LabelControl();
-        textControl15 = new org.openswing.swing.client.TextControl();
-        labelControl47 = new org.openswing.swing.client.LabelControl();
-        textControl19 = new org.openswing.swing.client.TextControl();
-        labelControl48 = new org.openswing.swing.client.LabelControl();
-        textControl20 = new org.openswing.swing.client.TextControl();
-        labelControl49 = new org.openswing.swing.client.LabelControl();
-        textControl23 = new org.openswing.swing.client.TextControl();
-        labelControl50 = new org.openswing.swing.client.LabelControl();
-        textControl24 = new org.openswing.swing.client.TextControl();
-        jSeparator3 = new javax.swing.JSeparator();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         insertButtonProduto = new org.openswing.swing.client.InsertButton();
@@ -833,6 +833,319 @@ public class NfeDetalhe extends InternalFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
         getContentPane().add(jPanel1, gridBagConstraints);
+
+        formDestinatario.setVOClassName("com.t2tierp.nfe.java.NfeDestinatarioVO");
+        formDestinatario.setFunctionId("nfeDestinatario");
+        formDestinatario.setLayout(new java.awt.GridBagLayout());
+
+        labelControl2.setText("Cliente:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl2, gridBagConstraints);
+
+        codLookupControl3.setAllowOnlyNumbers(true);
+        codLookupControl3.setAttributeName("nfeCabecalho.cliente.id");
+        codLookupControl3.setEnabled(false);
+        codLookupControl3.setLinkLabel(labelControl2);
+        codLookupControl3.setMaxCharacters(10);
+        codLookupControl3.setRequired(true);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipadx = -100;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(codLookupControl3, gridBagConstraints);
+
+        labelControl4.setLabel("Cpf Cnpj:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl4, gridBagConstraints);
+
+        textControl3.setAttributeName("cpfCnpj");
+        textControl3.setEnabled(false);
+        textControl3.setEnabledOnEdit(false);
+        textControl3.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipadx = 50;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl3, gridBagConstraints);
+
+        labelControl5.setLabel("Razao Social:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl5, gridBagConstraints);
+
+        textControl4.setAttributeName("razaoSocial");
+        textControl4.setEnabled(false);
+        textControl4.setEnabledOnEdit(false);
+        textControl4.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl4, gridBagConstraints);
+
+        labelControl6.setLabel("Logradouro:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl6, gridBagConstraints);
+
+        textControl5.setAttributeName("logradouro");
+        textControl5.setEnabled(false);
+        textControl5.setEnabledOnEdit(false);
+        textControl5.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl5, gridBagConstraints);
+
+        labelControl7.setLabel("Numero:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl7, gridBagConstraints);
+
+        textControl6.setAttributeName("numero");
+        textControl6.setEnabled(false);
+        textControl6.setEnabledOnEdit(false);
+        textControl6.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl6, gridBagConstraints);
+
+        labelControl8.setLabel("Complemento:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl8, gridBagConstraints);
+
+        textControl7.setAttributeName("complemento");
+        textControl7.setEnabled(false);
+        textControl7.setEnabledOnEdit(false);
+        textControl7.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl7, gridBagConstraints);
+
+        labelControl9.setLabel("Bairro:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl9, gridBagConstraints);
+
+        textControl10.setAttributeName("bairro");
+        textControl10.setEnabled(false);
+        textControl10.setEnabledOnEdit(false);
+        textControl10.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl10, gridBagConstraints);
+
+        labelControl20.setLabel("Codigo Municipio:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl20, gridBagConstraints);
+
+        numericControl10.setAttributeName("codigoMunicipio");
+        numericControl10.setEnabled(false);
+        numericControl10.setEnabledOnEdit(false);
+        numericControl10.setEnabledOnInsert(false);
+        numericControl10.setLinkLabel(labelControl20);
+        numericControl10.setRequired(true);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(numericControl10, gridBagConstraints);
+
+        labelControl25.setLabel("Nome Municipio:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl25, gridBagConstraints);
+
+        textControl11.setAttributeName("nomeMunicipio");
+        textControl11.setEnabled(false);
+        textControl11.setEnabledOnEdit(false);
+        textControl11.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl11, gridBagConstraints);
+
+        labelControl27.setLabel("Uf:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl27, gridBagConstraints);
+
+        textControl14.setAttributeName("uf");
+        textControl14.setEnabled(false);
+        textControl14.setEnabledOnEdit(false);
+        textControl14.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl14, gridBagConstraints);
+
+        labelControl28.setLabel("Cep:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl28, gridBagConstraints);
+
+        textControl15.setAttributeName("cep");
+        textControl15.setEnabled(false);
+        textControl15.setEnabledOnEdit(false);
+        textControl15.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl15, gridBagConstraints);
+
+        labelControl47.setLabel("Telefone:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl47, gridBagConstraints);
+
+        textControl19.setAttributeName("telefone");
+        textControl19.setEnabled(false);
+        textControl19.setEnabledOnEdit(false);
+        textControl19.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl19, gridBagConstraints);
+
+        labelControl48.setLabel("Inscricao Estadual:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl48, gridBagConstraints);
+
+        textControl20.setAttributeName("inscricaoEstadual");
+        textControl20.setEnabled(false);
+        textControl20.setEnabledOnEdit(false);
+        textControl20.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl20, gridBagConstraints);
+
+        labelControl49.setLabel("Suframa:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl49, gridBagConstraints);
+
+        textControl23.setAttributeName("suframa");
+        textControl23.setEnabled(false);
+        textControl23.setEnabledOnEdit(false);
+        textControl23.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl23, gridBagConstraints);
+
+        labelControl50.setLabel("Email:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
+        formDestinatario.add(labelControl50, gridBagConstraints);
+
+        textControl24.setAttributeName("email");
+        textControl24.setEnabled(false);
+        textControl24.setEnabledOnEdit(false);
+        textControl24.setEnabledOnInsert(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
+        formDestinatario.add(textControl24, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        formDestinatario.add(jSeparator3, gridBagConstraints);
+
+        jTabbedPane2.addTab("Destinatário", formDestinatario);
 
         formDadosNfe.setVOClassName("com.t2tierp.nfe.java.NfeCabecalhoVO");
         formDadosNfe.setEditButton(editButton1);
@@ -1891,319 +2204,6 @@ public class NfeDetalhe extends InternalFrame {
         formDadosNfe.add(labelControl46, gridBagConstraints);
 
         jTabbedPane2.addTab("Dados da NF", formDadosNfe);
-
-        formDestinatario.setVOClassName("com.t2tierp.nfe.java.NfeDestinatarioVO");
-        formDestinatario.setFunctionId("nfeDestinatario");
-        formDestinatario.setLayout(new java.awt.GridBagLayout());
-
-        labelControl2.setText("Cliente:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl2, gridBagConstraints);
-
-        codLookupControl3.setAllowOnlyNumbers(true);
-        codLookupControl3.setAttributeName("nfeCabecalho.cliente.id");
-        codLookupControl3.setEnabled(false);
-        codLookupControl3.setLinkLabel(labelControl2);
-        codLookupControl3.setMaxCharacters(10);
-        codLookupControl3.setRequired(true);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = -100;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(codLookupControl3, gridBagConstraints);
-
-        labelControl4.setLabel("Cpf Cnpj:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl4, gridBagConstraints);
-
-        textControl3.setAttributeName("cpfCnpj");
-        textControl3.setEnabled(false);
-        textControl3.setEnabledOnEdit(false);
-        textControl3.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 50;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl3, gridBagConstraints);
-
-        labelControl5.setLabel("Razao Social:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl5, gridBagConstraints);
-
-        textControl4.setAttributeName("razaoSocial");
-        textControl4.setEnabled(false);
-        textControl4.setEnabledOnEdit(false);
-        textControl4.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl4, gridBagConstraints);
-
-        labelControl6.setLabel("Logradouro:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl6, gridBagConstraints);
-
-        textControl5.setAttributeName("logradouro");
-        textControl5.setEnabled(false);
-        textControl5.setEnabledOnEdit(false);
-        textControl5.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl5, gridBagConstraints);
-
-        labelControl7.setLabel("Numero:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl7, gridBagConstraints);
-
-        textControl6.setAttributeName("numero");
-        textControl6.setEnabled(false);
-        textControl6.setEnabledOnEdit(false);
-        textControl6.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl6, gridBagConstraints);
-
-        labelControl8.setLabel("Complemento:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl8, gridBagConstraints);
-
-        textControl7.setAttributeName("complemento");
-        textControl7.setEnabled(false);
-        textControl7.setEnabledOnEdit(false);
-        textControl7.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl7, gridBagConstraints);
-
-        labelControl9.setLabel("Bairro:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl9, gridBagConstraints);
-
-        textControl10.setAttributeName("bairro");
-        textControl10.setEnabled(false);
-        textControl10.setEnabledOnEdit(false);
-        textControl10.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl10, gridBagConstraints);
-
-        labelControl20.setLabel("Codigo Municipio:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl20, gridBagConstraints);
-
-        numericControl10.setAttributeName("codigoMunicipio");
-        numericControl10.setEnabled(false);
-        numericControl10.setEnabledOnEdit(false);
-        numericControl10.setEnabledOnInsert(false);
-        numericControl10.setLinkLabel(labelControl20);
-        numericControl10.setRequired(true);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(numericControl10, gridBagConstraints);
-
-        labelControl25.setLabel("Nome Municipio:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl25, gridBagConstraints);
-
-        textControl11.setAttributeName("nomeMunicipio");
-        textControl11.setEnabled(false);
-        textControl11.setEnabledOnEdit(false);
-        textControl11.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl11, gridBagConstraints);
-
-        labelControl27.setLabel("Uf:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl27, gridBagConstraints);
-
-        textControl14.setAttributeName("uf");
-        textControl14.setEnabled(false);
-        textControl14.setEnabledOnEdit(false);
-        textControl14.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl14, gridBagConstraints);
-
-        labelControl28.setLabel("Cep:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl28, gridBagConstraints);
-
-        textControl15.setAttributeName("cep");
-        textControl15.setEnabled(false);
-        textControl15.setEnabledOnEdit(false);
-        textControl15.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl15, gridBagConstraints);
-
-        labelControl47.setLabel("Telefone:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl47, gridBagConstraints);
-
-        textControl19.setAttributeName("telefone");
-        textControl19.setEnabled(false);
-        textControl19.setEnabledOnEdit(false);
-        textControl19.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl19, gridBagConstraints);
-
-        labelControl48.setLabel("Inscricao Estadual:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl48, gridBagConstraints);
-
-        textControl20.setAttributeName("inscricaoEstadual");
-        textControl20.setEnabled(false);
-        textControl20.setEnabledOnEdit(false);
-        textControl20.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl20, gridBagConstraints);
-
-        labelControl49.setLabel("Suframa:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl49, gridBagConstraints);
-
-        textControl23.setAttributeName("suframa");
-        textControl23.setEnabled(false);
-        textControl23.setEnabledOnEdit(false);
-        textControl23.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl23, gridBagConstraints);
-
-        labelControl50.setLabel("Email:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
-        formDestinatario.add(labelControl50, gridBagConstraints);
-
-        textControl24.setAttributeName("email");
-        textControl24.setEnabled(false);
-        textControl24.setEnabledOnEdit(false);
-        textControl24.setEnabledOnInsert(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
-        formDestinatario.add(textControl24, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        formDestinatario.add(jSeparator3, gridBagConstraints);
-
-        jTabbedPane2.addTab("Destinatário", formDestinatario);
 
         jPanel8.setLayout(new java.awt.GridBagLayout());
 
