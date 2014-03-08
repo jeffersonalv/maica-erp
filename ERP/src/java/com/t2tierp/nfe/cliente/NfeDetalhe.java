@@ -16,29 +16,25 @@ import org.openswing.swing.util.client.ClientUtils;
  *
  * <p>Copyright: Copyright (C) 2010 T2Ti.COM
  *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  *
- *        The author may be contacted at:
- *            t2ti.com@gmail.com</p>
+ * The author may be contacted at: t2ti.com@gmail.com</p>
  *
  * @author Claudio de Barros (t2ti.com@gmail.com)
  * @version 1.0
@@ -50,7 +46,6 @@ public class NfeDetalhe extends InternalFrame {
     private LookupController operacaoFiscalController = new LookupController();
     private LookupController vendaController = new LookupController();
     private LookupController setorController = new LookupController();
-
     private NfeDestinatarioDetalheController destinatarioController;
     private NfeDetalheGridController produtoController;
     private NfeReferenciadaGridController nfeReferenciadaController;
@@ -151,6 +146,21 @@ public class NfeDetalhe extends InternalFrame {
         lookupProdutoController.setHeaderColumnName("nome", "Nome");
         lookupProdutoController.setHeaderColumnName("gtin", "GTIN");
         lookupProdutoController.setFrameTitle("Importa Produto");
+        lookupProdutoController.setShowNavigatorBar(true);
+        lookupProdutoController.setGridFilterButton(true);
+        lookupProdutoController.setGridExportButton(true);
+        lookupProdutoController.setFilterableColumn("nome", true);
+        lookupProdutoController.setFilterableColumn("gtin", true);
+       
+
+
+        lookupProdutoController.setPreferredWidthColumn("nome", 300);
+
+        lookupProdutoController.setSortableColumn("nome", true);
+        lookupProdutoController.setSortableColumn("gtin", true);
+
+        lookupProdutoController.setHeaderColumnName("nome", "Nome do Produto");
+        lookupProdutoController.setHeaderColumnName("gtin", "Gtin");
 
         lookupProdutoController.setVisibleStatusPanel(true);
         lookupProdutoController.setVisibleColumn("id", true);
@@ -175,6 +185,24 @@ public class NfeDetalhe extends InternalFrame {
         transportadoraController.setHeaderColumnName("nome", "Nome");
         transportadoraController.setHeaderColumnName("cpfCnpj", "CPF / CNPJ");
         transportadoraController.setFrameTitle("Importa Transportadora");
+
+        transportadoraController.setShowNavigatorBar(true);
+        transportadoraController.setGridFilterButton(true);
+        transportadoraController.setGridExportButton(true);
+        transportadoraController.setFilterableColumn("nome", true);
+        transportadoraController.setFilterableColumn("cpfCnpj", true);
+      
+
+
+        transportadoraController.setPreferredWidthColumn("nome", 300);
+
+        transportadoraController.setSortableColumn("nome", true);
+        transportadoraController.setSortableColumn("cpfCnpj", true);
+
+        transportadoraController.setHeaderColumnName("nome", "Nome");
+        transportadoraController.setHeaderColumnName("cpfCnpj", "Cpf/Cnpj");
+
+
 
         transportadoraController.setVisibleStatusPanel(true);
         transportadoraController.setVisibleColumn("id", true);
@@ -202,6 +230,22 @@ public class NfeDetalhe extends InternalFrame {
         operacaoFiscalController.setVisibleColumn("descricao", true);
         operacaoFiscalController.setFramePreferedSize(new Dimension(600, 500));
 
+
+
+        operacaoFiscalController.setShowNavigatorBar(true);
+        operacaoFiscalController.setGridFilterButton(true);
+        operacaoFiscalController.setGridExportButton(true);
+        operacaoFiscalController.setFilterableColumn("descricao", true);
+        operacaoFiscalController.setFilterableColumn("listaIss", true);
+        
+
+        operacaoFiscalController.setPreferredWidthColumn("descricao", 300);
+
+        operacaoFiscalController.setSortableColumn("descricao", true);
+        operacaoFiscalController.setSortableColumn("listaIss", true);
+
+
+
         operacaoFiscalController.setLookupDataLocator(new LookupDataLocatorGenerico(operacaoFiscalController.getLookupValueObjectClassName()));
         codLookupControl1.setLookupController(operacaoFiscalController);
 
@@ -214,6 +258,23 @@ public class NfeDetalhe extends InternalFrame {
         vendaController.setHeaderColumnName("numeroFatura", "Número Fatura");
         vendaController.setHeaderColumnName("cliente.pessoa.nome", "Cliente");
         vendaController.setFrameTitle("Importa Venda");
+
+
+        vendaController.setShowNavigatorBar(true);
+        vendaController.setGridFilterButton(true);
+        vendaController.setGridExportButton(true);
+        vendaController.setFilterableColumn("numeroFatura", true);
+        vendaController.setFilterableColumn("cliente.pessoa.nome", true);
+       
+
+
+        vendaController.setPreferredWidthColumn("cliente.pessoa.nome", 300);
+
+        vendaController.setSortableColumn("cliente.pessoa.nome", true);
+        vendaController.setSortableColumn("numeroFatura", true);
+
+
+
 
         vendaController.setVisibleStatusPanel(true);
         vendaController.setVisibleColumn("id", true);
@@ -254,6 +315,19 @@ public class NfeDetalhe extends InternalFrame {
         setorController.setVisibleColumn("nome", true);
         setorController.setVisibleColumn("cpfCnpj", true);
         setorController.setFramePreferedSize(new Dimension(600, 500));
+        
+        setorController.setShowNavigatorBar(true);
+        setorController.setGridFilterButton(true);
+        setorController.setGridExportButton(true);
+        setorController.setFilterableColumn("nome", true);
+        setorController.setFilterableColumn("cpfCnpj", true);
+       
+
+
+        setorController.setPreferredWidthColumn("nome", 300);
+
+        setorController.setSortableColumn("nome", true);
+        setorController.setSortableColumn("cpfCnpj", true);
 
         setorController.setLookupDataLocator(new LookupDataLocatorGenerico(setorController.getLookupValueObjectClassName()));
         codLookupControl3.setLookupController(setorController);
@@ -387,10 +461,10 @@ public class NfeDetalhe extends InternalFrame {
         return gridControlDuplicata;
     }
 
-    /** This method is called from within the constructor to
-     * initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is
-     * always regenerated by the Form Editor.
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -3946,7 +4020,6 @@ public class NfeDetalhe extends InternalFrame {
             JOptionPane.showMessageDialog(this, "Ocorreu um erro ao enviar o email.\n" + ex.getMessage(), "Erro do Sistema", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnEnviaEmailActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.client.GenericButton btnCancelaNfe;
     private org.openswing.swing.client.GenericButton btnEnviaEmail;
