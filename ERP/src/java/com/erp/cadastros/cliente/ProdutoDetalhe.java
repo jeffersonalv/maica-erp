@@ -104,6 +104,10 @@ public class ProdutoDetalhe extends InternalFrame {
         marcaController.setHeaderColumnName("id", "ID");
         marcaController.setHeaderColumnName("nome", "Nome");
         marcaController.setFrameTitle("Importa Marca Produto");
+        marcaController.setGridFilterButton(true);
+        marcaController.setShowNavigatorBar(true);
+        marcaController.setFilterableColumn("nome",true);
+        
 
         marcaController.setVisibleStatusPanel(true);
         marcaController.setVisibleColumn("id", true);

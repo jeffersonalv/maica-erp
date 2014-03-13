@@ -137,7 +137,7 @@ public class ProdutoSubGrupoDetalhe extends InternalFrame {
         form1.add(labelControl1, gridBagConstraints);
 
         codLookupControl2.setAllowOnlyNumbers(true);
-        codLookupControl2.setAttributeName("grupo.id");
+        codLookupControl2.setAttributeName("produtoGrupo.id");
         codLookupControl2.setEnabled(false);
         codLookupControl2.setLinkLabel(labelControl1);
         codLookupControl2.setRequired(true);
@@ -148,7 +148,7 @@ public class ProdutoSubGrupoDetalhe extends InternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         form1.add(codLookupControl2, gridBagConstraints);
 
-        textControl2.setAttributeName("grupo.nome");
+        textControl2.setAttributeName("produtoGrupo.nome");
         textControl2.setEnabled(false);
         textControl2.setEnabledOnEdit(false);
         textControl2.setEnabledOnInsert(false);

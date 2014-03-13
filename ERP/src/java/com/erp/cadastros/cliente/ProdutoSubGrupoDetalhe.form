@@ -87,9 +87,7 @@
         <Component class="org.openswing.swing.client.CodLookupControl" name="codLookupControl2">
           <Properties>
             <Property name="allowOnlyNumbers" type="boolean" value="true"/>
-            <Property name="attributeName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;grupo.id&quot;" type="code"/>
-            </Property>
+            <Property name="attributeName" type="java.lang.String" value="produtoGrupo.id"/>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="linkLabel" type="org.openswing.swing.client.LabelControl" editor="org.netbeans.modules.form.ComponentChooserEditor">
               <ComponentRef name="labelControl1"/>
@@ -104,9 +102,7 @@
         </Component>
         <Component class="org.openswing.swing.client.TextControl" name="textControl2">
           <Properties>
-            <Property name="attributeName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;grupo.nome&quot;" type="code"/>
-            </Property>
+            <Property name="attributeName" type="java.lang.String" value="produtoGrupo.nome"/>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="enabledOnEdit" type="boolean" value="false"/>
             <Property name="enabledOnInsert" type="boolean" value="false"/>
