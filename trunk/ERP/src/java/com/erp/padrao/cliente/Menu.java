@@ -175,7 +175,8 @@ public class Menu implements MDIController, LoginController {
      * Method called by MDI Frame to authenticate the user.
      *
      * @param loginInfo login information, like nomeUsuario, password, ...
-     * @return <code>true</code> if user is correcly * * * * * *      * authenticated, <code>false</code> otherwise
+     * @return <code>true</code> if user is correcly * * * * * * *
+     * authenticated, <code>false</code> otherwise
      */
     public boolean authenticateUser(Map loginInfo) throws Exception {
         nomeUsuario = (String) loginInfo.get("username");
@@ -237,7 +238,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.ASK_BEFORE_CLOSE = true;
         ClientSettings.SHOW_PAGE_NUMBER_IN_GRID = true;
         ClientSettings.SHOW_PAGINATION_BUTTONS_ON_NAVBAR = true;
-        
+
         // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
         //  com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
         ClientSettings.MAX_NR_OF_LOOPS_IN_ANALYZE_VO = 3;
@@ -262,7 +263,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_IMPORT_IMAGE_NAME = "Importar.png";
         ClientSettings.GRID_PROFILE_MANAGER = new FileGridProfileManager();
         // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
-       // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
+        // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
 
 
 
@@ -338,6 +339,51 @@ public class Menu implements MDIController, LoginController {
         Domain tipoPessoa = new Domain("tipoPessoa");
         tipoPessoa.addDomainPair("F", "Física");
         tipoPessoa.addDomainPair("J", "Jurídica");
+
+        Domain podeFracionar = new Domain("podeFracionar");
+        podeFracionar.addDomainPair("S", "Sim");
+        podeFracionar.addDomainPair("J", "Não");
+
+        Domain dominioProdutoTipo = new Domain("produtoTipo");
+        dominioProdutoTipo.addDomainPair("V", "Venda");
+        dominioProdutoTipo.addDomainPair("C", "Composição");
+        dominioProdutoTipo.addDomainPair("P", "Produção");
+        dominioProdutoTipo.addDomainPair("I", "Insumo");
+        dominioProdutoTipo.addDomainPair("U", "Uso Proprio");
+
+        Domain dominioProdutoClasse = new Domain("produtoClasse");
+        dominioProdutoClasse.addDomainPair("A", "A");
+        dominioProdutoClasse.addDomainPair("B", "B");
+        dominioProdutoClasse.addDomainPair("C", "C");
+
+        Domain dominioProdutoIat = new Domain("produtoIat");
+        dominioProdutoIat.addDomainPair("A", "Arredondamento");
+        dominioProdutoIat.addDomainPair("T", "Truncamento");
+
+        Domain dominioProdutoIppt = new Domain("produtoIppt");
+        dominioProdutoIppt.addDomainPair("P", "Próprio");
+        dominioProdutoIppt.addDomainPair("T", "Terceiro");
+
+        Domain dominioEmpresaTipo = new Domain("empresaTipo");
+        dominioEmpresaTipo.addDomainPair("M", "Matriz");
+        dominioEmpresaTipo.addDomainPair("F", "Filial");
+        dominioEmpresaTipo.addDomainPair("D", "Depósito");
+
+        Domain dominioProdutoTipoItemSped = new Domain("produtoTipoItemSped");
+        dominioProdutoTipoItemSped.addDomainPair("00", "Mercadoria para Revenda");
+        dominioProdutoTipoItemSped.addDomainPair("01", "Matéria-Prima");
+        dominioProdutoTipoItemSped.addDomainPair("02", "Embalagem");
+        dominioProdutoTipoItemSped.addDomainPair("03", "Produto em Processo");
+        dominioProdutoTipoItemSped.addDomainPair("04", "Produto Acabado");
+        dominioProdutoTipoItemSped.addDomainPair("05", "Subproduto");
+        dominioProdutoTipoItemSped.addDomainPair("06", "Produto Intermediário");
+        dominioProdutoTipoItemSped.addDomainPair("07", "Material de Uso e Consumo");
+        dominioProdutoTipoItemSped.addDomainPair("08", "Ativo Imobilizado");
+        dominioProdutoTipoItemSped.addDomainPair("09", "Serviços");
+        dominioProdutoTipoItemSped.addDomainPair("10", "Outros Insumos");
+        dominioProdutoTipoItemSped.addDomainPair("99", "Outras");
+
+
 
         Domain tipoSangue = new Domain("tipoSangue");
         tipoSangue.addDomainPair("A+", "A+");
@@ -654,8 +700,19 @@ public class Menu implements MDIController, LoginController {
         dominioAberturaEncerramento.addDomainPair("A", "Abertura");
         dominioAberturaEncerramento.addDomainPair("E", "Encerramento");
 
+        Domain dominioCodigoModeloNf = new Domain("CodigoModeloNf");
+        dominioCodigoModeloNf.addDomainPair("55", "Nota Fiscal Eletrônica - NFe");
+        dominioCodigoModeloNf.addDomainPair("01", "Nota Fiscal 1/1A");
+
         domains.clear();
         domains.put(tipoPessoa.getDomainId(), tipoPessoa);
+        domains.put(podeFracionar.getDomainId(), podeFracionar);
+        domains.put(dominioCodigoModeloNf.getDomainId(), dominioCodigoModeloNf);
+        domains.put(dominioProdutoClasse.getDomainId(), dominioProdutoClasse);
+        domains.put(dominioProdutoIat.getDomainId(), dominioProdutoIat);
+        domains.put(dominioProdutoIppt.getDomainId(), dominioProdutoIppt);
+        domains.put(dominioProdutoTipoItemSped.getDomainId(), dominioProdutoTipoItemSped);
+        domains.put(dominioProdutoTipo.getDomainId(), dominioProdutoTipo);
         domains.put(tipoSangue.getDomainId(), tipoSangue);
         domains.put(dominioSexo.getDomainId(), dominioSexo);
         domains.put(dominioSimNao.getDomainId(), dominioSimNao);

@@ -134,6 +134,7 @@ public class UnidadeProdutoDetalhe extends InternalFrame {
         form1.add(labelControl3, gridBagConstraints);
 
         comboBoxControl4.setAttributeName("podeFracionar");
+        comboBoxControl4.setDomainId("podeFracionar");
         comboBoxControl4.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;

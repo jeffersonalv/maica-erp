@@ -50,6 +50,7 @@
         <mapping class="com.erp.cadastros.java.vo.CfopVO"/>
         <mapping class="com.erp.cadastros.java.vo.ChequeVO"/>
         <mapping class="com.erp.cadastros.java.vo.ClienteVO"/>
+        
         <mapping class="com.erp.cadastros.java.vo.CnaeVO"/>
         <mapping class="com.erp.cadastros.java.vo.CodApuracaoReceitaDaconVO"/>
         <mapping class="com.erp.cadastros.java.vo.CodigoApuracaoEfdVO"/>
@@ -102,6 +103,8 @@
         <mapping class="com.erp.cadastros.java.vo.PessoaFisicaVO"/>
         <mapping class="com.erp.cadastros.java.vo.PessoaJuridicaVO"/>
         <mapping class="com.erp.cadastros.java.vo.PessoaVO"/>
+        <mapping class="com.erp.cadastros.java.vo.PessoaClienteVO"/>
+        <mapping class="com.erp.cadastros.java.vo.PessoaTransportadoraVO"/>       
         <mapping class="com.erp.cadastros.java.vo.ProdutoAlteracaoItemVO"/>
         <mapping class="com.erp.cadastros.java.vo.ProdutoCodigoAdicionalVO"/>
         <mapping class="com.erp.cadastros.java.vo.ProdutoGrupoVO"/>
