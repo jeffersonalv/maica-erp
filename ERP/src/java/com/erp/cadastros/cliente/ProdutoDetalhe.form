@@ -267,10 +267,7 @@
                 </Component>
                 <Component class="org.openswing.swing.client.CodLookupControl" name="codLookupControlAlmoxarifado">
                   <Properties>
-                    <Property name="allowOnlyNumbers" type="boolean" value="true"/>
-                    <Property name="attributeName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="&quot;almoxarifado.id&quot;" type="code"/>
-                    </Property>
+                    <Property name="attributeName" type="java.lang.String" value="almoxarifado.id"/>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Constraints>

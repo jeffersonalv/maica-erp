@@ -63,6 +63,9 @@
         <Property name="deleteButton" type="org.openswing.swing.client.DeleteButton" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="deleteButton1"/>
         </Property>
+        <Property name="filterButton" type="org.openswing.swing.client.FilterButton" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="filterButton1"/>
+        </Property>
         <Property name="functionId" type="java.lang.String" value="unidadeProduto"/>
         <Property name="insertButton" type="org.openswing.swing.client.InsertButton" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="insertButton1"/>
@@ -87,6 +90,7 @@
       <SubComponents>
         <Component class="org.openswing.swing.table.columns.client.TextColumn" name="textColumn2">
           <Properties>
+            <Property name="columnFilterable" type="boolean" value="true"/>
             <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;sigla&quot;" type="code"/>
             </Property>
@@ -98,6 +102,7 @@
         </Component>
         <Component class="org.openswing.swing.table.columns.client.TextColumn" name="textColumn3">
           <Properties>
+            <Property name="columnFilterable" type="boolean" value="true"/>
             <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;descricao&quot;" type="code"/>
             </Property>
@@ -110,9 +115,8 @@
         </Component>
         <Component class="org.openswing.swing.table.columns.client.ComboColumn" name="comboColumn4">
           <Properties>
-            <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;podeFracionar&quot;" type="code"/>
-            </Property>
+            <Property name="columnFilterable" type="boolean" value="true"/>
+            <Property name="columnName" type="java.lang.String" value="podeFracionar"/>
             <Property name="domainId" type="java.lang.String" value="simnao"/>
             <Property name="headerColumnName" type="java.lang.String" value="Pode Fracionar"/>
             <Property name="headerFont" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">

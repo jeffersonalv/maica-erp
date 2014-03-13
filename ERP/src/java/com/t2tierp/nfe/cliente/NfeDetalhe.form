@@ -121,9 +121,7 @@
             <Component class="org.openswing.swing.client.CodLookupControl" name="codLookupControl3">
               <Properties>
                 <Property name="allowOnlyNumbers" type="boolean" value="true"/>
-                <Property name="attributeName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="&quot;nfeCabecalho.cliente.id&quot;" type="code"/>
-                </Property>
+                <Property name="attributeName" type="java.lang.String" value="nfeCabecalho.cliente.id"/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="linkLabel" type="org.openswing.swing.client.LabelControl" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="labelControl2"/>

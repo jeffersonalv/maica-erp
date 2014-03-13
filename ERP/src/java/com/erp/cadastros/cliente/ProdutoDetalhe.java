@@ -469,7 +469,6 @@ public class ProdutoDetalhe extends InternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
         jPanel2.add(labelControl5, gridBagConstraints);
 
-        codLookupControlAlmoxarifado.setAllowOnlyNumbers(true);
         codLookupControlAlmoxarifado.setAttributeName("almoxarifado.id");
         codLookupControlAlmoxarifado.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();

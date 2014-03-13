@@ -94,6 +94,7 @@ public class UnidadeProdutoGrid extends InternalFrame {
         getContentPane().add(jPanel1, gridBagConstraints);
 
         gridControl1.setDeleteButton(deleteButton1);
+        gridControl1.setFilterButton(filterButton1);
         gridControl1.setFunctionId("unidadeProduto");
         gridControl1.setInsertButton(insertButton1);
         gridControl1.setNavBar(navigatorBar1);
@@ -101,17 +102,20 @@ public class UnidadeProdutoGrid extends InternalFrame {
         gridControl1.setValueObjectClassName("com.erp.cadastros.java.vo.UnidadeProdutoVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
+        textColumn2.setColumnFilterable(true);
         textColumn2.setColumnName("sigla");
         textColumn2.setHeaderColumnName("Sigla");
         textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn2);
 
+        textColumn3.setColumnFilterable(true);
         textColumn3.setColumnName("descricao");
         textColumn3.setHeaderColumnName("Descricao");
         textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn3.setPreferredWidth(400);
         gridControl1.getColumnContainer().add(textColumn3);
 
+        comboColumn4.setColumnFilterable(true);
         comboColumn4.setColumnName("podeFracionar");
         comboColumn4.setDomainId("simnao");
         comboColumn4.setHeaderColumnName("Pode Fracionar");
