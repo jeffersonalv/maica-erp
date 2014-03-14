@@ -102,7 +102,7 @@ public class ProdutoSubGrupoGrid extends InternalFrame {
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         textColumn2.setColumnFilterable(true);
-        textColumn2.setColumnName("grupo.nome");
+        textColumn2.setColumnName("produtoGrupo.nome");
         textColumn2.setHeaderColumnName("Grupo");
         textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn2.setPreferredWidth(200);

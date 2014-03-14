@@ -230,7 +230,8 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.PERC_TREE_FOLDER = "folder3.gif";
         ClientSettings.BACKGROUND = "background4.jpg";
         ClientSettings.TREE_BACK = "treeback2.jpg";
-        ClientSettings.FILTER_PANEL_ON_GRID = false;
+        ClientSettings.FILTER_PANEL_ON_GRID = true;
+        // ClientSettings.LIKE = "%%";
         ClientSettings.AUTO_EXPAND_TREE_MENU = false;
         ClientSettings.LOOKUP_FRAME_CONTENT = LookupController.GRID_AND_PANEL_FRAME;
         ClientSettings.SHOW_PREVIEW_OF_IMAGE = true;
@@ -340,6 +341,10 @@ public class Menu implements MDIController, LoginController {
         tipoPessoa.addDomainPair("F", "Física");
         tipoPessoa.addDomainPair("J", "Jurídica");
 
+        Domain dominioVendaOrcamentoTipo = new Domain("vendaOrcamentoTipo");
+        dominioVendaOrcamentoTipo.addDomainPair("O", "Orçamento");
+        dominioVendaOrcamentoTipo.addDomainPair("P", "Pedido");
+
         Domain podeFracionar = new Domain("podeFracionar");
         podeFracionar.addDomainPair("S", "Sim");
         podeFracionar.addDomainPair("J", "Não");
@@ -435,6 +440,10 @@ public class Menu implements MDIController, LoginController {
         dominioStatusNota.addDomainPair("5", "5 - Autorizada");
         dominioStatusNota.addDomainPair("6", "6 - Cancelada");
 
+        Domain dominioCompraTipoFrete = new Domain("compraTipoFrete");
+        dominioCompraTipoFrete.addDomainPair("C", "CIF");
+        dominioCompraTipoFrete.addDomainPair("F", "FOB");
+
         Domain dominioTipoOperacao = new Domain("tipoOperacao");
         dominioTipoOperacao.addDomainPair("0", "0 - Entrada");
         dominioTipoOperacao.addDomainPair("1", "1 - Saída");
@@ -455,6 +464,12 @@ public class Menu implements MDIController, LoginController {
         dominioFinalidadeEmissao.addDomainPair("1", "1 - Normal");
         dominioFinalidadeEmissao.addDomainPair("2", "2 - Complementar");
         dominioFinalidadeEmissao.addDomainPair("3", "3 - Ajuste");
+
+        Domain dominioTransporteModalidadeFrete = new Domain("transporteModalidadeFrete");
+        dominioTransporteModalidadeFrete.addDomainPair("0", "Conta Emitente");
+        dominioTransporteModalidadeFrete.addDomainPair("1", "Conta Destinatário");
+        dominioTransporteModalidadeFrete.addDomainPair("2", "Conta Terceiros");
+        dominioTransporteModalidadeFrete.addDomainPair("9", "Sem Frete");
 
         Domain dominioTipoImpressaoDanfe = new Domain("tipoImpressaoDanfe");
         dominioTipoImpressaoDanfe.addDomainPair("1", "1 - Retrato");
@@ -707,6 +722,7 @@ public class Menu implements MDIController, LoginController {
         domains.clear();
         domains.put(tipoPessoa.getDomainId(), tipoPessoa);
         domains.put(podeFracionar.getDomainId(), podeFracionar);
+        domains.put(dominioVendaOrcamentoTipo.getDomainId(), dominioVendaOrcamentoTipo);
         domains.put(dominioCodigoModeloNf.getDomainId(), dominioCodigoModeloNf);
         domains.put(dominioProdutoClasse.getDomainId(), dominioProdutoClasse);
         domains.put(dominioProdutoIat.getDomainId(), dominioProdutoIat);
@@ -720,11 +736,13 @@ public class Menu implements MDIController, LoginController {
         domains.put(dominioMes.getDomainId(), dominioMes);
         domains.put(dominioTipoCentroResultado.getDomainId(), dominioTipoCentroResultado);
         domains.put(dominioStatusNota.getDomainId(), dominioStatusNota);
+        domains.put(dominioCompraTipoFrete.getDomainId(), dominioCompraTipoFrete);
         domains.put(dominioTipoOperacao.getDomainId(), dominioTipoOperacao);
         domains.put(dominioFormaPagamento.getDomainId(), dominioFormaPagamento);
         domains.put(dominioFormaEmissao.getDomainId(), dominioFormaEmissao);
         domains.put(dominioFinalidadeEmissao.getDomainId(), dominioFinalidadeEmissao);
         domains.put(dominioTipoImpressaoDanfe.getDomainId(), dominioTipoImpressaoDanfe);
+        domains.put(dominioTransporteModalidadeFrete.getDomainId(), dominioTransporteModalidadeFrete);
         domains.put(dominioCRT.getDomainId(), dominioCRT);
         domains.put(dominioModeloCupomFiscal.getDomainId(), dominioModeloCupomFiscal);
         domains.put(dominioTipoReajuste.getDomainId(), dominioTipoReajuste);
