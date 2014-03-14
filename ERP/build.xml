@@ -530,6 +530,17 @@
                 <include name="*.class" />
             </fileset>
         </copy>
+        
+        
+        <copy todir="${tmp}/com/erp/tributacao/cliente">
+            <fileset dir="${build.classes.dir}/com/erp/tributacao/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+     
+
+      
 
         <copy todir="${tmp}/com/erp/padrao/cliente">
             <fileset dir="${build.classes.dir}/com/erp/padrao/cliente">

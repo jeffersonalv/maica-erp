@@ -345,6 +345,13 @@ public class Menu implements MDIController, LoginController {
         dominioVendaOrcamentoTipo.addDomainPair("O", "Orçamento");
         dominioVendaOrcamentoTipo.addDomainPair("P", "Pedido");
 
+
+        Domain dominioTributPisModalidadeBaseCalculo = new Domain("pisModalidadeBaseCalculo");
+        dominioTributPisModalidadeBaseCalculo.addDomainPair("0", "Percentual");
+        dominioTributPisModalidadeBaseCalculo.addDomainPair("1", "Unidade");
+
+
+
         Domain podeFracionar = new Domain("podeFracionar");
         podeFracionar.addDomainPair("S", "Sim");
         podeFracionar.addDomainPair("J", "Não");
@@ -364,6 +371,12 @@ public class Menu implements MDIController, LoginController {
         Domain dominioProdutoIat = new Domain("produtoIat");
         dominioProdutoIat.addDomainPair("A", "Arredondamento");
         dominioProdutoIat.addDomainPair("T", "Truncamento");
+
+        Domain dominioOrigemMercadoria = new Domain("origemMercadoria");
+        dominioOrigemMercadoria.addDomainPair("0", "Nacional");
+        dominioOrigemMercadoria.addDomainPair("1", "Estrangeira - Importação direta");
+        dominioOrigemMercadoria.addDomainPair("2", "Estrangeira - Adquirida no mercado interno");
+
 
         Domain dominioProdutoIppt = new Domain("produtoIppt");
         dominioProdutoIppt.addDomainPair("P", "Próprio");
@@ -719,14 +732,28 @@ public class Menu implements MDIController, LoginController {
         dominioCodigoModeloNf.addDomainPair("55", "Nota Fiscal Eletrônica - NFe");
         dominioCodigoModeloNf.addDomainPair("01", "Nota Fiscal 1/1A");
 
+
+        Domain dominioTributIssModalidadeBaseCalculo = new Domain("issModalidadeBaseCalculo");
+        dominioTributIssModalidadeBaseCalculo.addDomainPair("0", "Valor Operação");
+        dominioTributIssModalidadeBaseCalculo.addDomainPair("9", "Outros");
+
+        Domain dominioTributIssCodigoTributacao = new Domain("issCodigoTributacao");
+        dominioTributIssCodigoTributacao.addDomainPair("N", "Normal");
+        dominioTributIssCodigoTributacao.addDomainPair("R", "Retida");
+        dominioTributIssCodigoTributacao.addDomainPair("S", "Substituta");
+        dominioTributIssCodigoTributacao.addDomainPair("I", "Isenta");
+
         domains.clear();
         domains.put(tipoPessoa.getDomainId(), tipoPessoa);
+        domains.put(dominioTributIssCodigoTributacao.getDomainId(), dominioTributIssCodigoTributacao);
+        domains.put(dominioTributIssModalidadeBaseCalculo.getDomainId(), dominioTributIssModalidadeBaseCalculo);
         domains.put(podeFracionar.getDomainId(), podeFracionar);
         domains.put(dominioVendaOrcamentoTipo.getDomainId(), dominioVendaOrcamentoTipo);
         domains.put(dominioCodigoModeloNf.getDomainId(), dominioCodigoModeloNf);
         domains.put(dominioProdutoClasse.getDomainId(), dominioProdutoClasse);
         domains.put(dominioProdutoIat.getDomainId(), dominioProdutoIat);
         domains.put(dominioProdutoIppt.getDomainId(), dominioProdutoIppt);
+        domains.put(dominioOrigemMercadoria.getDomainId(), dominioOrigemMercadoria);
         domains.put(dominioProdutoTipoItemSped.getDomainId(), dominioProdutoTipoItemSped);
         domains.put(dominioProdutoTipo.getDomainId(), dominioProdutoTipo);
         domains.put(tipoSangue.getDomainId(), tipoSangue);
@@ -747,6 +774,14 @@ public class Menu implements MDIController, LoginController {
         domains.put(dominioModeloCupomFiscal.getDomainId(), dominioModeloCupomFiscal);
         domains.put(dominioTipoReajuste.getDomainId(), dominioTipoReajuste);
         domains.put(dominioMetodoDepreciacao.getDomainId(), dominioMetodoDepreciacao);
+        domains.put(dominioCalculoPisCofins.getDomainId(), dominioCalculoPisCofins);
+        domains.put(dominioTributPisModalidadeBaseCalculo.getDomainId(), dominioTributPisModalidadeBaseCalculo);
+
+
+
+
+
+
         domains.put(dominioTipoDepreciacao.getDomainId(), dominioTipoDepreciacao);
         domains.put(dominioTipoHorarioPonto.getDomainId(), dominioTipoHorarioPonto);
         domains.put(dominioTipoTrabalho.getDomainId(), dominioTipoTrabalho);

@@ -45,6 +45,11 @@ import com.erp.cadastros.cliente.TransportadoraGridController;
 import com.erp.cadastros.cliente.UfGridController;
 import com.erp.cadastros.cliente.UnidadeProdutoGridController;
 import com.erp.cadastros.cliente.UsuarioGridController;
+import com.erp.tributacao.cliente.TributConfiguraOfGtGridController;
+import com.erp.tributacao.cliente.TributGrupoTributarioGridController;
+import com.erp.tributacao.cliente.TributIcmsCustomCabGridController;
+import com.erp.tributacao.cliente.TributIssGridController;
+import com.erp.tributacao.cliente.TributOperacaoFiscalGridController;
 import com.t2tierp.compras.cliente.CompraConfirmaCotacaoGridController;
 import com.t2tierp.compras.cliente.CompraCotacaoGridController;
 import com.t2tierp.compras.cliente.CompraMapaComparativoGridController;
@@ -218,6 +223,28 @@ public class Fachada implements ClientFacade {
     public void getEmpresa() {
         new EmpresaGridController();
     }
+    
+    
+     public void getTributOperacaoFiscal() {
+        new TributOperacaoFiscalGridController();
+    }
+
+    public void getTributGrupoTributario() {
+        new TributGrupoTributarioGridController();
+    }
+
+    public void getTributConfiguraOfGt() {
+        new TributConfiguraOfGtGridController();
+    }
+
+    public void getTributIcmsCustomCab() {
+        new TributIcmsCustomCabGridController();
+    }
+
+    public void getTributIss() {
+        new TributIssGridController();
+    }
+
 
     //PESSOA
     public void getEstadoCivil() {
