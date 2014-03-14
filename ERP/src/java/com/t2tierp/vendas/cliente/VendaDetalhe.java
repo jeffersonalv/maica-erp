@@ -83,7 +83,7 @@ public class VendaDetalhe extends InternalFrame {
          * Configurações do lookup do vendedor
          */
         vendedorController.setLookupValueObjectClassName("com.erp.cadastros.java.vo.VendedorVO");
-        vendedorController.addLookup2ParentLink("id", "vendedor.id");
+        vendedorController.addLookup2ParentLink("id", "vendaCabecalho.vendedor.id");
         vendedorController.addLookup2ParentLink("colaborador.pessoa.nome", "vendedor.colaborador.pessoa.nome");
         vendedorController.addLookup2ParentLink("comissao", "taxaComissao");
         vendedorController.setHeaderColumnName("id", "ID");
@@ -202,6 +202,7 @@ public class VendaDetalhe extends InternalFrame {
         orcamentoController.setVisibleColumn("codigo", true);
         orcamentoController.setVisibleColumn("cliente.pessoa.nome", true);
         orcamentoController.setFramePreferedSize(new Dimension(500, 400));
+        orcamentoController.setShowNavigatorBar(true);
 
         orcamentoController.setLookupDataLocator(orcamentoDataLocator);
         codLookupOrcamento.setLookupController(orcamentoController);
@@ -333,7 +334,7 @@ public class VendaDetalhe extends InternalFrame {
         textControl4 = new org.openswing.swing.client.TextControl();
         textControl5 = new org.openswing.swing.client.TextControl();
 
-        setTitle("T2Ti ERP - Vendas e Faturamento");
+        setTitle("ERP - Vendas e Faturamento");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.CardLayout());
 
@@ -359,7 +360,7 @@ public class VendaDetalhe extends InternalFrame {
         codLookupColumn1.setEditableOnEdit(true);
         codLookupColumn1.setEditableOnInsert(true);
         codLookupColumn1.setHeaderColumnName("Produto");
-        codLookupColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        codLookupColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         codLookupColumn1.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(codLookupColumn1);
 
@@ -368,7 +369,7 @@ public class VendaDetalhe extends InternalFrame {
         decimalColumn1.setEditableOnEdit(true);
         decimalColumn1.setEditableOnInsert(true);
         decimalColumn1.setHeaderColumnName("Quantidade");
-        decimalColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn1.setMaxCharacters(3);
         decimalColumn1.setPreferredWidth(80);
         gridControl1.getColumnContainer().add(decimalColumn1);
@@ -378,7 +379,7 @@ public class VendaDetalhe extends InternalFrame {
         decimalColumn2.setDecimals(2);
         decimalColumn2.setGrouping(true);
         decimalColumn2.setHeaderColumnName("Valor Unitário");
-        decimalColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn2);
 
         decimalColumn3.setColumnName("valorSubtotal");
@@ -386,7 +387,7 @@ public class VendaDetalhe extends InternalFrame {
         decimalColumn3.setDecimals(2);
         decimalColumn3.setGrouping(true);
         decimalColumn3.setHeaderColumnName("SubTotal");
-        decimalColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn3);
 
         decimalColumn6.setColumnName("taxaDesconto");
@@ -396,7 +397,7 @@ public class VendaDetalhe extends InternalFrame {
         decimalColumn6.setEditableOnInsert(true);
         decimalColumn6.setGrouping(true);
         decimalColumn6.setHeaderColumnName("Taxa Desconto");
-        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn6);
 
         decimalColumn4.setColumnName("valorDesconto");
@@ -404,7 +405,7 @@ public class VendaDetalhe extends InternalFrame {
         decimalColumn4.setDecimals(2);
         decimalColumn4.setGrouping(true);
         decimalColumn4.setHeaderColumnName("Desconto");
-        decimalColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn4);
 
         decimalColumn5.setColumnName("valorTotal");
@@ -412,7 +413,7 @@ public class VendaDetalhe extends InternalFrame {
         decimalColumn5.setDecimals(2);
         decimalColumn5.setGrouping(true);
         decimalColumn5.setHeaderColumnName("Valor Total");
-        decimalColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn5);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -645,7 +646,6 @@ public class VendaDetalhe extends InternalFrame {
         codLookupCondicaoPagamento.setAllowOnlyNumbers(true);
         codLookupCondicaoPagamento.setAttributeName("vendaCondicoesPagamento.id");
         codLookupCondicaoPagamento.setEnabled(false);
-        codLookupCondicaoPagamento.setEnabledOnInsert(false);
         codLookupCondicaoPagamento.setLinkLabel(labelControl9);
         codLookupCondicaoPagamento.setRequired(true);
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -673,7 +673,6 @@ public class VendaDetalhe extends InternalFrame {
         codLookupTrasportadora.setAllowOnlyNumbers(true);
         codLookupTrasportadora.setAttributeName("transportadora.id");
         codLookupTrasportadora.setEnabled(false);
-        codLookupTrasportadora.setEnabledOnInsert(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -704,9 +703,8 @@ public class VendaDetalhe extends InternalFrame {
         form1.add(labelControl9, gridBagConstraints);
 
         codLookupVendedor.setAllowOnlyNumbers(true);
-        codLookupVendedor.setAttributeName("vendedor.id");
+        codLookupVendedor.setAttributeName("vendaCabecalho.vendedor.id");
         codLookupVendedor.setEnabled(false);
-        codLookupVendedor.setEnabledOnInsert(false);
         codLookupVendedor.setLinkLabel(labelControl28);
         codLookupVendedor.setRequired(true);
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -743,7 +741,6 @@ public class VendaDetalhe extends InternalFrame {
         codLookupCliente.setAllowOnlyNumbers(true);
         codLookupCliente.setAttributeName("cliente.id");
         codLookupCliente.setEnabled(false);
-        codLookupCliente.setEnabledOnInsert(false);
         codLookupCliente.setLinkLabel(labelControl20);
         codLookupCliente.setRequired(true);
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -818,6 +815,11 @@ public class VendaDetalhe extends InternalFrame {
         comboBoxControl2.setAttributeName("formaPagamento");
         comboBoxControl2.setDomainId("formaPagamento");
         comboBoxControl2.setEnabled(false);
+        comboBoxControl2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxControl2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
@@ -1098,6 +1100,10 @@ public class VendaDetalhe extends InternalFrame {
     private void numericControl5FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_numericControl5FocusLost
         controller.atualizaTotais();
     }//GEN-LAST:event_numericControl5FocusLost
+
+    private void comboBoxControl2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxControl2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxControl2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.client.CodLookupControl codLookupCliente;
