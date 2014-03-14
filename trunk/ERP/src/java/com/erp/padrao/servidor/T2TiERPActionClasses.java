@@ -98,6 +98,21 @@ import com.erp.cadastros.servidor.UnidadeProdutoDetalheAction;
 import com.erp.cadastros.servidor.UnidadeProdutoGridAction;
 import com.erp.cadastros.servidor.UsuarioDetalheAction;
 import com.erp.cadastros.servidor.UsuarioGridAction;
+import com.erp.tributacao.servidor.TributCofinsCodApuracaoDetalheAction;
+import com.erp.tributacao.servidor.TributConfiguraOfGtDetalheAction;
+import com.erp.tributacao.servidor.TributConfiguraOfGtGridAction;
+import com.erp.tributacao.servidor.TributGrupoTributarioDetalheAction;
+import com.erp.tributacao.servidor.TributGrupoTributarioGridAction;
+import com.erp.tributacao.servidor.TributIcmsCustomCabDetalheAction;
+import com.erp.tributacao.servidor.TributIcmsCustomCabGridAction;
+import com.erp.tributacao.servidor.TributIcmsCustomDetGridAction;
+import com.erp.tributacao.servidor.TributIcmsUfGridAction;
+import com.erp.tributacao.servidor.TributIpiDipiDetalheAction;
+import com.erp.tributacao.servidor.TributIssDetalheAction;
+import com.erp.tributacao.servidor.TributIssGridAction;
+import com.erp.tributacao.servidor.TributOperacaoFiscalDetalheAction;
+import com.erp.tributacao.servidor.TributOperacaoFiscalGridAction;
+import com.erp.tributacao.servidor.TributPisCodApuracaoDetalheAction;
 import com.t2tierp.compras.servidor.CompraConfirmaCotacaoDetalheAction;
 import com.t2tierp.compras.servidor.CompraConfirmaCotacaoDetalheGridAction;
 import com.t2tierp.compras.servidor.CompraConfirmaCotacaoGridAction;
@@ -822,22 +837,24 @@ public class T2TiERPActionClasses extends ActionsCollection {
         put(a.getRequestName(), a);
 
 
-        /*actions do módulo tributacao*/
-        /*  a = new TributOperacaoFiscalGridAction(); put(a.getRequestName(), a);
-         a = new TributOperacaoFiscalDetalheAction(); put(a.getRequestName(), a);
-         a = new TributGrupoTributarioGridAction(); put(a.getRequestName(), a);
-         a = new TributGrupoTributarioDetalheAction(); put(a.getRequestName(), a);
-         a = new TributConfiguraOfGtGridAction(); put(a.getRequestName(), a);
-         a = new TributConfiguraOfGtDetalheAction(); put(a.getRequestName(), a);
-         a = new TributIcmsUfGridAction(); put(a.getRequestName(), a);
-         a = new TributPisCodApuracaoDetalheAction(); put(a.getRequestName(), a);
-         a = new TributCofinsCodApuracaoDetalheAction(); put(a.getRequestName(), a);
-         a = new TributIpiDipiDetalheAction(); put(a.getRequestName(), a);
-         a = new TributIcmsCustomCabGridAction(); put(a.getRequestName(), a);
-         a = new TributIcmsCustomCabDetalheAction(); put(a.getRequestName(), a);
-         a = new TributIcmsCustomDetGridAction(); put(a.getRequestName(), a);
-         a = new TributIssGridAction(); put(a.getRequestName(), a);
-         a = new TributIssDetalheAction(); put(a.getRequestName(), a);*/
+     
+       /*actions do módulo tributacao*/
+        a = new TributOperacaoFiscalGridAction(); put(a.getRequestName(), a);
+        a = new TributOperacaoFiscalDetalheAction(); put(a.getRequestName(), a);
+        a = new TributGrupoTributarioGridAction(); put(a.getRequestName(), a);
+        a = new TributGrupoTributarioDetalheAction(); put(a.getRequestName(), a);
+        a = new TributConfiguraOfGtGridAction(); put(a.getRequestName(), a);
+        a = new TributConfiguraOfGtDetalheAction(); put(a.getRequestName(), a);
+        a = new TributIcmsUfGridAction(); put(a.getRequestName(), a);
+        a = new TributPisCodApuracaoDetalheAction(); put(a.getRequestName(), a);
+        a = new TributCofinsCodApuracaoDetalheAction(); put(a.getRequestName(), a);
+        a = new TributIpiDipiDetalheAction(); put(a.getRequestName(), a);
+        a = new TributIcmsCustomCabGridAction(); put(a.getRequestName(), a);
+        a = new TributIcmsCustomCabDetalheAction(); put(a.getRequestName(), a);
+        a = new TributIcmsCustomDetGridAction(); put(a.getRequestName(), a);
+        a = new TributIssGridAction(); put(a.getRequestName(), a);
+        a = new TributIssDetalheAction(); put(a.getRequestName(), a);
+
 
         //tesouraria 
         a = new FinResumoTesourariaGridAction();

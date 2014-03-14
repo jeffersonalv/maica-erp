@@ -344,7 +344,7 @@
         
         
         <!--SPED--> 
-       <!--
+        <!--
         <mapping class="com.t2tierp.sped.java.ViewC321VO"/>
         <mapping class="com.t2tierp.sped.java.ViewC321VoId"/>
         <mapping class="com.t2tierp.sped.java.ViewC370VO"/>
@@ -480,7 +480,7 @@
       
         <mapping class="com.erp.tributacao.java.vo.TributConfiguraOfGtVO"/>       
         <mapping class="com.erp.tributacao.java.vo.TributPisCodApuracaoVO"/> 
-        
+               
         
         
         <!--Orçamentos-->

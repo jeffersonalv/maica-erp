@@ -121,6 +121,15 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         ApplicationFunction n157 = new ApplicationFunction(factory.getResources(langId).getResource("Nível Formação"), "nivelFormacao", "nivel_formacao16.png", "getNivelFormacao");
         ApplicationFunction n158 = new ApplicationFunction(factory.getResources(langId).getResource("Colaborador"), "colaborador", "colaborador16.png", "getColaborador");
 
+        
+          ApplicationFunction n150 = new ApplicationFunction(factory.getResources(langId).getResource("Tributação"), null);
+         ApplicationFunction n200 = new ApplicationFunction(factory.getResources(langId).getResource("Operação Fiscal"), "tributOperacaoFiscal", null, "getTributOperacaoFiscal");
+         ApplicationFunction n201 = new ApplicationFunction(factory.getResources(langId).getResource("Grupo Tributário"), "tributGrupoTributario", null, "getTributGrupoTributario");
+         ApplicationFunction n202 = new ApplicationFunction(factory.getResources(langId).getResource("Configura Tributação"), "tributConfiguraOfGt", null, "getTributConfiguraOfGt");
+         ApplicationFunction n203 = new ApplicationFunction(factory.getResources(langId).getResource("ICMS Customizado"), "tributIcmsCustomCab", null, "getTributIcmsCustomCab");
+         ApplicationFunction n204 = new ApplicationFunction(factory.getResources(langId).getResource("ISS - Imposto Sobre Serviços"), "tributIss", null, "getTributIss");
+
+        
         ApplicationFunction n16 = new ApplicationFunction(factory.getResources(langId).getResource("Outros"), "outros.png");
         ApplicationFunction n161 = new ApplicationFunction(factory.getResources(langId).getResource("Contador"), "contador", "contador16.png", "getContador");
         ApplicationFunction n162 = new ApplicationFunction(factory.getResources(langId).getResource("Sindicato"), "sindicato", "sidicato.png", "getSindicato");
@@ -610,14 +619,12 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         n40.add(n314);
         n40.add(n315);
         n29.add(n40);
-        /*  ApplicationFunction n2 = new ApplicationFunction(factory.getResources(langId).getResource("Tributação"), null);
-         ApplicationFunction n21 = new ApplicationFunction(factory.getResources(langId).getResource("Operação Fiscal"), "tributOperacaoFiscal", null, "getTributOperacaoFiscal");
-         ApplicationFunction n22 = new ApplicationFunction(factory.getResources(langId).getResource("Grupo Tributário"), "tributGrupoTributario", null, "getTributGrupoTributario");
-         ApplicationFunction n23 = new ApplicationFunction(factory.getResources(langId).getResource("Configura Tributação"), "tributConfiguraOfGt", null, "getTributConfiguraOfGt");
-         ApplicationFunction n24 = new ApplicationFunction(factory.getResources(langId).getResource("ICMS Customizado"), "tributIcmsCustomCab", null, "getTributIcmsCustomCab");
-         ApplicationFunction n25 = new ApplicationFunction(factory.getResources(langId).getResource("ISS - Imposto Sobre Serviços"), "tributIss", null, "getTributIss");*/
+        
 
-
+                 
+                 
+                 
+                 
         n1.add(n11);
         n1.add(n12);
         n1.add(nPessoal);
@@ -625,6 +632,15 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
         n1.add(n18);
         n1.add(n19);
         n1.add(n110);
+        
+        n150.add(n200);
+        n150.add(n201);
+        n150.add(n202);
+        n150.add(n203);
+        n150.add(n204);
+        
+        n1.add(n150);
+
 
         nPessoal.add(n13);
         nPessoal.add(n14);
@@ -685,8 +701,7 @@ public class T2TiERPFunctionAuthorizationsAction implements Action {
 
         n110.add(n1101);
         n110.add(n1102);
-
-
+      
         /*  n2.add(n23);
          n2.add(n24);
          n2.add(n25);
