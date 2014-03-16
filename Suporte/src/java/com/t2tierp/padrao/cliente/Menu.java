@@ -97,14 +97,14 @@ public class Menu implements MDIController, LoginController {
      * @return application title
      */
     public String getMDIFrameTitle() {
-        return "T2Ti ERP - Suporte Técnico";
+        return "ERP - Suporte Técnico";
     }
 
     /**
      * @return text to view in the about dialog window
      */
     public String getAboutText() {
-        return "Aplicação: T2Ti ERP\n"
+        return "Aplicação: ERP\n"
                 + "\n"
                 + "The MIT License\n"
                 + "Copyright: Copyright (C) 2011 T2Ti.COM\n"
@@ -192,8 +192,9 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BACKGROUND = "background4.jpg";
         ClientSettings.TREE_BACK = "treeback2.jpg";
         ClientSettings.FILTER_PANEL_ON_GRID = true;
-        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
-        com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true);
+        //ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
+        //com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true);
+        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
         ClientSettings.MAX_NR_OF_LOOPS_IN_ANALYZE_VO = 2;
 
         ClientSettings.getInstance().setLanguage(languageId);
