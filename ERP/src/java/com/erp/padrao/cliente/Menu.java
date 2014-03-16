@@ -1,7 +1,18 @@
 package com.erp.padrao.cliente;
 
+import com.erp.cadastros.cliente.ClienteGridController;
+import com.erp.cadastros.cliente.ProdutoGridController;
 import com.erp.cadastros.java.vo.EmpresaVO;
 import com.erp.cadastros.java.vo.UsuarioVO;
+import com.t2tierp.compras.cliente.CompraRequisicaoGridController;
+import com.t2tierp.controleestoque.cliente.EntradaNotaGridController;
+import com.t2tierp.financeiro.cliente.FinParcelaPagamentoGridController;
+import com.t2tierp.financeiro.cliente.FinParcelaRecebimentoGridController;
+import com.t2tierp.nfe.cliente.NfeGridController;
+import com.t2tierp.orcamento.cliente.OrcamentoEmpresarialGridController;
+import com.t2tierp.vendas.cliente.VendaGridController;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -24,7 +35,6 @@ import org.openswing.swing.lookup.client.LookupController;
 import org.openswing.swing.message.receive.java.*;
 import org.openswing.swing.permissions.java.ButtonsAuthorizations;
 import org.openswing.swing.table.profiles.client.FileGridProfileManager;
-import org.openswing.swing.util.java.Consts;
 
 public class Menu implements MDIController, LoginController {
 
@@ -263,7 +273,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_FILTER_IMAGE_NAME = "proc1.png";
         ClientSettings.BUTTON_IMPORT_IMAGE_NAME = "Importar.png";
         ClientSettings.GRID_PROFILE_MANAGER = new FileGridProfileManager();
-        // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
         // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
 
 
@@ -288,37 +298,11 @@ public class Menu implements MDIController, LoginController {
         userPanel.setText(nomeUsuario);
         MDIFrame.addStatusComponent(new Clock());
 
-        JMenuItem menuItemSuporte = new JMenuItem("Suporte Técnico");
-        menuItemSuporte.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    UsuarioVO usuario = (UsuarioVO) Container.getContainer().get("usuario");
-                    EmpresaVO empresa = (EmpresaVO) Container.getContainer().get("empresa");
-                    String modulo;
-                    String janela;
-                    if (MDIFrame.getSelectedFrame() != null) {
-                        modulo = MDIFrame.getSelectedFrame().getTitle();
-                        janela = MDIFrame.getSelectedFrame().getClass().getName();
-                    } else {
-                        modulo = "ERP";
-                        janela = "Principal";
-                    }
+        JPanel rightPanel = new JPanel();
 
-                    Runtime.getRuntime().exec("javaws -open \""
-                            + empresa.getId() + "|"
-                            + empresa.getRazaoSocial() + "|"
-                            + usuario.getColaborador().getPessoa().getId() + "|"
-                            + usuario.getColaborador().getPessoa().getNome() + "|"
-                            + modulo + "|"
-                            + janela + "\" http://localhost:8084/Suporte/T2TiERP.jnlp"
-                            + " ");
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
-
-        frame.getMenuHelp().add(menuItemSuporte);
+        rightPanel.setBorder(BorderFactory.createTitledBorder("Avisos"));
+        rightPanel.setPreferredSize(new Dimension(150, frame.getHeight()));
+        frame.getContentPane().add(rightPanel, BorderLayout.EAST);
 
 
     }
@@ -829,16 +813,35 @@ public class Menu implements MDIController, LoginController {
         domains.put(dominioAberturaEncerramento.getDomainId(), dominioAberturaEncerramento);
 
         MDIFrame mdi = new MDIFrame(this);
-
-        mdi.addButtonToToolBar("relatorioMenu.png", "Relatórios").addActionListener(new Menu.ReportAction());
+        mdi.addButtonToToolBar("cliente32.png", "Clientes").addActionListener(new Menu.ClientesAction());
         mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("compraSugerida32.png", "Compras").addActionListener(new Menu.ComprasAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("lancamentoPagar32.png", "Contas a Pagar").addActionListener(new Menu.ContasPagarAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("lancamentoReceber32.png", "Contas a Receber").addActionListener(new Menu.ContasReceberAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("venda32.png", "Vendas").addActionListener(new Menu.VendasAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("almoxarifado32.png", "Estoque").addActionListener(new Menu.EstoqueAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("orcamento32.png", "Orçamento").addActionListener(new Menu.OrcamentoAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("produto32.png", "Produtos").addActionListener(new Menu.ProdutoAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("nfe32.png", "Nota Fiscal Eletronica").addActionListener(new Menu.NfeAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("relatorio32.png", "Relatórios").addActionListener(new Menu.ReportAction());
+        mdi.addSeparatorToToolBar();
+        mdi.addButtonToToolBar("helpdesk32.png", "Suporte").addActionListener(new Menu.Suportection());
+        mdi.addSeparatorToToolBar();
+
 
     }
 
     class ReportAction implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-
 
             try {
                 String janela;
@@ -884,6 +887,150 @@ public class Menu implements MDIController, LoginController {
 
 
 
+
+        }
+    }
+
+    class ClientesAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new ClienteGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class ComprasAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new CompraRequisicaoGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class ContasPagarAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new FinParcelaPagamentoGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class ContasReceberAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new FinParcelaRecebimentoGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class VendasAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new VendaGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class EstoqueAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new EntradaNotaGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class OrcamentoAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new OrcamentoEmpresarialGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class ProdutoAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new ProdutoGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class NfeAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                new NfeGridController();
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
+
+        }
+    }
+
+    class Suportection implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+
+
+                UsuarioVO usuario = (UsuarioVO) Container.getContainer().get("usuario");
+                EmpresaVO empresa = (EmpresaVO) Container.getContainer().get("empresa");
+                String modulo;
+                String janela;
+                if (MDIFrame.getSelectedFrame() != null) {
+                    modulo = MDIFrame.getSelectedFrame().getTitle();
+                    janela = MDIFrame.getSelectedFrame().getClass().getName();
+                } else {
+                    modulo = "ERP";
+                    janela = "Principal";
+                }
+
+                Runtime.getRuntime().exec("javaws -open \""
+                        + empresa.getId() + "|"
+                        + empresa.getRazaoSocial() + "|"
+                        + usuario.getColaborador().getPessoa().getId() + "|"
+                        + usuario.getColaborador().getPessoa().getNome() + "|"
+                        + modulo + "|"
+                        + janela + "\" http://localhost:8084/Suporte/T2TiERP.jnlp"
+                        + " ");
+
+
+
+            } catch (Exception ev) {
+                ev.printStackTrace();
+            }
 
         }
     }
