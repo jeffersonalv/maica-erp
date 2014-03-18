@@ -9,7 +9,6 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -52,22 +51,12 @@
         </Component>
         <Component class="org.openswing.swing.client.NavigatorBar" name="navigatorBar1">
         </Component>
-        <Component class="org.openswing.swing.client.ExportButton" name="exportButton1">
-        </Component>
-        <Component class="org.openswing.swing.client.FilterButton" name="filterButton1">
-        </Component>
       </SubComponents>
     </Container>
     <Container class="org.openswing.swing.client.GridControl" name="gridControl1">
       <Properties>
         <Property name="deleteButton" type="org.openswing.swing.client.DeleteButton" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="deleteButton1"/>
-        </Property>
-        <Property name="exportButton" type="org.openswing.swing.client.ExportButton" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="exportButton1"/>
-        </Property>
-        <Property name="filterButton" type="org.openswing.swing.client.FilterButton" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="filterButton1"/>
         </Property>
         <Property name="functionId" type="java.lang.String" value="produto"/>
         <Property name="insertButton" type="org.openswing.swing.client.InsertButton" editor="org.netbeans.modules.form.ComponentChooserEditor">

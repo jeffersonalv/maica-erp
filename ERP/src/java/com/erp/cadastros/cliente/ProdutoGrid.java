@@ -65,8 +65,6 @@ public class ProdutoGrid extends InternalFrame {
         deleteButton1 = new org.openswing.swing.client.DeleteButton();
         reloadButton1 = new org.openswing.swing.client.ReloadButton();
         navigatorBar1 = new org.openswing.swing.client.NavigatorBar();
-        exportButton1 = new org.openswing.swing.client.ExportButton();
-        filterButton1 = new org.openswing.swing.client.FilterButton();
         gridControl1 = new org.openswing.swing.client.GridControl();
         textColumn11 = new org.openswing.swing.table.columns.client.TextColumn();
         textColumn3 = new org.openswing.swing.table.columns.client.TextColumn();
@@ -89,13 +87,11 @@ public class ProdutoGrid extends InternalFrame {
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Produto"));
-        jPanel1.setLayout(new java.awt.FlowLayout(0));
+        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
         jPanel1.add(insertButton1);
         jPanel1.add(deleteButton1);
         jPanel1.add(reloadButton1);
         jPanel1.add(navigatorBar1);
-        jPanel1.add(exportButton1);
-        jPanel1.add(filterButton1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -106,14 +102,12 @@ public class ProdutoGrid extends InternalFrame {
         getContentPane().add(jPanel1, gridBagConstraints);
 
         gridControl1.setDeleteButton(deleteButton1);
-        gridControl1.setExportButton(exportButton1);
-        gridControl1.setFilterButton(filterButton1);
         gridControl1.setFunctionId("produto");
         gridControl1.setInsertButton(insertButton1);
         gridControl1.setNavBar(navigatorBar1);
         gridControl1.setReloadButton(reloadButton1);
         gridControl1.setValueObjectClassName("com.erp.cadastros.java.vo.ProdutoVO");
-        gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(0));
+        gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         textColumn11.setColumnFilterable(true);
         textColumn11.setColumnName("nome");
@@ -248,8 +242,6 @@ public class ProdutoGrid extends InternalFrame {
     private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn23;
     private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn25;
     private org.openswing.swing.client.DeleteButton deleteButton1;
-    private org.openswing.swing.client.ExportButton exportButton1;
-    private org.openswing.swing.client.FilterButton filterButton1;
     private org.openswing.swing.client.GridControl gridControl1;
     private org.openswing.swing.client.InsertButton insertButton1;
     private javax.swing.JPanel jPanel1;

@@ -1,7 +1,7 @@
 package com.erp.cadastros.cliente;
 
-import com.erp.padrao.constantes.Constantes;
 import com.erp.cadastros.java.vo.ProdutoVO;
+import com.erp.padrao.constantes.Constantes;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
