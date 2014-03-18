@@ -52,7 +52,7 @@ public class ChequeDetalhe extends InternalFrame {
         /*
          * Configurações do lookup do talonario
          */
-        pessoaController.setLookupValueObjectClassName("com.erp.cadastros.cliente.TalonarioChequeVO");
+        pessoaController.setLookupValueObjectClassName("com.erp.cadastros.java.vo.TalonarioChequeVO");
         pessoaController.addLookup2ParentLink("id", "talonarioCheque.id");
         pessoaController.addLookup2ParentLink("talao", "talonarioCheque.talao");
         pessoaController.setHeaderColumnName("id", "ID");

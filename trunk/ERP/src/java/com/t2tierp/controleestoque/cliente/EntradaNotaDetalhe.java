@@ -783,7 +783,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         numericControl62 = new org.openswing.swing.client.NumericControl();
         jSeparator6 = new javax.swing.JSeparator();
 
-        setTitle("T2Ti ERP - Controle de Estoque");
+        setTitle("ERP - Controle de Estoque");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -1222,7 +1222,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         jPanel3.add(numericControl40, gridBagConstraints);
 
-        labelControl35.setFont(new java.awt.Font("Tahoma", 1, 11));
+        labelControl35.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelControl35.setLabel("Valor Total Produtos:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -1352,7 +1352,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         jPanel3.add(numericControl37, gridBagConstraints);
 
-        labelControl44.setFont(new java.awt.Font("Tahoma", 1, 11));
+        labelControl44.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelControl44.setLabel("Valor Total:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -2196,21 +2196,21 @@ public class EntradaNotaDetalhe extends InternalFrame {
         checkBoxColumn1.setColumnName("produtoCadastrado");
         checkBoxColumn1.setColumnRequired(false);
         checkBoxColumn1.setHeaderColumnName("Cadastrado");
-        checkBoxColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        checkBoxColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         checkBoxColumn1.setPreferredWidth(70);
         gridControlProduto.getColumnContainer().add(checkBoxColumn1);
 
         integerColumn4.setColumnName("numeroItem");
         integerColumn4.setColumnRequired(false);
         integerColumn4.setHeaderColumnName("Numero Item");
-        integerColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(integerColumn4);
 
         codLookupColumn1.setColumnName("gtin");
         codLookupColumn1.setEditableOnEdit(true);
         codLookupColumn1.setEditableOnInsert(true);
         codLookupColumn1.setHeaderColumnName("GTIN");
-        codLookupColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        codLookupColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         codLookupColumn1.setMaxCharacters(14);
         gridControlProduto.getColumnContainer().add(codLookupColumn1);
 
@@ -2218,7 +2218,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn5.setEditableOnEdit(true);
         textColumn5.setEditableOnInsert(true);
         textColumn5.setHeaderColumnName("Codigo Produto");
-        textColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn5.setMaxCharacters(60);
         gridControlProduto.getColumnContainer().add(textColumn5);
 
@@ -2226,7 +2226,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn7.setEditableOnEdit(true);
         textColumn7.setEditableOnInsert(true);
         textColumn7.setHeaderColumnName("Nome Produto");
-        textColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn7.setMaxCharacters(100);
         textColumn7.setPreferredWidth(200);
         gridControlProduto.getColumnContainer().add(textColumn7);
@@ -2236,7 +2236,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn8.setEditableOnEdit(true);
         textColumn8.setEditableOnInsert(true);
         textColumn8.setHeaderColumnName("Ncm");
-        textColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn8.setMaxCharacters(8);
         gridControlProduto.getColumnContainer().add(textColumn8);
 
@@ -2245,7 +2245,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn9.setEditableOnEdit(true);
         integerColumn9.setEditableOnInsert(true);
         integerColumn9.setHeaderColumnName("Ex Tipi");
-        integerColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(integerColumn9);
 
         integerColumn10.setColumnName("cfop");
@@ -2253,7 +2253,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn10.setEditableOnEdit(true);
         integerColumn10.setEditableOnInsert(true);
         integerColumn10.setHeaderColumnName("Cfop");
-        integerColumn10.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn10.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(integerColumn10);
 
         textColumn11.setColumnName("unidadeComercial");
@@ -2261,7 +2261,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn11.setEditableOnEdit(true);
         textColumn11.setEditableOnInsert(true);
         textColumn11.setHeaderColumnName("Unidade Comercial");
-        textColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn11.setMaxCharacters(6);
         gridControlProduto.getColumnContainer().add(textColumn11);
 
@@ -2271,7 +2271,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn12.setEditableOnEdit(true);
         decimalColumn12.setEditableOnInsert(true);
         decimalColumn12.setHeaderColumnName("Quantidade Comercial");
-        decimalColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn12);
 
         decimalColumn13.setColumnName("valorUnitarioComercial");
@@ -2280,7 +2280,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn13.setEditableOnEdit(true);
         decimalColumn13.setEditableOnInsert(true);
         decimalColumn13.setHeaderColumnName("Valor Unitario Comercial");
-        decimalColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn13);
 
         decimalColumn14.setColumnName("valorBrutoProduto");
@@ -2289,7 +2289,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn14.setEditableOnEdit(true);
         decimalColumn14.setEditableOnInsert(true);
         decimalColumn14.setHeaderColumnName("Valor Bruto Produto");
-        decimalColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn14);
 
         textColumn15.setColumnName("gtinUnidadeTributavel");
@@ -2297,7 +2297,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn15.setEditableOnEdit(true);
         textColumn15.setEditableOnInsert(true);
         textColumn15.setHeaderColumnName("Gtin Unidade Tributavel");
-        textColumn15.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn15.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn15.setMaxCharacters(14);
         gridControlProduto.getColumnContainer().add(textColumn15);
 
@@ -2306,7 +2306,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn16.setEditableOnEdit(true);
         textColumn16.setEditableOnInsert(true);
         textColumn16.setHeaderColumnName("Unidade Tributavel");
-        textColumn16.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn16.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn16.setMaxCharacters(6);
         gridControlProduto.getColumnContainer().add(textColumn16);
 
@@ -2316,7 +2316,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn17.setEditableOnEdit(true);
         decimalColumn17.setEditableOnInsert(true);
         decimalColumn17.setHeaderColumnName("Quantidade Tributavel");
-        decimalColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn17);
 
         decimalColumn18.setColumnName("valorUnitarioTributavel");
@@ -2325,7 +2325,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn18.setEditableOnEdit(true);
         decimalColumn18.setEditableOnInsert(true);
         decimalColumn18.setHeaderColumnName("Valor Unitario Tributavel");
-        decimalColumn18.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn18.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn18);
 
         decimalColumn19.setColumnName("valorFrete");
@@ -2334,7 +2334,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn19.setEditableOnEdit(true);
         decimalColumn19.setEditableOnInsert(true);
         decimalColumn19.setHeaderColumnName("Valor Frete");
-        decimalColumn19.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn19.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn19);
 
         decimalColumn20.setColumnName("valorSeguro");
@@ -2343,7 +2343,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn20.setEditableOnEdit(true);
         decimalColumn20.setEditableOnInsert(true);
         decimalColumn20.setHeaderColumnName("Valor Seguro");
-        decimalColumn20.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn20.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn20);
 
         decimalColumn21.setColumnName("valorDesconto");
@@ -2352,7 +2352,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn21.setEditableOnEdit(true);
         decimalColumn21.setEditableOnInsert(true);
         decimalColumn21.setHeaderColumnName("Valor Desconto");
-        decimalColumn21.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn21.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn21);
 
         decimalColumn22.setColumnName("valorOutrasDespesas");
@@ -2361,7 +2361,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn22.setEditableOnEdit(true);
         decimalColumn22.setEditableOnInsert(true);
         decimalColumn22.setHeaderColumnName("Valor Outras Despesas");
-        decimalColumn22.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn22.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn22);
 
         comboColumn23.setColumnName("entraTotal");
@@ -2370,7 +2370,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         comboColumn23.setEditableOnEdit(true);
         comboColumn23.setEditableOnInsert(true);
         comboColumn23.setHeaderColumnName("Entra Total");
-        comboColumn23.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn23.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(comboColumn23);
 
         decimalColumn24.setColumnName("valorSubtotal");
@@ -2379,7 +2379,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn24.setEditableOnEdit(true);
         decimalColumn24.setEditableOnInsert(true);
         decimalColumn24.setHeaderColumnName("Valor Subtotal");
-        decimalColumn24.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn24.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn24);
 
         decimalColumn25.setColumnName("valorTotal");
@@ -2388,7 +2388,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn25.setEditableOnEdit(true);
         decimalColumn25.setEditableOnInsert(true);
         decimalColumn25.setHeaderColumnName("Valor Total");
-        decimalColumn25.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn25.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(decimalColumn25);
 
         textColumn26.setColumnName("numeroPedidoCompra");
@@ -2396,7 +2396,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn26.setEditableOnEdit(true);
         textColumn26.setEditableOnInsert(true);
         textColumn26.setHeaderColumnName("Numero Pedido Compra");
-        textColumn26.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn26.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn26.setMaxCharacters(15);
         gridControlProduto.getColumnContainer().add(textColumn26);
 
@@ -2405,7 +2405,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn27.setEditableOnEdit(true);
         integerColumn27.setEditableOnInsert(true);
         integerColumn27.setHeaderColumnName("Item Pedido Compra");
-        integerColumn27.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn27.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlProduto.getColumnContainer().add(integerColumn27);
 
         textColumn28.setColumnName("informacoesAdicionais");
@@ -2413,7 +2413,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn28.setEditableOnEdit(true);
         textColumn28.setEditableOnInsert(true);
         textColumn28.setHeaderColumnName("Informacoes Adicionais");
-        textColumn28.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn28.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn28.setMaxCharacters(500);
         gridControlProduto.getColumnContainer().add(textColumn28);
 
@@ -2461,7 +2461,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn3.setEditableOnEdit(true);
         textColumn3.setEditableOnInsert(true);
         textColumn3.setHeaderColumnName("Chave de Acesso");
-        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn3.setMaxCharacters(44);
         textColumn3.setPreferredWidth(300);
         gridControlNfeReferenciada.getColumnContainer().add(textColumn3);
@@ -2510,7 +2510,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn3.setEditableOnEdit(true);
         integerColumn3.setEditableOnInsert(true);
         integerColumn3.setHeaderColumnName("Codigo Uf");
-        integerColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         integerColumn3.setMaxCharacters(2);
         gridControlNf1Referenciada.getColumnContainer().add(integerColumn3);
 
@@ -2518,7 +2518,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn4.setEditableOnEdit(true);
         textColumn4.setEditableOnInsert(true);
         textColumn4.setHeaderColumnName("Ano Mes");
-        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn4.setMaxCharacters(4);
         gridControlNf1Referenciada.getColumnContainer().add(textColumn4);
 
@@ -2526,7 +2526,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn6.setEditableOnEdit(true);
         textColumn6.setEditableOnInsert(true);
         textColumn6.setHeaderColumnName("Cnpj");
-        textColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn6.setMaxCharacters(14);
         gridControlNf1Referenciada.getColumnContainer().add(textColumn6);
 
@@ -2534,7 +2534,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn9.setEditableOnEdit(true);
         textColumn9.setEditableOnInsert(true);
         textColumn9.setHeaderColumnName("Modelo");
-        textColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn9.setMaxCharacters(2);
         gridControlNf1Referenciada.getColumnContainer().add(textColumn9);
 
@@ -2542,7 +2542,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn10.setEditableOnEdit(true);
         textColumn10.setEditableOnInsert(true);
         textColumn10.setHeaderColumnName("Serie");
-        textColumn10.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn10.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn10.setMaxCharacters(3);
         gridControlNf1Referenciada.getColumnContainer().add(textColumn10);
 
@@ -2550,7 +2550,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn12.setEditableOnEdit(true);
         textColumn12.setEditableOnInsert(true);
         textColumn12.setHeaderColumnName("Numero Nf");
-        textColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn12.setMaxCharacters(9);
         gridControlNf1Referenciada.getColumnContainer().add(textColumn12);
 
@@ -2598,7 +2598,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn13.setEditableOnEdit(true);
         textColumn13.setEditableOnInsert(true);
         textColumn13.setHeaderColumnName("Chave Acesso");
-        textColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn13.setMaxCharacters(44);
         textColumn13.setPreferredWidth(300);
         gridControlCteReferenciado.getColumnContainer().add(textColumn13);
@@ -2647,7 +2647,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn5.setEditableOnEdit(true);
         integerColumn5.setEditableOnInsert(true);
         integerColumn5.setHeaderColumnName("Codigo Uf");
-        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         integerColumn5.setMaxCharacters(2);
         gridControlProdRuralReferenciada.getColumnContainer().add(integerColumn5);
 
@@ -2655,7 +2655,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn14.setEditableOnEdit(true);
         textColumn14.setEditableOnInsert(true);
         textColumn14.setHeaderColumnName("Ano Mes");
-        textColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn14.setMaxCharacters(4);
         gridControlProdRuralReferenciada.getColumnContainer().add(textColumn14);
 
@@ -2664,7 +2664,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn17.setEditableOnEdit(true);
         textColumn17.setEditableOnInsert(true);
         textColumn17.setHeaderColumnName("Cnpj");
-        textColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn17.setMaxCharacters(14);
         gridControlProdRuralReferenciada.getColumnContainer().add(textColumn17);
 
@@ -2673,7 +2673,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn18.setEditableOnEdit(true);
         textColumn18.setEditableOnInsert(true);
         textColumn18.setHeaderColumnName("Cpf");
-        textColumn18.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn18.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn18.setMaxCharacters(11);
         gridControlProdRuralReferenciada.getColumnContainer().add(textColumn18);
 
@@ -2682,7 +2682,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn19.setEditableOnEdit(true);
         textColumn19.setEditableOnInsert(true);
         textColumn19.setHeaderColumnName("Inscricao Estadual");
-        textColumn19.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn19.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn19.setMaxCharacters(14);
         textColumn19.setPreferredWidth(110);
         gridControlProdRuralReferenciada.getColumnContainer().add(textColumn19);
@@ -2691,7 +2691,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn20.setEditableOnEdit(true);
         textColumn20.setEditableOnInsert(true);
         textColumn20.setHeaderColumnName("Modelo");
-        textColumn20.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn20.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn20.setMaxCharacters(2);
         gridControlProdRuralReferenciada.getColumnContainer().add(textColumn20);
 
@@ -2699,7 +2699,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn21.setEditableOnEdit(true);
         textColumn21.setEditableOnInsert(true);
         textColumn21.setHeaderColumnName("Serie");
-        textColumn21.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn21.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn21.setMaxCharacters(3);
         gridControlProdRuralReferenciada.getColumnContainer().add(textColumn21);
 
@@ -2707,7 +2707,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn22.setEditableOnEdit(true);
         textColumn22.setEditableOnInsert(true);
         textColumn22.setHeaderColumnName("Numero Nf");
-        textColumn22.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn22.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn22.setMaxCharacters(9);
         gridControlProdRuralReferenciada.getColumnContainer().add(textColumn22);
 
@@ -2754,7 +2754,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn23.setEditableOnEdit(true);
         textColumn23.setEditableOnInsert(true);
         textColumn23.setHeaderColumnName("Modelo Documento Fiscal");
-        textColumn23.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn23.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn23.setMaxCharacters(2);
         textColumn23.setPreferredWidth(150);
         gridControlCupomFiscalReferenciado.getColumnContainer().add(textColumn23);
@@ -2763,7 +2763,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn6.setEditableOnEdit(true);
         integerColumn6.setEditableOnInsert(true);
         integerColumn6.setHeaderColumnName("Numero Ordem Ecf");
-        integerColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         integerColumn6.setMaxCharacters(3);
         integerColumn6.setPreferredWidth(110);
         gridControlCupomFiscalReferenciado.getColumnContainer().add(integerColumn6);
@@ -2772,7 +2772,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn7.setEditableOnEdit(true);
         integerColumn7.setEditableOnInsert(true);
         integerColumn7.setHeaderColumnName("Coo");
-        integerColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         integerColumn7.setMaxCharacters(10);
         gridControlCupomFiscalReferenciado.getColumnContainer().add(integerColumn7);
 
@@ -2780,7 +2780,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         dateColumn6.setEditableOnEdit(true);
         dateColumn6.setEditableOnInsert(true);
         dateColumn6.setHeaderColumnName("Data Emissao Cupom");
-        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         dateColumn6.setPreferredWidth(130);
         gridControlCupomFiscalReferenciado.getColumnContainer().add(dateColumn6);
 
@@ -2788,14 +2788,14 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn8.setEditableOnEdit(true);
         integerColumn8.setEditableOnInsert(true);
         integerColumn8.setHeaderColumnName("Numero Caixa");
-        integerColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlCupomFiscalReferenciado.getColumnContainer().add(integerColumn8);
 
         textColumn24.setColumnName("numeroSerieEcf");
         textColumn24.setEditableOnEdit(true);
         textColumn24.setEditableOnInsert(true);
         textColumn24.setHeaderColumnName("Numero Serie Ecf");
-        textColumn24.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn24.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn24.setMaxCharacters(21);
         textColumn24.setPreferredWidth(150);
         gridControlCupomFiscalReferenciado.getColumnContainer().add(textColumn24);
@@ -3582,7 +3582,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn25.setEditableOnEdit(true);
         textColumn25.setEditableOnInsert(true);
         textColumn25.setHeaderColumnName("Placa");
-        textColumn25.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn25.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn25.setMaxCharacters(8);
         gridControlTransporteReboque.getColumnContainer().add(textColumn25);
 
@@ -3590,7 +3590,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn27.setEditableOnEdit(true);
         textColumn27.setEditableOnInsert(true);
         textColumn27.setHeaderColumnName("Uf");
-        textColumn27.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn27.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn27.setMaxCharacters(2);
         gridControlTransporteReboque.getColumnContainer().add(textColumn27);
 
@@ -3598,7 +3598,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn29.setEditableOnEdit(true);
         textColumn29.setEditableOnInsert(true);
         textColumn29.setHeaderColumnName("Rntc");
-        textColumn29.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn29.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn29.setMaxCharacters(20);
         gridControlTransporteReboque.getColumnContainer().add(textColumn29);
 
@@ -3646,14 +3646,14 @@ public class EntradaNotaDetalhe extends InternalFrame {
         integerColumn11.setEditableOnEdit(true);
         integerColumn11.setEditableOnInsert(true);
         integerColumn11.setHeaderColumnName("Quantidade");
-        integerColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlTransporteVolume.getColumnContainer().add(integerColumn11);
 
         textColumn30.setColumnName("especie");
         textColumn30.setEditableOnEdit(true);
         textColumn30.setEditableOnInsert(true);
         textColumn30.setHeaderColumnName("Especie");
-        textColumn30.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn30.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn30.setMaxCharacters(60);
         gridControlTransporteVolume.getColumnContainer().add(textColumn30);
 
@@ -3661,7 +3661,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn31.setEditableOnEdit(true);
         textColumn31.setEditableOnInsert(true);
         textColumn31.setHeaderColumnName("Marca");
-        textColumn31.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn31.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn31.setMaxCharacters(60);
         gridControlTransporteVolume.getColumnContainer().add(textColumn31);
 
@@ -3669,7 +3669,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn32.setEditableOnEdit(true);
         textColumn32.setEditableOnInsert(true);
         textColumn32.setHeaderColumnName("Numeracao");
-        textColumn32.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn32.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn32.setMaxCharacters(60);
         gridControlTransporteVolume.getColumnContainer().add(textColumn32);
 
@@ -3678,7 +3678,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn7.setEditableOnEdit(true);
         decimalColumn7.setEditableOnInsert(true);
         decimalColumn7.setHeaderColumnName("Peso Liquido");
-        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlTransporteVolume.getColumnContainer().add(decimalColumn7);
 
         decimalColumn8.setColumnName("pesoBruto");
@@ -3686,7 +3686,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn8.setEditableOnEdit(true);
         decimalColumn8.setEditableOnInsert(true);
         decimalColumn8.setHeaderColumnName("Peso Bruto");
-        decimalColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlTransporteVolume.getColumnContainer().add(decimalColumn8);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3729,7 +3729,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn33.setEditableOnEdit(true);
         textColumn33.setEditableOnInsert(true);
         textColumn33.setHeaderColumnName("Numero");
-        textColumn33.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn33.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn33.setMaxCharacters(60);
         textColumn33.setPreferredWidth(200);
         gridControlTransporteVolumeLacre.getColumnContainer().add(textColumn33);
@@ -3867,7 +3867,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         textColumn34.setEditableOnEdit(true);
         textColumn34.setEditableOnInsert(true);
         textColumn34.setHeaderColumnName("Numero");
-        textColumn34.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn34.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn34.setMaxCharacters(60);
         gridControlDuplicata.getColumnContainer().add(textColumn34);
 
@@ -3875,7 +3875,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         dateColumn4.setEditableOnEdit(true);
         dateColumn4.setEditableOnInsert(true);
         dateColumn4.setHeaderColumnName("Data Vencimento");
-        dateColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlDuplicata.getColumnContainer().add(dateColumn4);
 
         decimalColumn5.setColumnName("valor");
@@ -3883,7 +3883,7 @@ public class EntradaNotaDetalhe extends InternalFrame {
         decimalColumn5.setEditableOnEdit(true);
         decimalColumn5.setEditableOnInsert(true);
         decimalColumn5.setHeaderColumnName("Valor");
-        decimalColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlDuplicata.getColumnContainer().add(decimalColumn5);
 
         gridBagConstraints = new java.awt.GridBagConstraints();

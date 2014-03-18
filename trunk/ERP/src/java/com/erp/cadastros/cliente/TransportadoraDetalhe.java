@@ -74,7 +74,7 @@ public class TransportadoraDetalhe extends InternalFrame {
         /*
          * Configurações do lookup da conta contabil
          */
-        contaContabilController.setLookupValueObjectClassName(" com.erp.contabil_contabilidade.vo.ContabilContaVO");
+        contaContabilController.setLookupValueObjectClassName("com.t2tierp.contabilidade.java.ContabilContaVO");
         contaContabilController.addLookup2ParentLink("id", "contabilConta.id");
         contaContabilController.addLookup2ParentLink("descricao", "contabilConta.descricao");
         contaContabilController.setHeaderColumnName("id", "ID");

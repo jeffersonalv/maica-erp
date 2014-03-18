@@ -58,6 +58,7 @@ public class ProdutoDetalhe extends InternalFrame {
         /*
          * Configurações do lookup do sub grupo
          */
+        //com.erp.cadastros.java.vo.ProdutoVO;
         subGrupoController.setLookupValueObjectClassName("com.erp.cadastros.java.vo.ProdutoSubGrupoVO");
         subGrupoController.addLookup2ParentLink("id", "produtoSubGrupo.id");
         subGrupoController.addLookup2ParentLink("nome", "produtoSubGrupo.nome");
@@ -104,10 +105,6 @@ public class ProdutoDetalhe extends InternalFrame {
         marcaController.setHeaderColumnName("id", "ID");
         marcaController.setHeaderColumnName("nome", "Nome");
         marcaController.setFrameTitle("Importa Marca Produto");
-        marcaController.setGridFilterButton(true);
-        marcaController.setShowNavigatorBar(true);
-        marcaController.setFilterableColumn("nome",true);
-        
 
         marcaController.setVisibleStatusPanel(true);
         marcaController.setVisibleColumn("id", true);
@@ -469,6 +466,7 @@ public class ProdutoDetalhe extends InternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
         jPanel2.add(labelControl5, gridBagConstraints);
 
+        codLookupControlAlmoxarifado.setAllowOnlyNumbers(true);
         codLookupControlAlmoxarifado.setAttributeName("almoxarifado.id");
         codLookupControlAlmoxarifado.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
