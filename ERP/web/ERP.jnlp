@@ -22,7 +22,8 @@
     </security>
 
     <resources>
-        <j2se version="1.6"/>
+        <!-- <j2se version="1.6+"/>-->
+        <j2se version="1.6+" java-vm-args="-Xms96m -Xmx512m"/>
         <jar href="ERPCliente.jar" />
         <jar href="clientos.jar" />
         <jar href="commonos.jar" />

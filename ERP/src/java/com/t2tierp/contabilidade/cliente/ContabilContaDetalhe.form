@@ -85,9 +85,7 @@
         <Component class="org.openswing.swing.client.CodLookupControl" name="codLookupControl2">
           <Properties>
             <Property name="allowOnlyNumbers" type="boolean" value="true"/>
-            <Property name="attributeName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;contabilConta.id&quot;" type="code"/>
-            </Property>
+            <Property name="attributeName" type="java.lang.String" value="contabilConta.id"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Constraints>
