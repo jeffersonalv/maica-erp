@@ -7,40 +7,36 @@ import org.openswing.swing.lookup.client.LookupController;
 import org.openswing.swing.mdi.client.InternalFrame;
 
 /**
-* <p>Title: T2Ti ERP</p>
-* <p>Description: Tela EmpresaDetalhe.</p>
-*
-* <p>The MIT License</p>
-*
-* <p>Copyright: Copyright (C) 2010 T2Ti.COM
-*
-* Permission is hereby granted, free of charge, to any person
-* obtaining a copy of this software and associated documentation
-* files (the "Software"), to deal in the Software without
-* restriction, including without limitation the rights to use,
-* copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the
-* Software is furnished to do so, subject to the following
-* conditions:
-*
-* The above copyright notice and this permission notice shall be
-* included in all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-* OTHER DEALINGS IN THE SOFTWARE.
-*
-*        The author may be contacted at:
-*            t2ti.com@gmail.com</p>
-*
+ * <p>Title: T2Ti ERP</p>
+ * <p>Description: Tela EmpresaDetalhe.</p>
+ *
+ * <p>The MIT License</p>
+ *
+ * <p>Copyright: Copyright (C) 2010 T2Ti.COM
+ * 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+* The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+* The author may be contacted at: t2ti.com@gmail.com</p>
+ * 
 * @author Claudio de Barros (t2ti.com@gmail.com)
-* @version 1.0
-*/
+ * @version 1.0
+ */
 public class EmpresaDetalhe extends InternalFrame {
 
     private LookupController matrizController = new LookupController();
@@ -91,6 +87,10 @@ public class EmpresaDetalhe extends InternalFrame {
         matrizController.setVisibleColumn("razaoSocial", true);
         matrizController.setVisibleColumn("cnpj", true);
         matrizController.setFramePreferedSize(new Dimension(600, 500));
+        matrizController.setFilterableColumn("cnpj", true);
+        matrizController.setGridFilterButton(true);
+        matrizController.setShowNavigatorBar(true);
+
 
         matrizController.setLookupDataLocator(new LookupDataLocatorGenerico(matrizController.getLookupValueObjectClassName()));
         codLookupControl3.setLookupController(matrizController);
@@ -110,6 +110,10 @@ public class EmpresaDetalhe extends InternalFrame {
         contadorController.setVisibleColumn("pessoa.nome", true);
         contadorController.setFramePreferedSize(new Dimension(600, 500));
 
+        contadorController.setFilterableColumn("pessoa.nome", true);
+        contadorController.setPreferredWidthColumn("pessoa.nome", 350);
+        contadorController.setGridFilterButton(true);
+        contadorController.setShowNavigatorBar(true);
         contadorController.setLookupDataLocator(new LookupDataLocatorGenerico(contadorController.getLookupValueObjectClassName()));
         codLookupControl5.setLookupController(contadorController);
 
@@ -123,6 +127,11 @@ public class EmpresaDetalhe extends InternalFrame {
         sindicatoController.setHeaderColumnName("nome", "Nome");
         sindicatoController.setFrameTitle("Importa Sindicato");
 
+
+        sindicatoController.setFilterableColumn("nome", true);
+        sindicatoController.setPreferredWidthColumn("nome", 350);
+        sindicatoController.setGridFilterButton(true);
+        sindicatoController.setShowNavigatorBar(true);
         sindicatoController.setVisibleStatusPanel(true);
         sindicatoController.setVisibleColumn("id", true);
         sindicatoController.setVisibleColumn("nome", true);
@@ -146,6 +155,11 @@ public class EmpresaDetalhe extends InternalFrame {
         fpasController.setVisibleColumn("descricao", true);
         fpasController.setFramePreferedSize(new Dimension(600, 500));
 
+        fpasController.setFilterableColumn("descricao", true);
+        fpasController.setPreferredWidthColumn("descricao", 350);
+        fpasController.setGridFilterButton(true);
+        fpasController.setShowNavigatorBar(true);
+
         fpasController.setLookupDataLocator(new LookupDataLocatorGenerico(fpasController.getLookupValueObjectClassName()));
         codLookupControl4.setLookupController(fpasController);
 
@@ -160,6 +174,13 @@ public class EmpresaDetalhe extends InternalFrame {
         municipioEnderecoController.setHeaderColumnName("codigoIbge", "Código Ibge");
         municipioEnderecoController.setHeaderColumnName("uf.sigla", "Sigla");
         municipioEnderecoController.setFrameTitle("Importa Municipio IBGE");
+
+
+        municipioEnderecoController.setFilterableColumn("codigoIbge", true);
+        municipioEnderecoController.setFilterableColumn("uf", true);
+        // municipioEnderecoController.setPreferredWidthColumn("descricao", 350);
+        municipioEnderecoController.setGridFilterButton(true);
+        municipioEnderecoController.setShowNavigatorBar(true);
 
         municipioEnderecoController.setVisibleStatusPanel(true);
         municipioEnderecoController.setVisibleColumn("id", true);
@@ -196,10 +217,10 @@ public class EmpresaDetalhe extends InternalFrame {
         return gridControlEndereco;
     }
 
-    /** This method is called from within the constructor to
-     * initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is
-     * always regenerated by the Form Editor.
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -679,6 +700,7 @@ public class EmpresaDetalhe extends InternalFrame {
         form1.add(labelControl22, gridBagConstraints);
 
         comboBoxControl21.setAttributeName("tipoRegime");
+        comboBoxControl21.setDomainId("tipoRegimeEmpresa");
         comboBoxControl21.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1172,8 +1194,6 @@ public class EmpresaDetalhe extends InternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.table.columns.client.CodLookupColumn codLookupColumn1;
     private org.openswing.swing.client.CodLookupControl codLookupControl3;
@@ -1281,5 +1301,4 @@ public class EmpresaDetalhe extends InternalFrame {
     private org.openswing.swing.client.TextControl textControl7;
     private org.openswing.swing.client.TextControl textControl9;
     // End of variables declaration//GEN-END:variables
-
 }

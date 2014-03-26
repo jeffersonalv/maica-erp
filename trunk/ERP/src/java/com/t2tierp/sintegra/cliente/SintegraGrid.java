@@ -137,7 +137,7 @@ public class SintegraGrid extends InternalFrame {
         comboNaturezaSintegra = new javax.swing.JComboBox();
         comboFinalidadeSintegra = new javax.swing.JComboBox();
 
-        setTitle("T2Ti ERP - Sintegra");
+        setTitle("ERP - Sintegra");
         setPreferredSize(new java.awt.Dimension(500, 350));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 

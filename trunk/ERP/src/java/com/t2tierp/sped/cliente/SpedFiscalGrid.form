@@ -9,7 +9,6 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -147,7 +146,7 @@
             <Container class="org.openswing.swing.client.GridControl" name="gridControlContador">
               <Properties>
                 <Property name="functionId" type="java.lang.String" value="contador"/>
-                <Property name="valueObjectClassName" type="java.lang.String" value="com.t2tierp.cadastros.java.ContadorVO"/>
+                <Property name="valueObjectClassName" type="java.lang.String" value="com.erp.cadastros.java.vo.ContadorVO"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">

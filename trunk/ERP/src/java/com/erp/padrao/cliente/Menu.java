@@ -55,13 +55,15 @@ public class Menu implements MDIController, LoginController {
                 "Sair",
                 'S',
                 "Armazenar Informações",
-                "Basic",
+                "ERP",
                 null,
                 null,
                 null,
                 "Usuário",
                 "Senha",
                 null);
+        
+         System.setProperty("SERVERURL", System.getProperty("jnlp.SERVERURL"));
     }
 
     /**
@@ -431,6 +433,11 @@ public class Menu implements MDIController, LoginController {
         dominioCRT.addDomainPair("1", "1 - Simples Nacional");
         dominioCRT.addDomainPair("2", "2 - Simples Nac - Excesso");
         dominioCRT.addDomainPair("3", "3 - Regime Normal");
+        
+         Domain dominioTipoRegimeEmpresa = new Domain("tipoRegimeEmpresa");
+        dominioTipoRegimeEmpresa.addDomainPair("1", "Lucro Real");
+        dominioTipoRegimeEmpresa.addDomainPair("2", "Lucro Presumido");
+        dominioTipoRegimeEmpresa.addDomainPair("3", "Simples Nacional");
 
         Domain dominioModeloCupomFiscal = new Domain("modeloCupomFiscal");
         dominioModeloCupomFiscal.addDomainPair("2B", "2B - Emitido em Máquina Registradora (Não ECF)");
@@ -564,6 +571,8 @@ public class Menu implements MDIController, LoginController {
         dominioInformarContaContabil.addDomainPair("C", "Código");
         dominioInformarContaContabil.addDomainPair("M", "Máscara");
 
+       
+
         Domain dominioFormaEscrituracaoSped = new Domain("formaEscrituracaoSped");
         dominioFormaEscrituracaoSped.addDomainPair("LDC", "Livro Diário Completo");
         dominioFormaEscrituracaoSped.addDomainPair("LDE", "Livro Diário com Escrituração Resumida");
@@ -634,10 +643,7 @@ public class Menu implements MDIController, LoginController {
         dominioTipoContaCaixa.addDomainPair("I", "Investimento");
         dominioTipoContaCaixa.addDomainPair("X", "Caixa Interno");
 
-        Domain dominioTipoRegimeEmpresa = new Domain("tipoRegimeEmpresa");
-        dominioTipoRegimeEmpresa.addDomainPair("1", "Lucro Real");
-        dominioTipoRegimeEmpresa.addDomainPair("2", "Lucro Presumido");
-        dominioTipoRegimeEmpresa.addDomainPair("3", "Simples Nacional");
+      
 
         Domain dominioApuracaoRegime = new Domain("apuracaoRegime");
         dominioApuracaoRegime.addDomainPair("1", "Regime Competência");
