@@ -159,7 +159,7 @@
 
 
 
-        <property name="SERVERURL" value="$$context/controller"/>
+      c
 
     </resources>
 
