@@ -50,8 +50,6 @@
         </Component>
         <Component class="org.openswing.swing.client.SaveButton" name="saveButton1">
         </Component>
-        <Component class="org.openswing.swing.client.FilterButton" name="filterButton1">
-        </Component>
         <Component class="org.openswing.swing.client.ExportButton" name="exportButton1">
         </Component>
       </SubComponents>
@@ -266,9 +264,13 @@
           <SubComponents>
             <Component class="org.openswing.swing.table.columns.client.CodLookupColumn" name="codLookupColumn1">
               <Properties>
+                <Property name="autoCompletitionWaitTime" type="long" value="300"/>
+                <Property name="columnFilterable" type="boolean" value="true"/>
                 <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="&quot;produto.nome&quot;" type="code"/>
                 </Property>
+                <Property name="columnRequired" type="boolean" value="false"/>
+                <Property name="columnSortable" type="boolean" value="true"/>
                 <Property name="editableOnEdit" type="boolean" value="true"/>
                 <Property name="editableOnInsert" type="boolean" value="true"/>
                 <Property name="headerColumnName" type="java.lang.String" value="Produto"/>

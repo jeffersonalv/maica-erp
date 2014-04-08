@@ -73,7 +73,7 @@ public class PlanoContaRefSpedGrid extends InternalFrame {
         dateColumn6 = new org.openswing.swing.table.columns.client.DateColumn();
         comboColumn7 = new org.openswing.swing.table.columns.client.ComboColumn();
 
-        setTitle("T2Ti ERP - Contabilidade");
+        setTitle("Contabilidade");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -99,9 +99,10 @@ public class PlanoContaRefSpedGrid extends InternalFrame {
         gridControl1.setValueObjectClassName("com.t2tierp.contabilidade.java.PlanoContaRefSpedVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
+        textColumn2.setColumnFilterable(true);
         textColumn2.setColumnName("codCtaRef");
         textColumn2.setHeaderColumnName("Cod Cta Ref");
-        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn2);
 
         textColumn3.setColumnName("descricao");
@@ -112,17 +113,17 @@ public class PlanoContaRefSpedGrid extends InternalFrame {
 
         textColumn4.setColumnName("orientacoes");
         textColumn4.setHeaderColumnName("Orientacoes");
-        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn4);
 
         dateColumn5.setColumnName("inicioValidade");
         dateColumn5.setHeaderColumnName("Inicio Validade");
-        dateColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn5);
 
         dateColumn6.setColumnName("fimValidade");
         dateColumn6.setHeaderColumnName("Fim Validade");
-        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn6);
 
         comboColumn7.setColumnName("tipo");

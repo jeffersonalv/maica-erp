@@ -83,7 +83,7 @@ public class VendaGrid extends InternalFrame {
         decimalColumn23 = new org.openswing.swing.table.columns.client.DecimalColumn();
         comboColumn26 = new org.openswing.swing.table.columns.client.ComboColumn();
 
-        setTitle("T2Ti ERP - Vendas e Faturamento");
+        setTitle("ERP - Vendas e Faturamento");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -136,12 +136,12 @@ public class VendaGrid extends InternalFrame {
 
         dateColumn9.setColumnName("dataVenda");
         dateColumn9.setHeaderColumnName("Data Venda");
-        dateColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn9);
 
         dateColumn10.setColumnName("dataSaida");
         dateColumn10.setHeaderColumnName("Data Saida");
-        dateColumn10.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn10.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn10);
 
         textColumn11.setColumnName("horaSaida");
@@ -151,30 +151,30 @@ public class VendaGrid extends InternalFrame {
 
         integerColumn12.setColumnName("numeroFatura");
         integerColumn12.setHeaderColumnName("Numero Fatura");
-        integerColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(integerColumn12);
 
         decimalColumn15.setColumnName("valorSubtotal");
         decimalColumn15.setHeaderColumnName("Valor Subtotal");
-        decimalColumn15.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn15.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn15.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn15);
 
         decimalColumn17.setColumnName("valorComissao");
         decimalColumn17.setHeaderColumnName("Valor Comissao");
-        decimalColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn17.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn17);
 
         decimalColumn19.setColumnName("valorDesconto");
         decimalColumn19.setHeaderColumnName("Valor Desconto");
-        decimalColumn19.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn19.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn19.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn19);
 
         decimalColumn20.setColumnName("valorTotal");
         decimalColumn20.setHeaderColumnName("Valor Total");
-        decimalColumn20.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn20.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn20.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn20);
 
@@ -193,7 +193,7 @@ public class VendaGrid extends InternalFrame {
 
         decimalColumn23.setColumnName("valorFrete");
         decimalColumn23.setHeaderColumnName("Valor Frete");
-        decimalColumn23.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn23.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn23.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn23);
 

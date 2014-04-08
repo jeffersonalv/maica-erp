@@ -65,6 +65,7 @@ public class TributConfiguraOfGtGrid extends InternalFrame {
         deleteButton1 = new org.openswing.swing.client.DeleteButton();
         reloadButton1 = new org.openswing.swing.client.ReloadButton();
         navigatorBar1 = new org.openswing.swing.client.NavigatorBar();
+        filterButton1 = new org.openswing.swing.client.FilterButton();
         gridControl1 = new org.openswing.swing.client.GridControl();
         textColumn2 = new org.openswing.swing.table.columns.client.TextColumn();
         textColumn3 = new org.openswing.swing.table.columns.client.TextColumn();
@@ -79,6 +80,7 @@ public class TributConfiguraOfGtGrid extends InternalFrame {
         jPanel1.add(deleteButton1);
         jPanel1.add(reloadButton1);
         jPanel1.add(navigatorBar1);
+        jPanel1.add(filterButton1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -96,12 +98,14 @@ public class TributConfiguraOfGtGrid extends InternalFrame {
         gridControl1.setValueObjectClassName("com.erp.tributacao.java.vo.TributConfiguraOfGtVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
+        textColumn2.setColumnFilterable(true);
         textColumn2.setColumnName("tributGrupoTributario.descricao");
         textColumn2.setHeaderColumnName("Grupo Tributario");
         textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn2.setPreferredWidth(300);
         gridControl1.getColumnContainer().add(textColumn2);
 
+        textColumn3.setColumnFilterable(true);
         textColumn3.setColumnName("tributOperacaoFiscal.descricao");
         textColumn3.setHeaderColumnName("Operacao Fiscal");
         textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -120,6 +124,7 @@ public class TributConfiguraOfGtGrid extends InternalFrame {
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.client.DeleteButton deleteButton1;
+    private org.openswing.swing.client.FilterButton filterButton1;
     private org.openswing.swing.client.GridControl gridControl1;
     private org.openswing.swing.client.InsertButton insertButton1;
     private javax.swing.JPanel jPanel1;

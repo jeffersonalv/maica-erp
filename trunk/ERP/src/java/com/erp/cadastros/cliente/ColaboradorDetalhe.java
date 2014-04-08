@@ -499,7 +499,7 @@ public class ColaboradorDetalhe extends InternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 0, 5);
         jPanel2.add(labelControl5, gridBagConstraints);
 
-        codLookupControlTipoAdmissao.setAttributeName("idtipoadmissao.id");
+        codLookupControlTipoAdmissao.setAttributeName("tipoAdmissao.id");
         codLookupControlTipoAdmissao.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;

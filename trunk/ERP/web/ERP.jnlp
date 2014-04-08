@@ -3,7 +3,7 @@
 <jnlp spec="1.0+" codebase = "$$codebase"> 
 
     <application-desc main-class="com.erp.padrao.cliente.Menu"/>
-
+    <!--- <property name="jnlp.SERVERURL" value="$$context/controller"/>-->
     <information>
         <title>ERP</title>
         <vendor>MAICACORP</vendor>
@@ -22,8 +22,7 @@
     </security>
 
     <resources>
-        <!-- <j2se version="1.6+"/>-->
-        <j2se version="1.6+" java-vm-args="-Xms96m -Xmx512m"/>
+        <j2se version="1.6"/>
         <jar href="ERPCliente.jar" />
         <jar href="clientos.jar" />
         <jar href="commonos.jar" />
@@ -159,7 +158,7 @@
 
 
 
-      c
+      
 
     </resources>
 

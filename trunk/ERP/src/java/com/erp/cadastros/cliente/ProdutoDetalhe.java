@@ -6,40 +6,36 @@ import org.openswing.swing.lookup.client.LookupController;
 import org.openswing.swing.mdi.client.InternalFrame;
 
 /**
-* <p>Title: T2Ti ERP</p>
-* <p>Description: Tela ProdutoDetalhe.</p>
-*
-* <p>The MIT License</p>
-*
-* <p>Copyright: Copyright (C) 2010 T2Ti.COM
-*
-* Permission is hereby granted, free of charge, to any person
-* obtaining a copy of this software and associated documentation
-* files (the "Software"), to deal in the Software without
-* restriction, including without limitation the rights to use,
-* copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the
-* Software is furnished to do so, subject to the following
-* conditions:
-*
-* The above copyright notice and this permission notice shall be
-* included in all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-* OTHER DEALINGS IN THE SOFTWARE.
-*
-*        The author may be contacted at:
-*            t2ti.com@gmail.com</p>
-*
+ * <p>Title: T2Ti ERP</p>
+ * <p>Description: Tela ProdutoDetalhe.</p>
+ *
+ * <p>The MIT License</p>
+ *
+ * <p>Copyright: Copyright (C) 2010 T2Ti.COM
+ * 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+* The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+* The author may be contacted at: t2ti.com@gmail.com</p>
+ * 
 * @author Claudio de Barros (t2ti.com@gmail.com)
-* @version 1.0
-*/
+ * @version 1.0
+ */
 public class ProdutoDetalhe extends InternalFrame {
 
     private LookupController subGrupoController = new LookupController();
@@ -66,6 +62,10 @@ public class ProdutoDetalhe extends InternalFrame {
         subGrupoController.setHeaderColumnName("id", "ID");
         subGrupoController.setHeaderColumnName("nome", "Nome");
         subGrupoController.setHeaderColumnName("descricao", "Descrição");
+        subGrupoController.setGridFilterButton(true);
+        subGrupoController.setFilterableColumn("nome", true);
+        subGrupoController.setFilterableColumn("descricao", true);
+        subGrupoController.setShowNavigatorBar(true);
         subGrupoController.setFrameTitle("Importa Agrupamento");
 
         subGrupoController.setVisibleStatusPanel(true);
@@ -90,6 +90,12 @@ public class ProdutoDetalhe extends InternalFrame {
         unidadeController.setVisibleStatusPanel(true);
         unidadeController.setVisibleColumn("id", true);
         unidadeController.setVisibleColumn("sigla", true);
+
+        unidadeController.setGridFilterButton(true);
+        unidadeController.setFilterableColumn("sigla", true);
+
+        unidadeController.setShowNavigatorBar(true);
+
         unidadeController.setFramePreferedSize(new Dimension(600, 500));
 
         unidadeController.setLookupDataLocator(new LookupDataLocatorGenerico(unidadeController.getLookupValueObjectClassName()));
@@ -109,6 +115,16 @@ public class ProdutoDetalhe extends InternalFrame {
         marcaController.setVisibleStatusPanel(true);
         marcaController.setVisibleColumn("id", true);
         marcaController.setVisibleColumn("nome", true);
+
+
+        marcaController.setGridFilterButton(true);
+        marcaController.setFilterableColumn("sigla", true);
+
+        marcaController.setShowNavigatorBar(true);
+
+
+
+
         marcaController.setFramePreferedSize(new Dimension(600, 500));
 
         marcaController.setLookupDataLocator(new LookupDataLocatorGenerico(marcaController.getLookupValueObjectClassName()));
@@ -127,6 +143,15 @@ public class ProdutoDetalhe extends InternalFrame {
         almoxarifadoController.setVisibleStatusPanel(true);
         almoxarifadoController.setVisibleColumn("id", true);
         almoxarifadoController.setVisibleColumn("nome", true);
+
+
+        almoxarifadoController.setGridFilterButton(true);
+        almoxarifadoController.setFilterableColumn("nome", true);
+
+        almoxarifadoController.setShowNavigatorBar(true);
+
+
+
         almoxarifadoController.setFramePreferedSize(new Dimension(600, 500));
 
         almoxarifadoController.setLookupDataLocator(new LookupDataLocatorGenerico(almoxarifadoController.getLookupValueObjectClassName()));
@@ -146,6 +171,13 @@ public class ProdutoDetalhe extends InternalFrame {
         grupoTributarioController.setVisibleStatusPanel(true);
         grupoTributarioController.setVisibleColumn("id", true);
         grupoTributarioController.setVisibleColumn("descricao", true);
+
+        grupoTributarioController.setGridFilterButton(true);
+        grupoTributarioController.setFilterableColumn("nome", true);
+
+        grupoTributarioController.setShowNavigatorBar(true);
+
+
         grupoTributarioController.setFramePreferedSize(new Dimension(600, 500));
 
         grupoTributarioController.setLookupDataLocator(new LookupDataLocatorGenerico(grupoTributarioController.getLookupValueObjectClassName()));
@@ -164,6 +196,13 @@ public class ProdutoDetalhe extends InternalFrame {
         icmsCustomizadoController.setVisibleStatusPanel(true);
         icmsCustomizadoController.setVisibleColumn("id", true);
         icmsCustomizadoController.setVisibleColumn("descricao", true);
+
+        icmsCustomizadoController.setGridFilterButton(true);
+        icmsCustomizadoController.setFilterableColumn("nome", true);
+
+        icmsCustomizadoController.setShowNavigatorBar(true);
+
+
         icmsCustomizadoController.setFramePreferedSize(new Dimension(600, 500));
 
         icmsCustomizadoController.setLookupDataLocator(new LookupDataLocatorGenerico(icmsCustomizadoController.getLookupValueObjectClassName()));
@@ -181,6 +220,14 @@ public class ProdutoDetalhe extends InternalFrame {
         ncmController.setVisibleStatusPanel(true);
         ncmController.setVisibleColumn("codigo", true);
         ncmController.setVisibleColumn("descricao", true);
+
+
+        ncmController.setGridFilterButton(true);
+        ncmController.setFilterableColumn("descricao", true);
+
+        ncmController.setShowNavigatorBar(true);
+
+
         ncmController.setFramePreferedSize(new Dimension(600, 500));
 
         ncmController.setLookupDataLocator(new LookupDataLocatorGenerico(ncmController.getLookupValueObjectClassName()));
@@ -195,10 +242,10 @@ public class ProdutoDetalhe extends InternalFrame {
         return form1;
     }
 
-    /** This method is called from within the constructor to
-     * initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is
-     * always regenerated by the Form Editor.
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -1278,8 +1325,6 @@ public class ProdutoDetalhe extends InternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.client.CodLookupControl codLookupControlAlmoxarifado;
     private org.openswing.swing.client.CodLookupControl codLookupControlGrupoTributario;
@@ -1387,5 +1432,4 @@ public class ProdutoDetalhe extends InternalFrame {
     private org.openswing.swing.client.TextControl textControl8;
     private org.openswing.swing.client.TextControl textControl9;
     // End of variables declaration//GEN-END:variables
-
 }

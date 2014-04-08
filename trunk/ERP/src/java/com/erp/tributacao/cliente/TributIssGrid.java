@@ -65,6 +65,7 @@ public class TributIssGrid extends InternalFrame {
         deleteButton1 = new org.openswing.swing.client.DeleteButton();
         reloadButton1 = new org.openswing.swing.client.ReloadButton();
         navigatorBar1 = new org.openswing.swing.client.NavigatorBar();
+        filterButton1 = new org.openswing.swing.client.FilterButton();
         gridControl1 = new org.openswing.swing.client.GridControl();
         textColumn2 = new org.openswing.swing.table.columns.client.TextColumn();
         comboColumn3 = new org.openswing.swing.table.columns.client.ComboColumn();
@@ -86,6 +87,7 @@ public class TributIssGrid extends InternalFrame {
         jPanel1.add(deleteButton1);
         jPanel1.add(reloadButton1);
         jPanel1.add(navigatorBar1);
+        jPanel1.add(filterButton1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -96,6 +98,7 @@ public class TributIssGrid extends InternalFrame {
         getContentPane().add(jPanel1, gridBagConstraints);
 
         gridControl1.setDeleteButton(deleteButton1);
+        gridControl1.setFilterButton(filterButton1);
         gridControl1.setFunctionId("tributIss");
         gridControl1.setInsertButton(insertButton1);
         gridControl1.setNavBar(navigatorBar1);
@@ -103,6 +106,7 @@ public class TributIssGrid extends InternalFrame {
         gridControl1.setValueObjectClassName("com.erp.tributacao.java.vo.TributIssVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
+        textColumn2.setColumnFilterable(true);
         textColumn2.setColumnName("tributOperacaoFiscal.descricao");
         textColumn2.setHeaderColumnName("Operacao Fiscal");
         textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -116,6 +120,7 @@ public class TributIssGrid extends InternalFrame {
         comboColumn3.setPreferredWidth(150);
         gridControl1.getColumnContainer().add(comboColumn3);
 
+        decimalColumn4.setColumnFilterable(true);
         decimalColumn4.setColumnName("porcentoBaseCalculo");
         decimalColumn4.setDecimals(2);
         decimalColumn4.setHeaderColumnName("Porcento Base Calculo");
@@ -181,6 +186,7 @@ public class TributIssGrid extends InternalFrame {
     private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn7;
     private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn8;
     private org.openswing.swing.client.DeleteButton deleteButton1;
+    private org.openswing.swing.client.FilterButton filterButton1;
     private org.openswing.swing.client.GridControl gridControl1;
     private org.openswing.swing.client.InsertButton insertButton1;
     private org.openswing.swing.table.columns.client.IntegerColumn integerColumn9;

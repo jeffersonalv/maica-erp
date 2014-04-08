@@ -6,40 +6,36 @@ import org.openswing.swing.lookup.client.LookupController;
 import org.openswing.swing.mdi.client.InternalFrame;
 
 /**
-* <p>Title: T2Ti ERP</p>
-* <p>Description: Tela TributConfiguraOfGtDetalhe.</p>
-*
-* <p>The MIT License</p>
-*
-* <p>Copyright: Copyright (C) 2010 T2Ti.COM
-*
-* Permission is hereby granted, free of charge, to any person
-* obtaining a copy of this software and associated documentation
-* files (the "Software"), to deal in the Software without
-* restriction, including without limitation the rights to use,
-* copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the
-* Software is furnished to do so, subject to the following
-* conditions:
-*
-* The above copyright notice and this permission notice shall be
-* included in all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-* OTHER DEALINGS IN THE SOFTWARE.
-*
-*        The author may be contacted at:
-*            t2ti.com@gmail.com</p>
-*
+ * <p>Title: T2Ti ERP</p>
+ * <p>Description: Tela TributConfiguraOfGtDetalhe.</p>
+ *
+ * <p>The MIT License</p>
+ *
+ * <p>Copyright: Copyright (C) 2010 T2Ti.COM
+ * 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+* The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+* The author may be contacted at: t2ti.com@gmail.com</p>
+ * 
 * @author Claudio de Barros (t2ti.com@gmail.com)
-* @version 1.0
-*/
+ * @version 1.0
+ */
 public class TributConfiguraOfGtDetalhe extends InternalFrame {
 
     private LookupController grupoTributarioController = new LookupController();
@@ -86,6 +82,10 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         grupoTributarioController.setHeaderColumnName("id", "ID");
         grupoTributarioController.setHeaderColumnName("descricao", "Descrição");
         grupoTributarioController.setFrameTitle("Importa Grupo Tributário");
+        grupoTributarioController.setGridFilterButton(true);
+        grupoTributarioController.setShowNavigatorBar(true);
+        grupoTributarioController.setFilterableColumn("descricao", true);
+
 
         grupoTributarioController.setVisibleStatusPanel(true);
         grupoTributarioController.setVisibleColumn("id", true);
@@ -110,6 +110,9 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         operacaoFiscalController.setVisibleColumn("id", true);
         operacaoFiscalController.setVisibleColumn("descricao", true);
         operacaoFiscalController.setFramePreferedSize(new Dimension(600, 500));
+        operacaoFiscalController.setFilterableColumn("descricao", true);
+        operacaoFiscalController.setShowNavigatorBar(true);
+        operacaoFiscalController.setGridFilterButton(true);
 
         operacaoFiscalController.setLookupDataLocator(new LookupDataLocatorGenerico(operacaoFiscalController.getLookupValueObjectClassName()));
         codLookupControl3.setLookupController(operacaoFiscalController);
@@ -127,6 +130,9 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         ufController.setVisibleColumn("sigla", true);
         ufController.setVisibleColumn("nome", true);
         ufController.setFramePreferedSize(new Dimension(600, 500));
+        ufController.setGridFilterButton(true);
+        ufController.setFilterableColumn("uf", true);
+        ufController.setShowNavigatorBar(true);
 
         ufController.setLookupDataLocator(new LookupDataLocatorGenerico(ufController.getLookupValueObjectClassName()));
         codLookupColumn1.setLookupController(ufController);
@@ -144,7 +150,9 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         cfopController.setVisibleColumn("cfop", true);
         cfopController.setVisibleColumn("descricao", true);
         cfopController.setFramePreferedSize(new Dimension(600, 500));
-
+        cfopController.setGridFilterButton(true);
+        cfopController.setShowNavigatorBar(true);
+        cfopController.setFilterableColumn("cfop", true);
         cfopController.setLookupDataLocator(new LookupDataLocatorGenerico(cfopController.getLookupValueObjectClassName()));
         codLookupColumn2.setLookupController(cfopController);
 
@@ -161,7 +169,10 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         csosnController.setVisibleColumn("codigo", true);
         csosnController.setVisibleColumn("descricao", true);
         csosnController.setFramePreferedSize(new Dimension(600, 500));
-
+        csosnController.setFilterableColumn("codigo", true);
+        csosnController.setFilterableColumn("descricao", true);
+        csosnController.setGridFilterButton(true);
+        csosnController.setShowNavigatorBar(true);
         csosnController.setLookupDataLocator(new LookupDataLocatorGenerico(csosnController.getLookupValueObjectClassName()));
         codLookupColumn3.setLookupController(csosnController);
 
@@ -178,6 +189,10 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         cstController.setVisibleColumn("codigo", true);
         cstController.setVisibleColumn("descricao", true);
         cstController.setFramePreferedSize(new Dimension(600, 500));
+        cstController.setFilterableColumn("codigo", true);
+        cstController.setFilterableColumn("descricao", true);
+        cstController.setGridFilterButton(true);
+        cstController.setShowNavigatorBar(true);
 
         cstController.setLookupDataLocator(new LookupDataLocatorGenerico(cstController.getLookupValueObjectClassName()));
         codLookupColumn4.setLookupController(cstController);
@@ -195,6 +210,9 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         cstPisController.setVisibleStatusPanel(true);
         cstPisController.setVisibleColumn("codigo", true);
         cstPisController.setVisibleColumn("descricao", true);
+        cstPisController.setFilterableColumn("descricao", true);
+        cstPisController.setGridFilterButton(true);
+        cstPisController.setShowNavigatorBar(true);
         cstPisController.setFramePreferedSize(new Dimension(600, 500));
 
         cstPisController.setLookupDataLocator(new LookupDataLocatorGenerico(cstPisController.getLookupValueObjectClassName()));
@@ -215,6 +233,10 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         codigoApuracaoEfdPisController.setVisibleColumn("descricao", true);
         codigoApuracaoEfdPisController.setFramePreferedSize(new Dimension(600, 500));
 
+        codigoApuracaoEfdPisController.setFilterableColumn("descricao", true);
+        codigoApuracaoEfdPisController.setGridFilterButton(true);
+        codigoApuracaoEfdPisController.setShowNavigatorBar(true);
+
         codigoApuracaoEfdPisController.setLookupDataLocator(new LookupDataLocatorGenerico(codigoApuracaoEfdPisController.getLookupValueObjectClassName()));
         codLookupApuracaoEfdPis.setLookupController(codigoApuracaoEfdPisController);
 
@@ -232,6 +254,10 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         cstCofinsController.setVisibleColumn("codigo", true);
         cstCofinsController.setVisibleColumn("descricao", true);
         cstCofinsController.setFramePreferedSize(new Dimension(600, 500));
+
+        cstCofinsController.setFilterableColumn("descricao", true);
+        cstCofinsController.setGridFilterButton(true);
+        cstCofinsController.setShowNavigatorBar(true);
 
         cstCofinsController.setLookupDataLocator(new LookupDataLocatorGenerico(cstCofinsController.getLookupValueObjectClassName()));
         codLookupCstCofins.setLookupController(cstCofinsController);
@@ -251,6 +277,11 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         codigoApuracaoEfdCofinsController.setVisibleColumn("descricao", true);
         codigoApuracaoEfdCofinsController.setFramePreferedSize(new Dimension(600, 500));
 
+
+        codigoApuracaoEfdCofinsController.setFilterableColumn("descricao", true);
+        codigoApuracaoEfdCofinsController.setGridFilterButton(true);
+        codigoApuracaoEfdCofinsController.setShowNavigatorBar(true);
+
         codigoApuracaoEfdCofinsController.setLookupDataLocator(new LookupDataLocatorGenerico(codigoApuracaoEfdCofinsController.getLookupValueObjectClassName()));
         codLookupApuracaoEfdCofins.setLookupController(codigoApuracaoEfdCofinsController);
 
@@ -269,6 +300,10 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         cstIpiController.setVisibleColumn("descricao", true);
         cstIpiController.setFramePreferedSize(new Dimension(600, 500));
 
+        cstIpiController.setFilterableColumn("descricao", true);
+        cstIpiController.setGridFilterButton(true);
+        cstIpiController.setShowNavigatorBar(true);
+
         cstIpiController.setLookupDataLocator(new LookupDataLocatorGenerico(cstIpiController.getLookupValueObjectClassName()));
         codLookupCstIpi.setLookupController(cstIpiController);
 
@@ -286,6 +321,12 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         tipoReceitaDipiController.setVisibleColumn("id", true);
         tipoReceitaDipiController.setVisibleColumn("descricao", true);
         tipoReceitaDipiController.setFramePreferedSize(new Dimension(600, 500));
+
+        tipoReceitaDipiController.setFilterableColumn("descricao", true);
+        tipoReceitaDipiController.setGridFilterButton(true);
+        tipoReceitaDipiController.setShowNavigatorBar(true);
+
+
 
         tipoReceitaDipiController.setLookupDataLocator(new LookupDataLocatorGenerico(tipoReceitaDipiController.getLookupValueObjectClassName()));
         codLookupTipoReceitaDipi.setLookupController(tipoReceitaDipiController);
@@ -327,10 +368,10 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
         return ipiDipiController;
     }
 
-    /** This method is called from within the constructor to
-     * initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is
-     * always regenerated by the Form Editor.
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -1375,8 +1416,6 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.client.CodLookupControl codLookupApuracaoEfdCofins;
     private org.openswing.swing.client.CodLookupControl codLookupApuracaoEfdPis;
@@ -1491,5 +1530,4 @@ public class TributConfiguraOfGtDetalhe extends InternalFrame {
     private org.openswing.swing.client.TextControl textControl8;
     private org.openswing.swing.client.TextControl textControl9;
     // End of variables declaration//GEN-END:variables
-
 }

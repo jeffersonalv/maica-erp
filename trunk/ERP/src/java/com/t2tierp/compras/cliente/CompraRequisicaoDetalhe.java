@@ -156,7 +156,6 @@ public class CompraRequisicaoDetalhe extends InternalFrame {
         editButton1 = new org.openswing.swing.client.EditButton();
         reloadButton1 = new org.openswing.swing.client.ReloadButton();
         saveButton1 = new org.openswing.swing.client.SaveButton();
-        filterButton1 = new org.openswing.swing.client.FilterButton();
         exportButton1 = new org.openswing.swing.client.ExportButton();
         form1 = new org.openswing.swing.form.client.Form();
         labelControl1 = new org.openswing.swing.client.LabelControl();
@@ -192,7 +191,6 @@ public class CompraRequisicaoDetalhe extends InternalFrame {
         jPanel1.add(editButton1);
         jPanel1.add(reloadButton1);
         jPanel1.add(saveButton1);
-        jPanel1.add(filterButton1);
         jPanel1.add(exportButton1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -332,7 +330,11 @@ public class CompraRequisicaoDetalhe extends InternalFrame {
         gridRequisicaoDetalhe.setValueObjectClassName("com.t2tierp.compras.java.CompraRequisicaoDetalheVO");
         gridRequisicaoDetalhe.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
+        codLookupColumn1.setAutoCompletitionWaitTime(300L);
+        codLookupColumn1.setColumnFilterable(true);
         codLookupColumn1.setColumnName("produto.nome");
+        codLookupColumn1.setColumnRequired(false);
+        codLookupColumn1.setColumnSortable(true);
         codLookupColumn1.setEditableOnEdit(true);
         codLookupColumn1.setEditableOnInsert(true);
         codLookupColumn1.setHeaderColumnName("Produto");
@@ -396,7 +398,6 @@ public class CompraRequisicaoDetalhe extends InternalFrame {
     private org.openswing.swing.client.EditButton editButtonRequisicaoDetalhe;
     private org.openswing.swing.client.ExportButton exportButton1;
     private org.openswing.swing.client.ExportButton exportButton2;
-    private org.openswing.swing.client.FilterButton filterButton1;
     private org.openswing.swing.client.FilterButton filterButton2;
     private org.openswing.swing.form.client.Form form1;
     private org.openswing.swing.client.GridControl gridRequisicaoDetalhe;

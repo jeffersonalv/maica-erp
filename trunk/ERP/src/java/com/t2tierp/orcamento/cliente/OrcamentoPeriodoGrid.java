@@ -67,7 +67,7 @@ public class OrcamentoPeriodoGrid extends InternalFrame {
         textColumn3 = new org.openswing.swing.table.columns.client.TextColumn();
         textColumn4 = new org.openswing.swing.table.columns.client.TextColumn();
 
-        setTitle("T2Ti ERP - Controle de Orçamento");
+        setTitle("ERP - Controle de Orçamento");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
