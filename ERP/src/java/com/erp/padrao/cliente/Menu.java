@@ -11,8 +11,6 @@ import com.t2tierp.financeiro.cliente.FinLancamentoReceberGridController;
 import com.t2tierp.nfe.cliente.NfeGridController;
 import com.t2tierp.orcamento.cliente.OrcamentoEmpresarialGridController;
 import com.t2tierp.vendas.cliente.VendaGridController;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -43,6 +41,7 @@ public class Menu implements MDIController, LoginController {
     private String nomeUsuario = null;
 
     public Menu() {
+        //  System.setProperty("SERVERURL", System.getProperty("jnlp.SERVERURL"));
         ClientUtils.setObjectSender(new HessianObjectSender());
         fachadaCliente = new Fachada();
         LoginDialog d = new LoginDialog(
@@ -62,8 +61,8 @@ public class Menu implements MDIController, LoginController {
                 "Usuário",
                 "Senha",
                 null);
-        
-         System.setProperty("SERVERURL", System.getProperty("jnlp.SERVERURL"));
+
+
     }
 
     /**
@@ -242,7 +241,7 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.PERC_TREE_FOLDER = "folder3.gif";
         ClientSettings.BACKGROUND = "background4.jpg";
         ClientSettings.TREE_BACK = "treeback2.jpg";
-        ClientSettings.FILTER_PANEL_ON_GRID = true;
+        ClientSettings.FILTER_PANEL_ON_GRID = false;
         // ClientSettings.LIKE = "%%";
         ClientSettings.AUTO_EXPAND_TREE_MENU = false;
         ClientSettings.LOOKUP_FRAME_CONTENT = LookupController.GRID_AND_PANEL_FRAME;
@@ -268,10 +267,12 @@ public class Menu implements MDIController, LoginController {
         ClientSettings.BUTTON_FILTER_IMAGE_NAME = "proc1.png";
         ClientSettings.BUTTON_IMPORT_IMAGE_NAME = "Importar.png";
         ClientSettings.GRID_PROFILE_MANAGER = new FileGridProfileManager();
-        //  ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
-        // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
-        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
-        com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
+        ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+        //ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "a03.swing.plaf.A03LookAndFeel";
+       // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "UIManager.getSystemLookAndFeelClassName()";
+       
+       // ClientSettings.LOOK_AND_FEEL_CLASS_NAME = "com.birosoft.liquid.LiquidLookAndFeel";
+       // com.birosoft.liquid.LiquidLookAndFeel.setLiquidDecorations(true, "mac");
 
 
 
@@ -295,11 +296,11 @@ public class Menu implements MDIController, LoginController {
         userPanel.setText(nomeUsuario);
         MDIFrame.addStatusComponent(new Clock());
 
-        JPanel rightPanel = new JPanel();
+        /* JPanel rightPanel = new JPanel();
 
-        rightPanel.setBorder(BorderFactory.createTitledBorder("Avisos"));
-        rightPanel.setPreferredSize(new Dimension(150, frame.getHeight()));
-        frame.getContentPane().add(rightPanel, BorderLayout.EAST);
+         rightPanel.setBorder(BorderFactory.createTitledBorder("Avisos"));
+         rightPanel.setPreferredSize(new Dimension(150, frame.getHeight()));
+         frame.getContentPane().add(rightPanel, BorderLayout.EAST);*/
 
 
     }
@@ -433,8 +434,8 @@ public class Menu implements MDIController, LoginController {
         dominioCRT.addDomainPair("1", "1 - Simples Nacional");
         dominioCRT.addDomainPair("2", "2 - Simples Nac - Excesso");
         dominioCRT.addDomainPair("3", "3 - Regime Normal");
-        
-         Domain dominioTipoRegimeEmpresa = new Domain("tipoRegimeEmpresa");
+
+        Domain dominioTipoRegimeEmpresa = new Domain("tipoRegimeEmpresa");
         dominioTipoRegimeEmpresa.addDomainPair("1", "Lucro Real");
         dominioTipoRegimeEmpresa.addDomainPair("2", "Lucro Presumido");
         dominioTipoRegimeEmpresa.addDomainPair("3", "Simples Nacional");
@@ -571,7 +572,7 @@ public class Menu implements MDIController, LoginController {
         dominioInformarContaContabil.addDomainPair("C", "Código");
         dominioInformarContaContabil.addDomainPair("M", "Máscara");
 
-       
+
 
         Domain dominioFormaEscrituracaoSped = new Domain("formaEscrituracaoSped");
         dominioFormaEscrituracaoSped.addDomainPair("LDC", "Livro Diário Completo");
@@ -643,7 +644,7 @@ public class Menu implements MDIController, LoginController {
         dominioTipoContaCaixa.addDomainPair("I", "Investimento");
         dominioTipoContaCaixa.addDomainPair("X", "Caixa Interno");
 
-      
+
 
         Domain dominioApuracaoRegime = new Domain("apuracaoRegime");
         dominioApuracaoRegime.addDomainPair("1", "Regime Competência");

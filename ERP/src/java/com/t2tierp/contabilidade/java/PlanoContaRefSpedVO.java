@@ -136,7 +136,8 @@ public class PlanoContaRefSpedVO extends ValueObjectImpl implements Serializable
 
     @Override
     public String toString() {
-        return "com.erp.contabilidade.vo.PlanoContaRefSpedVO[id=" + id + "]";
+        return "com.t2tierp.contabilidade.java.PlanoContaRefSpedVO[id=" + id + "]";
+      //  com.t2tierp.contabilidade.java;
     }
 
 }

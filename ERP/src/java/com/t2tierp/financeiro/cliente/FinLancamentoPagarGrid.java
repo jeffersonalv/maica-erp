@@ -76,7 +76,7 @@ public class FinLancamentoPagarGrid extends InternalFrame {
         textColumn9 = new org.openswing.swing.table.columns.client.TextColumn();
         dateColumn11 = new org.openswing.swing.table.columns.client.DateColumn();
 
-        setTitle("T2Ti ERP - Financeiro - Contas a Pagar");
+        setTitle("ERP - Financeiro - Contas a Pagar");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -111,49 +111,49 @@ public class FinLancamentoPagarGrid extends InternalFrame {
 
         textColumn3.setColumnName("fornecedor.pessoa.nome");
         textColumn3.setHeaderColumnName("Fornecedor");
-        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn3.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn3);
 
         comboColumn4.setColumnName("pagamentoCompartilhado");
         comboColumn4.setDomainId("simnao");
         comboColumn4.setHeaderColumnName("Pagamento Compartilhado");
-        comboColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         comboColumn4.setPreferredWidth(150);
         gridControl1.getColumnContainer().add(comboColumn4);
 
         integerColumn5.setColumnName("quantidadeParcela");
         integerColumn5.setHeaderColumnName("Quantidade Parcela");
-        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         integerColumn5.setPreferredWidth(110);
         gridControl1.getColumnContainer().add(integerColumn5);
 
         decimalColumn6.setColumnName("valorTotal");
         decimalColumn6.setDecimals(2);
         decimalColumn6.setHeaderColumnName("Valor Total");
-        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn6);
 
         decimalColumn7.setColumnName("valorAPagar");
         decimalColumn7.setHeaderColumnName("Valor A Pagar");
-        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn7.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn7);
 
         dateColumn8.setColumnName("dataLancamento");
         dateColumn8.setHeaderColumnName("Data Lancamento");
-        dateColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn8);
 
         textColumn9.setColumnName("numeroDocumento");
         textColumn9.setHeaderColumnName("Numero Documento");
-        textColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn9.setPreferredWidth(120);
         gridControl1.getColumnContainer().add(textColumn9);
 
         dateColumn11.setColumnName("primeiroVencimento");
         dateColumn11.setHeaderColumnName("Primeiro Vencimento");
-        dateColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         dateColumn11.setPreferredWidth(130);
         gridControl1.getColumnContainer().add(dateColumn11);
 

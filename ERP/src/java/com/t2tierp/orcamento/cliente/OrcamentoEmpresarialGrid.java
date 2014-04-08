@@ -72,7 +72,7 @@ public class OrcamentoEmpresarialGrid extends InternalFrame {
         integerColumn6 = new org.openswing.swing.table.columns.client.IntegerColumn();
         dateColumn7 = new org.openswing.swing.table.columns.client.DateColumn();
 
-        setTitle("T2Ti ERP - Controle de Orçamento");
+        setTitle("ERP - Controle de Orçamento");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -112,7 +112,7 @@ public class OrcamentoEmpresarialGrid extends InternalFrame {
 
         dateColumn5.setColumnName("dataInicial");
         dateColumn5.setHeaderColumnName("Data Inicial");
-        dateColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn5);
 
         integerColumn6.setColumnName("numeroPeriodos");
@@ -123,7 +123,7 @@ public class OrcamentoEmpresarialGrid extends InternalFrame {
 
         dateColumn7.setColumnName("dataBase");
         dateColumn7.setHeaderColumnName("Data Base");
-        dateColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn7);
 
         gridBagConstraints = new java.awt.GridBagConstraints();

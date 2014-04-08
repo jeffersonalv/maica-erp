@@ -1,53 +1,54 @@
 package com.t2tierp.contabilidade.cliente;
 
+import com.erp.padrao.cliente.LookupDataLocatorGenerico;
 import java.awt.Dimension;
 import org.openswing.swing.lookup.client.LookupController;
 import org.openswing.swing.lookup.client.LookupServerDataLocator;
 import org.openswing.swing.mdi.client.InternalFrame;
 
 /**
-* <p>Title: T2Ti ERP</p>
-* <p>Description: Tela ContabilContaDetalhe.</p>
-*
-* <p>The MIT License</p>
-*
-* <p>Copyright: Copyright (C) 2010 T2Ti.COM
-*
-* Permission is hereby granted, free of charge, to any person
-* obtaining a copy of this software and associated documentation
-* files (the "Software"), to deal in the Software without
-* restriction, including without limitation the rights to use,
-* copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the
-* Software is furnished to do so, subject to the following
-* conditions:
-*
-* The above copyright notice and this permission notice shall be
-* included in all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-* OTHER DEALINGS IN THE SOFTWARE.
-*
-*        The author may be contacted at:
-*            t2ti.com@gmail.com</p>
-*
+ * <p>Title: T2Ti ERP</p>
+ * <p>Description: Tela ContabilContaDetalhe.</p>
+ *
+ * <p>The MIT License</p>
+ *
+ * <p>Copyright: Copyright (C) 2010 T2Ti.COM
+ * 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+* The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+* The author may be contacted at: t2ti.com@gmail.com</p>
+ * 
 * @author Claudio de Barros (t2ti.com@gmail.com)
-* @version 1.0
-*/
+ * @version 1.0
+ */
 public class ContabilContaDetalhe extends InternalFrame {
 
+    /* private LookupController contaContabilController = new LookupController();
+     private LookupServerDataLocator contaContabilDataLocator = new LookupServerDataLocator();
+     private LookupController planoContasController = new LookupController();
+     private LookupServerDataLocator planoContasDataLocator = new LookupServerDataLocator();
+     private LookupController planoContasSpedController = new LookupController();
+     private LookupServerDataLocator planoContasSpedDataLocator = new LookupServerDataLocator();*/
     private LookupController contaContabilController = new LookupController();
-    private LookupServerDataLocator contaContabilDataLocator = new LookupServerDataLocator();
     private LookupController planoContasController = new LookupController();
-    private LookupServerDataLocator planoContasDataLocator = new LookupServerDataLocator();
+    private LookupController situacaoController = new LookupController();
     private LookupController planoContasSpedController = new LookupController();
-    private LookupServerDataLocator planoContasSpedDataLocator = new LookupServerDataLocator();
 
     public ContabilContaDetalhe(ContabilContaDetalheController controller) {
         initComponents();
@@ -73,12 +74,16 @@ public class ContabilContaDetalhe extends InternalFrame {
         contaContabilController.setVisibleColumn("classificacao", true);
         contaContabilController.setVisibleColumn("descricao", true);
         contaContabilController.setVisibleColumn("natureza", true);
+        contaContabilController.setShowNavigatorBar(true);
+        contaContabilController.setGridFilterButton(true);
+        contaContabilController.setFilterableColumn("classificacao", true);
         contaContabilController.setFramePreferedSize(new Dimension(500, 400));
 
-        contaContabilController.setLookupDataLocator(contaContabilDataLocator);
+
+        contaContabilController.setLookupDataLocator(new LookupDataLocatorGenerico(contaContabilController.getLookupValueObjectClassName()));
         codLookupControl2.setLookupController(contaContabilController);
-        contaContabilDataLocator.setGridMethodName("importaContaContabil");
-        contaContabilDataLocator.setValidationMethodName("validaContaContabil");
+
+
 
         /*
          * Configurações do lookup do plano de contas
@@ -100,12 +105,13 @@ public class ContabilContaDetalhe extends InternalFrame {
         planoContasController.setVisibleColumn("macara", true);
         planoContasController.setVisibleColumn("niveis", true);
         planoContasController.setFramePreferedSize(new Dimension(500, 400));
+        planoContasController.setShowNavigatorBar(true);
+        planoContasController.setGridFilterButton(true);
+        planoContasController.setFilterableColumn("nome", true);
+        planoContasController.setFilterableColumn("marca", true);
 
-        planoContasController.setLookupDataLocator(planoContasDataLocator);
+        planoContasController.setLookupDataLocator(new LookupDataLocatorGenerico(planoContasController.getLookupValueObjectClassName()));
         codLookupControl3.setLookupController(planoContasController);
-        planoContasDataLocator.setGridMethodName("importaPlanoContas");
-        planoContasDataLocator.setValidationMethodName("validaPlanoContas");
-
         /*
          * Configurações do lookup do plano de contas sped
          */
@@ -122,12 +128,14 @@ public class ContabilContaDetalhe extends InternalFrame {
         planoContasSpedController.setVisibleColumn("id", true);
         planoContasSpedController.setVisibleColumn("codCtaRef", true);
         planoContasSpedController.setVisibleColumn("descricao", true);
+        planoContasSpedController.setShowNavigatorBar(true);
+        planoContasSpedController.setGridFilterButton(true);
+        planoContasSpedController.setFilterableColumn("codCtaRef", true);
+        planoContasSpedController.setFilterableColumn("descricao", true);
         planoContasSpedController.setFramePreferedSize(new Dimension(500, 400));
 
-        planoContasSpedController.setLookupDataLocator(planoContasSpedDataLocator);
+        planoContasSpedController.setLookupDataLocator(new LookupDataLocatorGenerico(planoContasSpedController.getLookupValueObjectClassName()));
         codLookupControl4.setLookupController(planoContasSpedController);
-        planoContasSpedDataLocator.setGridMethodName("importaPlanoContasSped");
-        planoContasSpedDataLocator.setValidationMethodName("validaPlanoContasSped");
     }
 
     /**
@@ -137,10 +145,10 @@ public class ContabilContaDetalhe extends InternalFrame {
         return form1;
     }
 
-    /** This method is called from within the constructor to
-     * initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is
-     * always regenerated by the Form Editor.
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -538,8 +546,6 @@ public class ContabilContaDetalhe extends InternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.client.CodLookupControl codLookupControl2;
     private org.openswing.swing.client.CodLookupControl codLookupControl3;
@@ -581,5 +587,4 @@ public class ContabilContaDetalhe extends InternalFrame {
     private org.openswing.swing.client.TextControl textControl5;
     private org.openswing.swing.client.TextControl textControl7;
     // End of variables declaration//GEN-END:variables
-
 }

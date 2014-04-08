@@ -2,6 +2,7 @@ package com.erp.cadastros.cliente;
 
 import com.erp.padrao.cliente.LookupDataLocatorGenerico;
 import java.awt.Dimension;
+import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 import org.openswing.swing.lookup.client.LookupController;
 import org.openswing.swing.mdi.client.InternalFrame;
@@ -46,6 +47,7 @@ public class EmpresaDetalhe extends InternalFrame {
     private LookupController municipioEnderecoController = new LookupController();
     private EmpresaContatoGridController contatoController;
     private EmpresaEnderecoGridController enderecoController;
+    private MaskFormatter cnpj;
 
     public EmpresaDetalhe(EmpresaDetalheController controller) {
         initComponents();
@@ -60,15 +62,26 @@ public class EmpresaDetalhe extends InternalFrame {
         gridControlEndereco.setController(enderecoController);
         gridControlEndereco.setGridDataLocator(enderecoController);
 
-        formattedTextControl1.setEnabled(false);
         try {
-            MaskFormatter mask = new MaskFormatter("##.###.###/####-##");
-            mask.setValidCharacters("0123456789");
-            mask.setValueContainsLiteralCharacters(false);
-            formattedTextControl1.setFormatter(mask);
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            cnpj = new MaskFormatter("##.###.###/####-##");
+            cnpj.setValidCharacters("0123456789");
+            cnpj.setValueContainsLiteralCharacters(false);
+            formattedTextControl1.setFormatterFactory(new DefaultFormatterFactory(cnpj));
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+
+        /*textControl14.setEnabled(false);
+         try {
+         MaskFormatter mask = new MaskFormatter("##.###.###/####-##");
+         mask.setValidCharacters("0123456789");
+         mask.setValueContainsLiteralCharacters(false);
+         textControl14.setFormatter(mask);
+         } catch (Exception ex) {
+         ex.printStackTrace();
+         }*/
 
         /*
          * Configurações do lookup da matriz
@@ -903,7 +916,6 @@ public class EmpresaDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = -100;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         form1.add(codLookupControl6, gridBagConstraints);
 
@@ -931,12 +943,16 @@ public class EmpresaDetalhe extends InternalFrame {
         form1.add(imageControl1, gridBagConstraints);
 
         formattedTextControl1.setAttributeName("cnpj");
-        formattedTextControl1.setLinkLabel(labelControl9);
-        formattedTextControl1.setRequired(true);
+        formattedTextControl1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                formattedTextControl1FocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         form1.add(formattedTextControl1, gridBagConstraints);
 
@@ -1194,6 +1210,10 @@ public class EmpresaDetalhe extends InternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formattedTextControl1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formattedTextControl1FocusLost
+        
+    }//GEN-LAST:event_formattedTextControl1FocusLost
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.table.columns.client.CodLookupColumn codLookupColumn1;
     private org.openswing.swing.client.CodLookupControl codLookupControl3;

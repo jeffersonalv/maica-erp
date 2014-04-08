@@ -171,7 +171,7 @@ public class OrcamentoFluxoCaixaDetalhe extends InternalFrame {
         reloadButton2 = new org.openswing.swing.client.ReloadButton();
         navigatorBar1 = new org.openswing.swing.client.NavigatorBar();
 
-        setTitle("T2Ti ERP - Controle de Orçamento");
+        setTitle("ERP - Controle de Orçamento");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -413,7 +413,7 @@ public class OrcamentoFluxoCaixaDetalhe extends InternalFrame {
         textColumn2.setColumnName("idorcamentofluxocaixa.nome");
         textColumn2.setColumnRequired(false);
         textColumn2.setHeaderColumnName("Classificacao Natureza Financeira");
-        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn2.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn2);
 
@@ -427,7 +427,7 @@ public class OrcamentoFluxoCaixaDetalhe extends InternalFrame {
         textColumn4.setColumnName("periodo");
         textColumn4.setColumnRequired(false);
         textColumn4.setHeaderColumnName("Periodo");
-        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn4);
 
         decimalColumn5.setColumnName("valorOrcado");
@@ -443,21 +443,21 @@ public class OrcamentoFluxoCaixaDetalhe extends InternalFrame {
         decimalColumn6.setColumnRequired(false);
         decimalColumn6.setDecimals(2);
         decimalColumn6.setHeaderColumnName("Valor Realizado");
-        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn6);
 
         decimalColumn7.setColumnName("taxaVariacao");
         decimalColumn7.setColumnRequired(false);
         decimalColumn7.setDecimals(2);
         decimalColumn7.setHeaderColumnName("Taxa Variacao");
-        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn7);
 
         decimalColumn8.setColumnName("valorVariacao");
         decimalColumn8.setColumnRequired(false);
         decimalColumn8.setDecimals(2);
         decimalColumn8.setHeaderColumnName("Valor Variacao");
-        decimalColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(decimalColumn8);
 
         gridBagConstraints = new java.awt.GridBagConstraints();

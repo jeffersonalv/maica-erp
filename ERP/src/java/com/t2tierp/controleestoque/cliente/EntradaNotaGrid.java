@@ -80,7 +80,7 @@ public class EntradaNotaGrid extends InternalFrame {
         decimalColumn42 = new org.openswing.swing.table.columns.client.DecimalColumn();
         comboColumn62 = new org.openswing.swing.table.columns.client.ComboColumn();
 
-        setTitle("T2Ti ERP - Controle de Estoque");
+        setTitle("ERP - Controle de Estoque");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -107,46 +107,46 @@ public class EntradaNotaGrid extends InternalFrame {
 
         textColumn2.setColumnName("tributOperacaoFiscal.descricao");
         textColumn2.setHeaderColumnName("Operacao Fiscal");
-        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn2.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn2);
 
         textColumn5.setColumnName("fornecedor.pessoa.nome");
         textColumn5.setHeaderColumnName("Fornecedor");
-        textColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn5.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn5);
 
         textColumn6.setColumnName("cliente.pessoa.nome");
         textColumn6.setHeaderColumnName("Cliente");
-        textColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn6.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn6);
 
         textColumn8.setColumnName("codigoNumerico");
         textColumn8.setHeaderColumnName("Codigo Numerico");
-        textColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn8);
 
         textColumn13.setColumnName("numero");
         textColumn13.setHeaderColumnName("Numero");
-        textColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn13);
 
         dateColumn14.setColumnName("dataEmissao");
         dateColumn14.setHeaderColumnName("Data Emissao");
-        dateColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(dateColumn14);
 
         comboColumn17.setColumnName("tipoOperacao");
         comboColumn17.setDomainId("tipoOperacao");
         comboColumn17.setHeaderColumnName("Tipo Operacao");
-        comboColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn17.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(comboColumn17);
 
         textColumn21.setColumnName("chaveAcesso");
         textColumn21.setHeaderColumnName("Chave Acesso");
-        textColumn21.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn21.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn21.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn21);
 
@@ -158,32 +158,32 @@ public class EntradaNotaGrid extends InternalFrame {
         decimalColumn33.setColumnName("valorTotalProdutos");
         decimalColumn33.setDecimals(2);
         decimalColumn33.setHeaderColumnName("Valor Total Produtos");
-        decimalColumn33.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn33.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn33.setPreferredWidth(120);
         gridControl1.getColumnContainer().add(decimalColumn33);
 
         decimalColumn34.setColumnName("valorFrete");
         decimalColumn34.setHeaderColumnName("Valor Frete");
-        decimalColumn34.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn34.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn34.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn34);
 
         decimalColumn36.setColumnName("valorDesconto");
         decimalColumn36.setHeaderColumnName("Valor Desconto");
-        decimalColumn36.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn36.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn36.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn36);
 
         decimalColumn42.setColumnName("valorTotal");
         decimalColumn42.setHeaderColumnName("Valor Total");
-        decimalColumn42.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn42.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn42.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn42);
 
         comboColumn62.setColumnName("statusNota");
         comboColumn62.setDomainId("statusNotaFiscalEletronica");
         comboColumn62.setHeaderColumnName("Status Nota");
-        comboColumn62.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn62.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(comboColumn62);
 
         gridBagConstraints = new java.awt.GridBagConstraints();

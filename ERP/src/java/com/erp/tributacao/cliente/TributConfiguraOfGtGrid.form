@@ -9,6 +9,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -51,6 +52,8 @@
         </Component>
         <Component class="org.openswing.swing.client.NavigatorBar" name="navigatorBar1">
         </Component>
+        <Component class="org.openswing.swing.client.FilterButton" name="filterButton1">
+        </Component>
       </SubComponents>
     </Container>
     <Container class="org.openswing.swing.client.GridControl" name="gridControl1">
@@ -82,6 +85,7 @@
       <SubComponents>
         <Component class="org.openswing.swing.table.columns.client.TextColumn" name="textColumn2">
           <Properties>
+            <Property name="columnFilterable" type="boolean" value="true"/>
             <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;tributGrupoTributario.descricao&quot;" type="code"/>
             </Property>
@@ -94,6 +98,7 @@
         </Component>
         <Component class="org.openswing.swing.table.columns.client.TextColumn" name="textColumn3">
           <Properties>
+            <Property name="columnFilterable" type="boolean" value="true"/>
             <Property name="columnName" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;tributOperacaoFiscal.descricao&quot;" type="code"/>
             </Property>

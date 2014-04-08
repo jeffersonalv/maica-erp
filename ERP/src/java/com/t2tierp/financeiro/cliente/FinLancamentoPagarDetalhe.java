@@ -11,42 +11,38 @@ import org.openswing.swing.mdi.client.InternalFrame;
 import org.openswing.swing.util.client.ClientUtils;
 
 /**
-* <p>Title: T2Ti ERP</p>
-* <p>Description: Tela FinLancamentoPagarDetalhe.</p>
-*
-* <p>The MIT License</p>
-*
-* <p>Copyright: Copyright (C) 2010 T2Ti.COM
-*
-* Permission is hereby granted, free of charge, to any person
-* obtaining a copy of this software and associated documentation
-* files (the "Software"), to deal in the Software without
-* restriction, including without limitation the rights to use,
-* copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the
-* Software is furnished to do so, subject to the following
-* conditions:
-*
-* The above copyright notice and this permission notice shall be
-* included in all copies or substantial portions of the Software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-* OTHER DEALINGS IN THE SOFTWARE.
-*
-*        The author may be contacted at:
-*            t2ti.com@gmail.com</p>
-*
+ * <p>Title: T2Ti ERP</p>
+ * <p>Description: Tela FinLancamentoPagarDetalhe.</p>
+ *
+ * <p>The MIT License</p>
+ *
+ * <p>Copyright: Copyright (C) 2010 T2Ti.COM
+ * 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+* The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+* The author may be contacted at: t2ti.com@gmail.com</p>
+ * 
 * @author Claudio de Barros (t2ti.com@gmail.com)
-* @version 1.0
-*/
+ * @version 1.0
+ */
 public class FinLancamentoPagarDetalhe extends InternalFrame {
-
+    
     private LookupController fornecedorController = new LookupController();
     private LookupController documentoOrigemController = new LookupController();
     private LookupController contaCaixaController = new LookupController();
@@ -54,22 +50,22 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
     private FinParcelaPagarGridController parcelaPagarController;
     private FinLctoPagarNtFinanceiraGridController gridNaturezaFinanceiraController;
     private FinLancamentoPagarDetalheController lancamentoPagarController;
-
+    
     public FinLancamentoPagarDetalhe(FinLancamentoPagarDetalheController controller) {
         initComponents();
-
+        
         genericButton1.setToolTipText("Gerar Parcelas");
         genericButton2.setToolTipText("Acionar GED");
-
+        
         this.lancamentoPagarController = controller;
         formLancamentoPagar.setFormController(lancamentoPagarController);
-
+        
         formContaCaixa.setFormController(new FormController());
-
+        
         parcelaPagarController = new FinParcelaPagarGridController(this);
         gridControlParcelaPagar.setController(parcelaPagarController);
         gridControlParcelaPagar.setGridDataLocator(parcelaPagarController);
-
+        
         gridNaturezaFinanceiraController = new FinLctoPagarNtFinanceiraGridController(this);
         gridControlNaturezaFinanceira.setController(gridNaturezaFinanceiraController);
         gridControlNaturezaFinanceira.setGridDataLocator(gridNaturezaFinanceiraController);
@@ -84,12 +80,15 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         fornecedorController.setHeaderColumnName("id", "ID");
         fornecedorController.setHeaderColumnName("pessoa.nome", "Nome");
         fornecedorController.setFrameTitle("Importa Fornecedor");
-
+        fornecedorController.setFilterableColumn("pessoa.nome", true);
+        fornecedorController.setGridFilterButton(true);
+        fornecedorController.setShowNavigatorBar(true);
+        
         fornecedorController.setVisibleStatusPanel(true);
         fornecedorController.setVisibleColumn("id", true);
         fornecedorController.setVisibleColumn("pessoa.nome", true);
         fornecedorController.setFramePreferedSize(new Dimension(600, 500));
-
+        
         fornecedorController.setLookupDataLocator(new LookupDataLocatorGenerico(fornecedorController.getLookupValueObjectClassName()));
         codLookupControl3.setLookupController(fornecedorController);
 
@@ -102,12 +101,12 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         documentoOrigemController.setHeaderColumnName("id", "ID");
         documentoOrigemController.setHeaderColumnName("descricao", "Descrição");
         documentoOrigemController.setFrameTitle("Importa Documento Origem");
-
+        
         documentoOrigemController.setVisibleStatusPanel(true);
         documentoOrigemController.setVisibleColumn("id", true);
         documentoOrigemController.setVisibleColumn("descricao", true);
         documentoOrigemController.setFramePreferedSize(new Dimension(600, 500));
-
+        
         documentoOrigemController.setLookupDataLocator(new LookupDataLocatorGenerico(documentoOrigemController.getLookupValueObjectClassName()));
         codLookupControl2.setLookupController(documentoOrigemController);
 
@@ -120,12 +119,12 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         contaCaixaController.setHeaderColumnName("id", "ID");
         contaCaixaController.setHeaderColumnName("nome", "Nome");
         contaCaixaController.setFrameTitle("Importa Conta Caixa");
-
+        
         contaCaixaController.setVisibleStatusPanel(true);
         contaCaixaController.setVisibleColumn("id", true);
         contaCaixaController.setVisibleColumn("nome", true);
         contaCaixaController.setFramePreferedSize(new Dimension(600, 500));
-
+        
         contaCaixaController.setLookupDataLocator(new LookupDataLocatorGenerico(contaCaixaController.getLookupValueObjectClassName()));
         codLookupControl1.setLookupController(contaCaixaController);
 
@@ -139,46 +138,49 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         naturezaFinanceiraController.setHeaderColumnName("id", "ID");
         naturezaFinanceiraController.setHeaderColumnName("descricao", "Descrição");
         naturezaFinanceiraController.setHeaderColumnName("classificacao", "Classificação");
-        naturezaFinanceiraController.setFrameTitle("Importa Conta Caixa");
-
+        naturezaFinanceiraController.setFrameTitle("Importa");
+        naturezaFinanceiraController.setGridFilterButton(true);
+        naturezaFinanceiraController.setFilterableColumn("descricao", true);
+        naturezaFinanceiraController.setShowNavigatorBar(true);
+        
         naturezaFinanceiraController.setVisibleStatusPanel(true);
         naturezaFinanceiraController.setVisibleColumn("id", true);
         naturezaFinanceiraController.setVisibleColumn("descricao", true);
         naturezaFinanceiraController.setVisibleColumn("classificacao", true);
         naturezaFinanceiraController.setFramePreferedSize(new Dimension(600, 500));
-
+        
         naturezaFinanceiraController.setLookupDataLocator(new LookupDataLocatorGenerico(naturezaFinanceiraController.getLookupValueObjectClassName()));
         codLookupColumn1.setLookupController(naturezaFinanceiraController);
     }
-
+    
     public org.openswing.swing.form.client.Form getFormLancamentoPagar() {
         return formLancamentoPagar;
     }
-
+    
     public org.openswing.swing.form.client.Form getFormContaCaixa() {
         return formContaCaixa;
     }
-
+    
     public org.openswing.swing.client.GridControl getGridControlParcelaPagar() {
         return gridControlParcelaPagar;
     }
-
+    
     public org.openswing.swing.client.GridControl getGridControlNaturezaFinanceira() {
         return gridControlNaturezaFinanceira;
     }
-
+    
     public FinParcelaPagarGridController getParcelaPagarController() {
         return parcelaPagarController;
     }
-
+    
     public FinLctoPagarNtFinanceiraGridController getGridNaturezaFinanceiraController() {
         return gridNaturezaFinanceiraController;
     }
 
-    /** This method is called from within the constructor to
-     * initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is
-     * always regenerated by the Form Editor.
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -250,7 +252,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         dateColumn5 = new org.openswing.swing.table.columns.client.DateColumn();
         decimalColumn6 = new org.openswing.swing.table.columns.client.DecimalColumn();
 
-        setTitle("T2Ti ERP - Financeiro - Contas a Pagar");
+        setTitle("Financeiro - Contas a Pagar");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -307,7 +309,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = -70;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(codLookupControl2, gridBagConstraints);
 
@@ -320,6 +322,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridy = 3;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(textControl2, gridBagConstraints);
 
@@ -342,7 +345,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = -70;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(codLookupControl3, gridBagConstraints);
 
@@ -373,9 +376,8 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
-        gridBagConstraints.ipadx = 100;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(comboBoxControl4, gridBagConstraints);
 
@@ -396,6 +398,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(numericControl5, gridBagConstraints);
 
@@ -416,6 +419,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(numericControl6, gridBagConstraints);
 
@@ -436,6 +440,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(numericControl7, gridBagConstraints);
 
@@ -455,6 +460,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(dateControl8, gridBagConstraints);
 
@@ -475,6 +481,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(textControl9, gridBagConstraints);
 
@@ -493,8 +500,8 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(dateControl11, gridBagConstraints);
 
@@ -515,6 +522,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 5, 5, 5);
         formLancamentoPagar.add(numericControl13, gridBagConstraints);
 
@@ -602,40 +610,40 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         textColumn2.setColumnName("contaCaixa.nome");
         textColumn2.setColumnRequired(false);
         textColumn2.setHeaderColumnName("Conta Caixa");
-        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(textColumn2);
 
         integerColumn5.setColumnName("numeroParcela");
         integerColumn5.setColumnRequired(false);
         integerColumn5.setHeaderColumnName("Numero Parcela");
-        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        integerColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(integerColumn5);
 
         dateColumn6.setColumnName("dataEmissao");
         dateColumn6.setColumnRequired(false);
         dateColumn6.setHeaderColumnName("Data Emissao");
-        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(dateColumn6);
 
         dateColumn7.setColumnName("dataVencimento");
         dateColumn7.setColumnRequired(false);
         dateColumn7.setEditableOnEdit(true);
         dateColumn7.setHeaderColumnName("Data Vencimento");
-        dateColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(dateColumn7);
 
         dateColumn8.setColumnName("descontoAte");
         dateColumn8.setColumnRequired(false);
         dateColumn8.setEditableOnEdit(true);
         dateColumn8.setHeaderColumnName("Desconto Ate");
-        dateColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(dateColumn8);
 
         comboColumn9.setColumnName("sofreRetencao");
         comboColumn9.setColumnRequired(false);
         comboColumn9.setDomainId("simnao");
         comboColumn9.setHeaderColumnName("Sofre Retencao");
-        comboColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        comboColumn9.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(comboColumn9);
 
         decimalColumn10.setColumnName("valor");
@@ -650,21 +658,21 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         decimalColumn11.setColumnRequired(false);
         decimalColumn11.setDecimals(2);
         decimalColumn11.setHeaderColumnName("Taxa Juro");
-        decimalColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn11.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(decimalColumn11);
 
         decimalColumn14.setColumnName("valorJuro");
         decimalColumn14.setColumnRequired(false);
         decimalColumn14.setDecimals(2);
         decimalColumn14.setHeaderColumnName("Valor Juro");
-        decimalColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn14.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(decimalColumn14);
 
         decimalColumn12.setColumnName("taxaMulta");
         decimalColumn12.setColumnRequired(false);
         decimalColumn12.setDecimals(2);
         decimalColumn12.setHeaderColumnName("Taxa Multa");
-        decimalColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn12.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(decimalColumn12);
 
         decimalColumn15.setColumnName("valorMulta");
@@ -678,14 +686,14 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         decimalColumn13.setColumnRequired(false);
         decimalColumn13.setDecimals(2);
         decimalColumn13.setHeaderColumnName("Taxa Desconto");
-        decimalColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn13.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(decimalColumn13);
 
         decimalColumn16.setColumnName("valorDesconto");
         decimalColumn16.setColumnRequired(false);
         decimalColumn16.setDecimals(2);
         decimalColumn16.setHeaderColumnName("Valor Desconto");
-        decimalColumn16.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn16.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlParcelaPagar.getColumnContainer().add(decimalColumn16);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -730,7 +738,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         codLookupColumn1.setEditableOnEdit(true);
         codLookupColumn1.setEditableOnInsert(true);
         codLookupColumn1.setHeaderColumnName("Natureza Financeira");
-        codLookupColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        codLookupColumn1.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         codLookupColumn1.setPreferredWidth(200);
         gridControlNaturezaFinanceira.getColumnContainer().add(codLookupColumn1);
 
@@ -738,7 +746,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         dateColumn5.setEditableOnEdit(true);
         dateColumn5.setEditableOnInsert(true);
         dateColumn5.setHeaderColumnName("Data Inclusao");
-        dateColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        dateColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlNaturezaFinanceira.getColumnContainer().add(dateColumn5);
 
         decimalColumn6.setColumnName("valor");
@@ -746,7 +754,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
         decimalColumn6.setEditableOnEdit(true);
         decimalColumn6.setEditableOnInsert(true);
         decimalColumn6.setHeaderColumnName("Valor");
-        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControlNaturezaFinanceira.getColumnContainer().add(decimalColumn6);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -778,7 +786,7 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
             JOptionPane.showMessageDialog(this, "Ocorreu um erro ao gerar as parcelas\n" + ex.getMessage(), "Erro do Sistema", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_genericButton1ActionPerformed
-
+    
     private void genericButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genericButton2ActionPerformed
         try {
             lancamentoPagarController.acionaGed();
@@ -788,8 +796,6 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
             JOptionPane.showMessageDialog(this, "Ocorreu um erro ao acionar o GED!\n" + ex.getMessage(), "Erro do Sistema", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_genericButton2ActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.table.columns.client.CodLookupColumn codLookupColumn1;
     private org.openswing.swing.client.CodLookupControl codLookupControl1;
@@ -856,6 +862,4 @@ public class FinLancamentoPagarDetalhe extends InternalFrame {
     private org.openswing.swing.client.TextControl textControl3;
     private org.openswing.swing.client.TextControl textControl9;
     // End of variables declaration//GEN-END:variables
-
-
 }

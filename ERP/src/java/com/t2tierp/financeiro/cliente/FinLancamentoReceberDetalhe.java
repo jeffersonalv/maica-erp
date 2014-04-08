@@ -261,7 +261,7 @@ public class FinLancamentoReceberDetalhe extends InternalFrame {
         dateColumn5 = new org.openswing.swing.table.columns.client.DateColumn();
         decimalColumn6 = new org.openswing.swing.table.columns.client.DecimalColumn();
 
-        setTitle("T2Ti ERP - Financeiro - Contas a Receber");
+        setTitle("ERP - Financeiro - Contas a Receber");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 

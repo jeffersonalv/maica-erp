@@ -65,6 +65,7 @@ public class TributGrupoTributarioGrid extends InternalFrame {
         deleteButton1 = new org.openswing.swing.client.DeleteButton();
         reloadButton1 = new org.openswing.swing.client.ReloadButton();
         navigatorBar1 = new org.openswing.swing.client.NavigatorBar();
+        filterButton1 = new org.openswing.swing.client.FilterButton();
         gridControl1 = new org.openswing.swing.client.GridControl();
         textColumn3 = new org.openswing.swing.table.columns.client.TextColumn();
         comboColumn4 = new org.openswing.swing.table.columns.client.ComboColumn();
@@ -80,6 +81,7 @@ public class TributGrupoTributarioGrid extends InternalFrame {
         jPanel1.add(deleteButton1);
         jPanel1.add(reloadButton1);
         jPanel1.add(navigatorBar1);
+        jPanel1.add(filterButton1);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -90,6 +92,7 @@ public class TributGrupoTributarioGrid extends InternalFrame {
         getContentPane().add(jPanel1, gridBagConstraints);
 
         gridControl1.setDeleteButton(deleteButton1);
+        gridControl1.setFilterButton(filterButton1);
         gridControl1.setFunctionId("tributGrupoTributario");
         gridControl1.setInsertButton(insertButton1);
         gridControl1.setNavBar(navigatorBar1);
@@ -97,12 +100,14 @@ public class TributGrupoTributarioGrid extends InternalFrame {
         gridControl1.setValueObjectClassName("com.erp.tributacao.java.vo.TributGrupoTributarioVO");
         gridControl1.getColumnContainer().setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
+        textColumn3.setColumnFilterable(true);
         textColumn3.setColumnName("descricao");
         textColumn3.setHeaderColumnName("Descricao");
         textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         textColumn3.setPreferredWidth(200);
         gridControl1.getColumnContainer().add(textColumn3);
 
+        comboColumn4.setColumnFilterable(true);
         comboColumn4.setColumnName("origemMercadoria");
         comboColumn4.setDomainId("origemMercadoria");
         comboColumn4.setHeaderColumnName("Origem Mercadoria");
@@ -129,6 +134,7 @@ public class TributGrupoTributarioGrid extends InternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.openswing.swing.table.columns.client.ComboColumn comboColumn4;
     private org.openswing.swing.client.DeleteButton deleteButton1;
+    private org.openswing.swing.client.FilterButton filterButton1;
     private org.openswing.swing.client.GridControl gridControl1;
     private org.openswing.swing.client.InsertButton insertButton1;
     private javax.swing.JPanel jPanel1;

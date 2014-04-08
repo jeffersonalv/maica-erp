@@ -74,7 +74,7 @@ public class OrcamentoDetalheGrid extends InternalFrame {
         decimalColumn7 = new org.openswing.swing.table.columns.client.DecimalColumn();
         decimalColumn8 = new org.openswing.swing.table.columns.client.DecimalColumn();
 
-        setTitle("T2Ti ERP - Orcamento");
+        setTitle("ERP - Orcamento");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -89,11 +89,12 @@ public class OrcamentoDetalheGrid extends InternalFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
         getContentPane().add(jPanel1, gridBagConstraints);
 
         gridControl1.setDeleteButton(deleteButton1);
-        gridControl1.setFunctionId("orcamentodetalhe");
+        gridControl1.setFunctionId("orcamentoDetalhe");
         gridControl1.setInsertButton(insertButton1);
         gridControl1.setNavBar(navigatorBar1);
         gridControl1.setReloadButton(reloadButton1);
@@ -102,40 +103,40 @@ public class OrcamentoDetalheGrid extends InternalFrame {
 
         textColumn2.setColumnName("idnaturezafinanceira.nome");
         textColumn2.setHeaderColumnName("Idnaturezafinanceira.nome");
-        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn2.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn2);
 
         textColumn3.setColumnName("idorcamentoempresarial.nome");
         textColumn3.setHeaderColumnName("Idorcamentoempresarial.nome");
-        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn3);
 
         textColumn4.setColumnName("periodo");
         textColumn4.setHeaderColumnName("Periodo");
-        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn4.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn4);
 
         decimalColumn5.setColumnName("valorOrcado");
         decimalColumn5.setHeaderColumnName("Valor Orcado");
-        decimalColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn5.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn5.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn5);
 
         decimalColumn6.setColumnName("valorRealizado");
         decimalColumn6.setHeaderColumnName("Valor Realizado");
-        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn6.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn6.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn6);
 
         decimalColumn7.setColumnName("taxaVariacao");
         decimalColumn7.setHeaderColumnName("Taxa Variacao");
-        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn7.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn7.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn7);
 
         decimalColumn8.setColumnName("valorVariacao");
         decimalColumn8.setHeaderColumnName("Valor Variacao");
-        decimalColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        decimalColumn8.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         decimalColumn8.setDecimals(2);
         gridControl1.getColumnContainer().add(decimalColumn8);
 
@@ -150,6 +151,10 @@ public class OrcamentoDetalheGrid extends InternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn5;
+    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn6;
+    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn7;
+    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn8;
     private org.openswing.swing.client.DeleteButton deleteButton1;
     private org.openswing.swing.client.GridControl gridControl1;
     private org.openswing.swing.client.InsertButton insertButton1;
@@ -159,9 +164,5 @@ public class OrcamentoDetalheGrid extends InternalFrame {
     private org.openswing.swing.table.columns.client.TextColumn textColumn2;
     private org.openswing.swing.table.columns.client.TextColumn textColumn3;
     private org.openswing.swing.table.columns.client.TextColumn textColumn4;
-    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn5;
-    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn6;
-    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn7;
-    private org.openswing.swing.table.columns.client.DecimalColumn decimalColumn8;
     // End of variables declaration//GEN-END:variables
 }

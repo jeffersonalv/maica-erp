@@ -68,7 +68,7 @@ public class OrcamentoFluxoCaixaPeriodoGrid extends InternalFrame {
         textColumn3 = new org.openswing.swing.table.columns.client.TextColumn();
         textColumn4 = new org.openswing.swing.table.columns.client.TextColumn();
 
-        setTitle("T2Ti ERP - Controle de Orçamento");
+        setTitle("ERP - Controle de Orçamento");
         setPreferredSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -99,7 +99,7 @@ public class OrcamentoFluxoCaixaPeriodoGrid extends InternalFrame {
 
         textColumn3.setColumnName("periodo");
         textColumn3.setHeaderColumnName("Periodo");
-        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11));
+        textColumn3.setHeaderFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         gridControl1.getColumnContainer().add(textColumn3);
 
         textColumn4.setColumnName("nome");

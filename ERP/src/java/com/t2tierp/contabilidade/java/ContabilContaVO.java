@@ -230,7 +230,7 @@ public class ContabilContaVO extends ValueObjectImpl implements Serializable {
 
     @Override
     public String toString() {
-        return "com.erp.contabilidade.vo.ContabilContaVO[id=" + id + "]";
+        return "com.t2tierp.contabilidade.java.ContabilContaVO[id=" + id + "]";
     }
 
 }
