@@ -41,7 +41,7 @@ public class Menu implements MDIController, LoginController {
     private String nomeUsuario = null;
 
     public Menu() {
-        //  System.setProperty("SERVERURL", System.getProperty("jnlp.SERVERURL"));
+          System.setProperty("SERVERURL", System.getProperty("jnlp.SERVERURL"));
         ClientUtils.setObjectSender(new HessianObjectSender());
         fachadaCliente = new Fachada();
         LoginDialog d = new LoginDialog(
